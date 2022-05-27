@@ -1,8 +1,8 @@
 import React from 'react';
 import '../App.css';
-import './LandingPage.css';
+import './HeroSection.css';
 
-const LandingPage = () => {
+const HeroSection = () => {
   return (
     <header className='landing-container'>
       <h1>first landing page</h1>
@@ -11,4 +11,4 @@ const LandingPage = () => {
   );
 }
 
-export default LandingPage;
+export default HeroSection;

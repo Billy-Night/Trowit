@@ -57,7 +57,14 @@ const Navbar = () => {
               Order your TROWIT Card 
             </Link>
           </li>
-          <li>
+          {/* <li className='nav-item'>
+            <Link to ='/order' className='nav-links' onClick={closeMobileMenu}>
+              Sign Up
+            </Link>
+          </li> */}
+
+
+          {/* <li >
           <Link
                 to='/sign-up'
                 className='nav-links-mobile'
@@ -65,9 +72,9 @@ const Navbar = () => {
               >
                 Sign Up
               </Link>
-            </li>
+            </li> */}
           </ul>
-          {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
+          {/* {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>} */}
         
       </div>
     </nav>
