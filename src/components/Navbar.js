@@ -26,13 +26,10 @@ const Navbar = () => {
 
   return (
     <nav className='navbar'>
-      <Link to="/">
-      </Link>
-      <div className="navbar-container">
-  
-        <Link to ="/" className="navbar-logo">
+     <Link to ="/" className="navbar-logo">
         <img className='logo' src="./logo_small@4x.png" alt="logo image"/>
         </Link>
+      <div className="navbar-container">
         <div className='menu-icon' onClick={handleClick}>
           <i className={click ? "fas fa-times" : "fas fa-bars"} />
         </div>
