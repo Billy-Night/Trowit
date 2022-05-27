@@ -1,9 +1,15 @@
+import ImpressYourPeers from '../Impress_your_peers/ImpressYourPeers.js';
 
 const LandingPageHeroSection = () => {
 
     return (
         <div>
-            <p>This is the landing page hero section</p>
+            <div>
+                <p>This is the landing page hero section</p>
+            </div>
+            <div>
+                <ImpressYourPeers />
+            </div>
         </div>
     );
 };
