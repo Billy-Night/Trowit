@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import "./Navbar.css";
+import Button from './Button';
 
 const Navbar = () => {
   const [click, setClick] = useState (false);
@@ -28,9 +29,9 @@ const Navbar = () => {
       <Link to="/">
       </Link>
       <div className="navbar-container">
-
+  
         <Link to ="/" className="navbar-logo">
-          Trowit
+        <img className='logo' src="./logo_small@4x.png" alt="logo image"/>
         </Link>
         <div className='menu-icon' onClick={handleClick}>
           <i className={click ? "fas fa-times" : "fas fa-bars"} />
@@ -56,7 +57,18 @@ const Navbar = () => {
               Order your TROWIT Card 
             </Link>
           </li>
-        </ul>  
+          <li>
+          <Link
+                to='/sign-up'
+                className='nav-links-mobile'
+                onClick={closeMobileMenu}
+              >
+                Sign Up
+              </Link>
+            </li>
+          </ul>
+          {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
+        
       </div>
     </nav>
   )
