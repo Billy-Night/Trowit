@@ -14,11 +14,14 @@
   
   .navbar-container {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: flex-start;
     align-items: center;
+    flex-wrap: nowrap;
     height: 80px;
     max-width: 1500px;
-    margin-top: 100;
+    margin-top: 10px;
   }
   
   .navbar-logo {
@@ -49,6 +52,8 @@
   
   .nav-item {
     height: 80px;
+    display: flex;
+    align-items: flex-start;
   }
 
   .nav-item-round {
