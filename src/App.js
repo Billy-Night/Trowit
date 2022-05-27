@@ -1,3 +1,4 @@
+import MyProvider from './context/MyProvider.js';
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';  
@@ -7,12 +8,13 @@ function App() {
   // const context = useContext(MyContext);
 
   return (
-    <Router>
-    <Navbar />
-    <Routes>
-      
-    </Routes>
-  </Router>
+    <MyProvider>
+      <Router>
+      <Navbar />
+      <Routes>
+      </Routes>
+      </Router>
+    </MyProvider>
   );
 }
 
