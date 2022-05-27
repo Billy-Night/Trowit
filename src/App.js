@@ -3,6 +3,7 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';  
 import Navbar from './components/Navbar';
+import LandingPageHeroSection from './components/Landing_Page/LandingPageHeroSection.js';
 
 function App() {
   // const context = useContext(MyContext);
@@ -10,9 +11,10 @@ function App() {
   return (
     <MyProvider>
       <Router>
-      <Navbar />
-      <Routes>
-      </Routes>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<LandingPageHeroSection /> } />
+        </Routes>
       </Router>
     </MyProvider>
   );
