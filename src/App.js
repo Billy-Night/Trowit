@@ -8,6 +8,9 @@ function App() {
   // const context = useContext(MyContext);
 
   return (
+    <div className="App">
+    "Bryan was here..."
+    </div>
     <Router>
     <Navbar />
     <Routes>
