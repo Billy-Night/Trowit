@@ -1,4 +1,5 @@
-import ImpressYourPeers from '../Impress_your_peers/ImpressYourPeers.js';
+import ImpressYourPeers from '../Impress_your_peers_section/ImpressYourPeers';
+import LandingPageFeatures from '../features_section/LandingPageFeatures';
 
 const LandingPageHeroSection = () => {
 
@@ -9,6 +10,7 @@ const LandingPageHeroSection = () => {
             </div>
             <div>
                 <ImpressYourPeers />
+                <LandingPageFeatures />
             </div>
         </div>
     );
