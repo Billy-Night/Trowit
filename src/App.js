@@ -7,6 +7,7 @@ import LandingPageHeroSection from './components/Landing_Page/Heros_section/Land
 import ImpressYourPeers from './components/Landing_Page/Impress_your_peers_section/ImpressYourPeers';
 import SignUpPage from './components/Sign_Up_Page/SignUpPage.jsx'
 import SignInPage from './components/Sign_In_Page/SignInPage.jsx'
+import CardsPage from './components/Cards_Page/CardsPage.jsx'
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/" element={<ImpressYourPeers /> } />
           <Route path="/sign-up" element={ <SignUpPage /> } />
           <Route path="/sign-in" element={< SignInPage />} />
+          <Route path="/cards" element={< CardsPage />} />
         </Routes>
       </Router>
     </MyProvider>
