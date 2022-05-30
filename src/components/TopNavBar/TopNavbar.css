@@ -203,10 +203,10 @@ line-height: 28px;
     }
   }
 
-  .btn--outline {
+  /* .btn--outline {
     background-color: #25DAC5;
     color: #fff;
     padding: 8px 20px;
     border: 1px solid var(--primary);
     transition: all 0.3s ease-out;
-  }
+  } */

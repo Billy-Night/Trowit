@@ -37,7 +37,6 @@ line-height: 26px;
     border: 1px solid var(--primary);
     border-radius: 25px;
     transition: all 0.3s ease-out;
-    
 }
 
 .btn--medium {
@@ -54,4 +53,12 @@ line-height: 26px;
 background: #fff ;
 color: var(--primary);
 transition: all 0.3s ease-out;
+}
+
+.btn--outline:hover {
+    background: var(--primary) ;
+color: #fff;
+transition: all 0.3s ease-out;
+border-radius: 25px;
+
 }
