@@ -55,7 +55,8 @@ const TopNavbar = () => {
             </Link>
           </li>
           </ul>
-      
+      <ul></ul>
+      <ul></ul>
           {button && <Button buttonStyle='btn--outline'>Sign Up</Button>}
           {button && <Button buttonStyle='btn--outline-in'>Sign In</Button>}
       </div>
