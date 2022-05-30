@@ -62,7 +62,7 @@
   .nav-item {
     height: 80px;
     display: flex;
-    align-items: flex-start;
+    align-items: flex-end;
   }
 
   .nav-item-round {
