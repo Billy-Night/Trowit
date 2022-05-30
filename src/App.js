@@ -2,10 +2,7 @@ import MyProvider from './context/MyProvider.js';
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';  
-
 import LandingPage from './components/Landing_Page/LandingPage.jsx';
-
-
 import SignUpPage from './components/Sign_Up_Page/SignUpPage.jsx'
 import SignInPage from './components/Sign_In_Page/SignInPage.jsx'
 import CardsPage from './components/Cards_Page/CardsPage.jsx'
