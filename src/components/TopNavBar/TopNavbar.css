@@ -28,7 +28,7 @@
     color: 
     #25DAC5;
     justify-self: start;
-    margin-left: 20px;
+    margin-left: 70px;
     cursor: pointer;
     text-decoration: none;
     font-size: 2rem;
@@ -55,12 +55,13 @@
     text-align: center;
     width: 60vw;
     justify-content: end;
-    margin-right: 2rem;
+    /* margin-right: 2rem; */
     margin-top: 0rem;
   }
   
   .nav-item {
-    height: 80px;
+    height: 50px;
+    font-size: smaller;
     display: flex;
     align-items: flex-end;
   }

@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import "../TopNavBar/TopNavbar.css";
-import Button from '../TopNavBar/Button.jsx';
+import {Button} from '../TopNavBar/Button.jsx';
 
-const Navbar = () => {
+const TopNavbar = () => {
   const [click, setClick] = useState (false);
   const [button, setButton] = useState(true);
 
@@ -54,28 +54,13 @@ const Navbar = () => {
               Order your TROWIT Card 
             </Link>
           </li>
-          {/* <li className='nav-item'>
-            <Link to ='/order' className='nav-links' onClick={closeMobileMenu}>
-              Sign Up
-            </Link>
-          </li> */}
-
-
-          {/* <li >
-          <Link
-                to='/sign-up'
-                className='nav-links-mobile'
-                onClick={closeMobileMenu}
-              >
-                Sign Up
-              </Link>
-            </li> */}
           </ul>
-          {/* {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>} */}
-        
+          
+          {button && <Button buttonStyle='btn--outline'>Sign Up</Button>}
+          {button && <Button buttonStyle='btn--outline-in'>Sign In</Button>}
       </div>
     </nav>
   )
 }
 
-export default Navbar;
+export default TopNavbar;
