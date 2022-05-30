@@ -44,6 +44,11 @@
     width: 200px;
     height: 50px;
     cursor: pointer;
+    position: absolute;
+    /* width: 102.21px;
+    height: 36.07px;
+    left: 155.79px;
+    top: 57px; */
   }
   
   
@@ -60,10 +65,11 @@
   }
   
   .nav-item {
-    height: 50px;
-    font-size: smaller;
-    display: flex;
-    align-items: flex-end;
+        font-family: 'DM Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 28px;
   }
 
   .nav-item-round {
@@ -95,6 +101,8 @@
   .menu-icon {
     display: none;
   }
+
+
   
   @media screen and (max-width: 960px) {
     .NavbarItems {
