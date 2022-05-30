@@ -32,7 +32,7 @@ const TopNavbar = () => {
         </Link>
       <div className="navbar-container">
         <div className='menu-icon' onClick={handleClick}>
-          <i className={click ? "fas fa-times" : "fas fa-bars"} />
+          <i className={click ? "fas fa-times" : "fas fa-bars"  } />
         </div>
         <ul className={click ? 'nav-menu active' : 'nav-menu'} >
           <li className='nav-item'>
@@ -55,12 +55,29 @@ const TopNavbar = () => {
               Order your TROWIT Card 
             </Link>
           </li>
+          
+          <Link
+                to='/sign-in'
+                className='nav-links-mobile-in'
+                onClick={closeMobileMenu}
+              >
+              Log In
+              </Link>
+          
+          <Link
+                to='/sign-up'
+                className='nav-links-mobile'
+                onClick={closeMobileMenu}
+              >
+                Sign Up
+              </Link>
+          
           </ul>
       <ul></ul>
       <ul></ul>
       
           {button && <SignUpPage buttonStyle='btn--outline' >Sign Up</SignUpPage>}
-          {button && <SignInPage buttonStyle='btn--outline-in'>Sign In</SignInPage>}
+          {button && <SignInPage buttonStyle='btn--outline-in'>Log In</SignInPage>}
       
       </div>
     </nav>
