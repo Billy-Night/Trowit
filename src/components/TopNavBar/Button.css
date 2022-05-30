@@ -12,6 +12,7 @@ font-style: normal;
 font-weight: 500;
 font-size: 18px;
 line-height: 26px;
+
 }
 
 .btn--primary {
@@ -36,11 +37,12 @@ line-height: 26px;
     border: 1px solid var(--primary);
     border-radius: 25px;
     transition: all 0.3s ease-out;
+    
 }
 
 .btn--medium {
     padding: 8px 20px;
-    font-size: 10px;
+    font-size: 18px;
 }
 
 .btn--large {
