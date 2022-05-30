@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';  
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 
 function App() {
@@ -8,14 +8,12 @@ function App() {
 
   return (
     <div className="App">
-    "Bryan was here..."
+      "Bryan was here..."
+      <Router>
+        <Navbar />
+        <Routes></Routes>
+      </Router>
     </div>
-    <Router>
-    <Navbar />
-    <Routes>
-      
-    </Routes>
-  </Router>
   );
 }
 
