@@ -2,7 +2,7 @@
     background: linear-gradient(90deg, #ffffff 0%,  #ffffff 100%);
     height: 80px;
     display: flex;
-    flex-wrap: nowrap;
+    /* flex-wrap: nowrap; */
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
@@ -28,7 +28,7 @@
     color: 
     #25DAC5;
     justify-self: start;
-    margin-left: 20px;
+    margin-left: 70px;
     cursor: pointer;
     text-decoration: none;
     font-size: 2rem;
@@ -36,7 +36,19 @@
     display: flex;
     align-items: center;
   }
-  
+
+  .logo {
+    margin-top: 0px;
+    margin-left: -150px;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    position: absolute;
+    /* width: 102.21px;
+    height: 36.07px;
+    left: 155.79px;
+    top: 57px; */
+  }
   
   .nav-menu {
     display: grid;
@@ -46,14 +58,16 @@
     text-align: center;
     width: 60vw;
     justify-content: end;
-    margin-right: 2rem;
+    /* margin-right: 2rem; */
     margin-top: 0rem;
   }
   
   .nav-item {
-    height: 80px;
-    display: flex;
-    align-items: flex-start;
+        font-family: 'DM Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 28px;
   }
 
   .nav-item-round {
@@ -85,6 +99,8 @@
   .menu-icon {
     display: none;
   }
+
+
   
   @media screen and (max-width: 960px) {
     .NavbarItems {
@@ -95,9 +111,10 @@
       display: flex;
       flex-direction: column;
       width: 100%;
-      height: 90vh;
+      /* height: 90vh; */
       position: absolute;
       top: 80px;
+      margin-left: -90px;
       left: -100%;
       opacity: 1;
       transition: all 0.5s ease;
@@ -120,7 +137,7 @@
   
     .nav-links:hover {
       background-color: #25DAC5;
-      color: #25DAC5;
+      color: #ffffff;
       border-radius: 0;
     }
   
@@ -128,6 +145,7 @@
       position: absolute;
       top: 0;
       left: 0;
+      margin-left: 0.5%;
       font-size: 200rem;
       transform: translate(45%, 20%);
     }
@@ -169,31 +187,26 @@
     }
   }
 
-  .logo {
-    margin-top: 0px;
-    margin-left: -200px;
-    padding-left: -40%;
-    width: 200px;
-    height: 50px;
-    cursor: pointer;
-  }
-
-    
-  @media screen and (max-width: 960px) {
-    .logo {
-      position: absolute;
-      left: 3px;
+  @media screen and (max-width: 480px) {
+    .logo .navbar .navbar-logo {
+      position: center;
       top: 10px;
       height: 40px;
       width: 110px;
+      float: none;
+      display: block;
+      justify-content: center;
+      text-align: center;
+      float: none !important;
+      right: auto !important;
+      text-align: center;
     }
   }
 
-
-  .btn--outline {
+  /* .btn--outline {
     background-color: #25DAC5;
     color: #fff;
     padding: 8px 20px;
     border: 1px solid var(--primary);
     transition: all 0.3s ease-out;
-  }
+  } */
