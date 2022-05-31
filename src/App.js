@@ -10,6 +10,7 @@ import Contacts from './components/Contacts_Page/Contacts.jsx';
 import CreateNewCard from './components/Cards_Page/CreateNewCard.jsx';
 import BackgrdImgGen from './components/Background_Image_Generator/BackgrdImgGen.jsx';
 import EmailGen from './components/Email_Generator_Page/EmailGen.jsx';
+import Settings from './components/Settings_Page/Settings.jsx';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route path="/contacts" element={< Contacts />} />
           <Route path="/background-image-gen" element={< BackgrdImgGen />} />
           <Route path="/email-gen" element={< EmailGen/>} />
+          <Route path="/settings" element={<Settings />} />
         </Routes>
       </Router>
     </MyProvider>
