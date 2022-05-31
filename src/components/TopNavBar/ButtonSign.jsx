@@ -8,7 +8,7 @@ const STYLES = ['btn--primary', 'btn--outline', 'btn--outline-in'];
 
 const SIZES = ['btn--medium', 'btn--large'];
 
-const ButtonSign= ({
+export const ButtonSign= ({
   children,
   type,
   onClick,
@@ -26,10 +26,8 @@ const ButtonSign= ({
 
   return (
       
-    <Link to='/sign-in' className="btn-mobile">
-         <div>
-            <p>This is the sign up page</p>
-        </div>
+    <Link to='/sign-up' className="btn-mobile">
+
       <button
       className={`btn ${checkButtonStyle} ${checkButtonSize}`}
       onClick={onClick}
@@ -42,4 +40,4 @@ const ButtonSign= ({
   )
 };
 
-export default ButtonSign;
+

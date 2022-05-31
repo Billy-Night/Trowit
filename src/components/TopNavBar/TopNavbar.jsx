@@ -4,6 +4,9 @@ import "../TopNavBar/TopNavbar.css";
 
 import { Button } from './Button';
 
+import { ButtonSign } from './ButtonSign';
+import { ButtonLogin } from './ButtonLogin';
+
 const TopNavbar = () => {
   const [click, setClick] = useState (false);
   const [button, setButton] = useState(true);
@@ -28,7 +31,7 @@ const TopNavbar = () => {
   return (
     <nav className='navbar'>
      <Link to ="/" className="navbar-logo">
-        <img className='logo' src="./logo_small@4x.png" alt="logo image"/>
+        <img className='logo' src="./logo_small@4x.png" alt="logo"/>
         </Link>
       <div className="navbar-container">
         <div className='menu-icon' onClick={handleClick}>
@@ -62,7 +65,7 @@ const TopNavbar = () => {
                 onClick={closeMobileMenu}
               >
               Log In
-              </Link>
+          </Link>
           
           <Link
                 to='/sign-up'
@@ -70,14 +73,14 @@ const TopNavbar = () => {
                 onClick={closeMobileMenu}
               >
                 Sign Up
-              </Link>
+          </Link>
           
           </ul>
       <ul></ul>
       <ul></ul>
       
-          {button && <Button buttonStyle='btn--outline' >Sign Up</Button>}
-          {button && <Button buttonStyle='btn--outline-in'>Log In</Button>}
+          {button && <ButtonSign buttonStyle='btn--outline' >Sign Up</ButtonSign>}
+          {button && <ButtonLogin buttonStyle='btn--outline-in'>Log In</ButtonLogin>}
       
       </div>
     </nav>
