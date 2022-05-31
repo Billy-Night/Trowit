@@ -1,5 +1,6 @@
 import SideNavBar from '../Side_NavBar/SideNavBar.jsx';
 import './Contacts.css';
+import ContactSortingOrder from './ContactSortingOrder.jsx';
 
 const Contact = () => {
 
@@ -7,6 +8,7 @@ const Contact = () => {
         <div className='contact'>
             <SideNavBar />
             <p>This is the contacts page</p>
+            <ContactSortingOrder />
         </div>
     );
 }
