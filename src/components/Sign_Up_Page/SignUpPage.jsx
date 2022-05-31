@@ -1,45 +1,10 @@
+const SignUpPage = () => {
 
-
-import React from "react";
-import { Link } from 'react-router-dom';
-import './SignUpPage.css';
-
-const STYLES = ['btn--primary', 'btn--outline', 'btn--outline-in'];
-
-const SIZES = ['btn--medium', 'btn--large'];
-
-const SignUpPage = ({
-  children,
-  type,
-  onClick,
-  buttonStyle,
-  buttonSize
-}) => {
-  const checkButtonStyle = STYLES.includes(buttonStyle) 
-  ? buttonStyle 
-  : STYLES(0)
-
-  const checkButtonSize = SIZES.includes(buttonSize)
-  ? buttonSize
-  : SIZES[0]
-
-
-  return (
-      
-    <Link to='/sign-in' className="btn-mobile">
-         <div>
+    return (
+        <div>
             <p>This is the sign up page</p>
         </div>
-      <button
-      className={`btn ${checkButtonStyle} ${checkButtonSize}`}
-      onClick={onClick}
-      type={type}
-      >
-        {children}
-   
-      </button>
-    </Link>
-  )
+    );
 };
 
-export default SignUpPage;
+export default SignUpPage; 

@@ -1,14 +1,12 @@
-
-
 import React from "react";
 import { Link } from 'react-router-dom';
-import './SignInPage.css';
+import './ButtonLogin.css';
 
 const STYLES = ['btn--primary', 'btn--outline', 'btn--outline-in'];
 
 const SIZES = ['btn--medium', 'btn--large'];
 
-const SignInPage = ({
+export const ButtonLogin = ({
   children,
   type,
   onClick,
@@ -25,7 +23,7 @@ const SignInPage = ({
 
 
   return (
-    <Link to='/sign-in' className="btn-mobile">
+    <Link to='/login' className="btn-mobile">
       <button
       className={`btn ${checkButtonStyle} ${checkButtonSize}`}
       onClick={onClick}
@@ -36,6 +34,5 @@ const SignInPage = ({
       </button>
     </Link>
   )
-};
 
-export default SignInPage;
+};

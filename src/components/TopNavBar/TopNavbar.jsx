@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import "../TopNavBar/TopNavbar.css";
-import SignInPage from '../Sign_In_Page/SignInPage.jsx';
-import SignUpPage from '../Sign_In_Page/SignInPage.jsx';
+import LoginPage from '../Login_Page/LoginPage.jsx';
+import SignUpPage from '../Login_Page/LoginPage.jsx';
 
 const TopNavbar = () => {
   const [click, setClick] = useState (false);
@@ -57,7 +57,7 @@ const TopNavbar = () => {
           </li>
           
           <Link
-                to='/sign-in'
+                to='/log-in'
                 className='nav-links-mobile-in'
                 onClick={closeMobileMenu}
               >
@@ -77,7 +77,7 @@ const TopNavbar = () => {
       <ul></ul>
       
           {button && <SignUpPage buttonStyle='btn--outline' >Sign Up</SignUpPage>}
-          {button && <SignInPage buttonStyle='btn--outline-in'>Log In</SignInPage>}
+          {button && <LoginPage buttonStyle='btn--outline-in'>Log In</LoginPage>}
       
       </div>
     </nav>
