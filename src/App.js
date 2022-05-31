@@ -8,6 +8,7 @@ import LoginPage from './components/Login_Page/LoginPage.jsx';
 import CardsPage from './components/Cards_Page/CardsPage.jsx';
 import Contacts from './components/Contacts_Page/Contacts.jsx';
 import CreateNewCard from './components/Cards_Page/CreateNewCard.jsx';
+import BackgrdImgGen from './components/Background_Image_Generator/BackgrdImgGen.jsx';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path="/cards" element={< CardsPage />} />
           <Route path="/cards/newcard" element={< CreateNewCard />} />
           <Route path="/contacts" element={< Contacts />} />
+          <Route path="/background-image-gen" element={< BackgrdImgGen />} />
         </Routes>
       </Router>
     </MyProvider>
