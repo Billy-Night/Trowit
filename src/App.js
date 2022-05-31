@@ -7,6 +7,7 @@ import SignUpPage from './components/Sign_Up_Page/SignUpPage.jsx';
 import LoginPage from './components/Login_Page/LoginPage.jsx';
 import CardsPage from './components/Cards_Page/CardsPage.jsx';
 import Contacts from './components/Contacts_Page/Contacts.jsx';
+import CreateNewCard from './components/Cards_Page/CreateNewCard.jsx';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path="/sign-up" element={<SignUpPage /> } />
           <Route path="/log-in" element={<LoginPage />} />
           <Route path="/cards" element={< CardsPage />} />
+          <Route path="/cards/newcard" element={< CreateNewCard />} />
           <Route path="/contacts" element={< Contacts />} />
         </Routes>
       </Router>
