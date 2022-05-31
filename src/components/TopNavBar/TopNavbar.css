@@ -53,7 +53,7 @@
   .nav-menu {
     display: grid;
     grid-template-columns: repeat(4, auto);
-    grid-gap: 10px;
+    grid-gap: 0px;
     list-style: none;
     text-align: center;
     width: 60vw;
@@ -93,6 +93,10 @@ line-height: 28px;
   }
   
   .nav-links-mobile {
+    display: none;
+  }
+
+  .nav-links-mobile-in {
     display: none;
   }
   
@@ -174,15 +178,30 @@ line-height: 28px;
       text-decoration: none;
       font-size: 1.5rem;
       background-color: transparent;
+      color: #ffffff;
+      padding: 14px 20px;
+      border: 1px solid #ffffff;
+      transition: all 0.3s ease-out;
+    }
+
+    .nav-links-mobile-in {
+      display: block;
+      text-align: center;
+      margin: 2rem auto;
+      border-radius: 4px;
+      width: 80%;
+      text-decoration: none;
+      font-size: 1.5rem;
+      background-color: #fff;
       color: #25DAC5;
       padding: 14px 20px;
-      border: 1px solid #25DAC5;
+      border: 1px solid #ffffff;
       transition: all 0.3s ease-out;
     }
   
     .nav-links-mobile:hover {
-      background: #25DAC5;
-      color: #242424;
+      background: #ffffff;
+      color: #25DAC5;
       transition: 250ms;
     }
   }

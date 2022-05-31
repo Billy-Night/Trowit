@@ -1,5 +1,5 @@
 
-const LandingPageFeatures = () => {
+const LPFeatures = () => {
 
     return (
         <div>
@@ -9,4 +9,4 @@ const LandingPageFeatures = () => {
     );
 };
 
-export default LandingPageFeatures;
+export default LPFeatures;
