@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import "../TopNavBar/TopNavbar.css";
-import LoginPage from '../Login_Page/LoginPage.jsx';
-import SignUpPage from '../Login_Page/LoginPage.jsx';
+
+import { Button } from './Button';
 
 const TopNavbar = () => {
   const [click, setClick] = useState (false);
@@ -76,8 +76,8 @@ const TopNavbar = () => {
       <ul></ul>
       <ul></ul>
       
-          {button && <SignUpPage buttonStyle='btn--outline' >Sign Up</SignUpPage>}
-          {button && <LoginPage buttonStyle='btn--outline-in'>Log In</LoginPage>}
+          {button && <Button buttonStyle='btn--outline' >Sign Up</Button>}
+          {button && <Button buttonStyle='btn--outline-in'>Log In</Button>}
       
       </div>
     </nav>
