@@ -9,6 +9,7 @@ import CardsPage from './components/Cards_Page/CardsPage.jsx';
 import Contacts from './components/Contacts_Page/Contacts.jsx';
 import CreateNewCard from './components/Cards_Page/CreateNewCard.jsx';
 import BackgrdImgGen from './components/Background_Image_Generator/BackgrdImgGen.jsx';
+import EmailGen from './components/Email_Generator_Page/EmailGen.jsx';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route path="/cards/newcard" element={< CreateNewCard />} />
           <Route path="/contacts" element={< Contacts />} />
           <Route path="/background-image-gen" element={< BackgrdImgGen />} />
+          <Route path="/email-gen" element={< EmailGen/>} />
         </Routes>
       </Router>
     </MyProvider>
