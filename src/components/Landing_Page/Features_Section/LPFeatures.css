@@ -1,0 +1,7 @@
+.features-section {
+  display: flex;
+}
+.img-and-text {
+  display: flex;
+  flex-direction: column;
+}
