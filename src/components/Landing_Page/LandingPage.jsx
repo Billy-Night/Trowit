@@ -8,8 +8,8 @@ const LandingPage = () => {
     <div>
       <TopNavbar />
       <HeroSection />
-      <ImpressYourPeers />
       <LPFeatures />
+      <ImpressYourPeers />
     </div>
   );
 };
