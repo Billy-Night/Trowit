@@ -1,5 +1,6 @@
 import './HeroSection.css';
 import heroImg from '../../../images/landing_page/hero-img@2xPS.png';
+import LPFeatures from '../Features_Section/LPFeatures';
 
 const HeroSection = () => {
   return (
@@ -26,26 +27,7 @@ const HeroSection = () => {
           />
         </div>
       </div>
-      <div className="features-section">
-        <div className="img-and-text">
-          <image />
-          <p className="description">
-            Easily create and share your Digital Business Card(s)
-          </p>
-        </div>
-        <div className="img-and-text">
-          <image />
-          <p className="description">
-            Manage your contacts and grow your network seamlessly
-          </p>
-        </div>
-        <div className="img-and-text">
-          <image />
-          <p className="description">
-            Impress your peers with the NFC powered TROWIT card
-          </p>
-        </div>
-      </div>
+      <LPFeatures />
     </div>
   );
 };
