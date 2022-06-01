@@ -4,6 +4,9 @@ import '../TopNavBar/TopNavbar.css';
 
 import { Button } from './Button';
 
+import { ButtonSign } from './ButtonSign';
+import { ButtonLogin } from './ButtonLogin';
+
 const TopNavbar = () => {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
@@ -79,8 +82,10 @@ const TopNavbar = () => {
         <ul></ul>
         <ul></ul>
 
-        {button && <Button buttonStyle="btn--outline">Sign Up</Button>}
-        {button && <Button buttonStyle="btn--outline-in">Log In</Button>}
+        {button && <ButtonSign buttonStyle="btn--outline">Sign Up</ButtonSign>}
+        {button && (
+          <ButtonLogin buttonStyle="btn--outline-in">Log In</ButtonLogin>
+        )}
       </div>
     </nav>
   );
