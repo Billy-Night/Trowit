@@ -1,10 +1,9 @@
 import './HeroSection.css';
 import heroImg from '../../../images/landing_page/hero-img@2xPS.png';
-import LPFeatures from '../Features_Section/LPFeatures';
 
 const HeroSection = () => {
   return (
-    <div id="hero-features-section">
+    <div id="hero-section">
       <div className="hero-section--flex">
         <div className="part1--flex-column">
           <h1 className="title">Bring your business card to the digital era</h1>
@@ -27,7 +26,6 @@ const HeroSection = () => {
           />
         </div>
       </div>
-      <LPFeatures />
     </div>
   );
 };

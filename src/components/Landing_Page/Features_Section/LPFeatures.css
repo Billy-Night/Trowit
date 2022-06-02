@@ -1,7 +1,17 @@
 .features-section {
-  display: flex;
+  display: block;
 }
 .img-and-text {
   display: flex;
   flex-direction: column;
+}
+
+.description {
+}
+.img-and-text {
+}
+
+.LPF-icon {
+}
+.business-cards {
 }
