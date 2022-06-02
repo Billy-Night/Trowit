@@ -11,7 +11,7 @@
   box-sizing: border-box;
 } */
 
-#hero-features-section {
+#hero-section {
   width: 100vw;
 }
 
@@ -105,15 +105,4 @@
   /* position: absolute; 
    z-index: 999;
   right: 0; */
-}
-
-/*todo ***** features sections ******/
-
-.features-section {
-}
-.img-and-text {
-}
-.description {
-}
-.img-and-text {
 }
