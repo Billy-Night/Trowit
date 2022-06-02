@@ -38,7 +38,7 @@
 
 .logo {
   margin-top: 0px;
-  margin-left: -150px;
+  margin-left: -4rem;
   width: 200px;
   height: auto;
   cursor: pointer;
@@ -146,7 +146,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    margin-left: 0.5%;
+    margin-left: 0.%;
     font-size: 200rem;
     transform: translate(45%, 20%);
   }
