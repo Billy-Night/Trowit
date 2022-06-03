@@ -1,11 +1,17 @@
 
-const ImpressYourPeers = () => {
+import business_card_img from '../../../images/landing_page/business_card_img.svg';
 
-    return (
-        <div>
-            <p>This is the impress your peers section</p>
-        </div>
-    );
+const ImpressYourPeers = () => {
+  return (
+    <div>
+      <img
+        //   src={profile_img_small@2x.}
+        class=""
+        alt=""
+      />
+      <p>This is the impress your peers section</p>
+    </div>
+  );
 };
 
 export default ImpressYourPeers;
