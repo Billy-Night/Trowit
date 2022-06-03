@@ -1,15 +1,28 @@
-
-import business_card_img from '../../../images/landing_page/business_card_img.svg';
+import './ImpressYourPeers.css';
+import impress_your_peers from '../../../images/landing_page/hand_with_mobile@2x.png';
 
 const ImpressYourPeers = () => {
   return (
-    <div>
+    <div id="impress_your_peers">
       <img
-        //   src={profile_img_small@2x.}
-        class=""
-        alt=""
+        src={impress_your_peers}
+        alt="profile preview"
+        className="IYP--main-img"
       />
-      <p>This is the impress your peers section</p>
+      <p className="IYP-text--p1">
+        Create your beautifully designed Digital Business Card with just a few
+        clicks, and easily share it through email, social media and more.
+      </p>
+      <p className="IYP-text--p2">
+        Anyone can receive your digital card, even if they don't have an account
+        on TROWIT!
+      </p>
+      <button className="IYP-learn-more--btn MC--hover-underline">
+        Learn More
+      </button>
+      <button className="IYP-order-trowit--btn">
+        Order your physical TROWIT Business Card
+      </button>
     </div>
   );
 };

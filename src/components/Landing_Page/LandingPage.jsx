@@ -8,7 +8,7 @@ import './LandingPage.css';
 
 const LandingPage = () => {
   return (
-    <div>
+    <div id="body">
       <TopNavbar />
       <HeroSection />
       <LPFeatures />

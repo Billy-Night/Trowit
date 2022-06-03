@@ -112,5 +112,6 @@
   grid-row: 1/13;
   width: auto;
   height: 100vh;
+
   clip-path: inset(0 8% 0 0);
 }
