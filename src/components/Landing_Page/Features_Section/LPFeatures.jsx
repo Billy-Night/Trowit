@@ -5,7 +5,7 @@ import business_card_img from '../../../images/landing_page/business_card_img.sv
 
 const LPFeatures = () => {
   return (
-    <div className="features-section">
+    <div className="features-section" id="section-features1">
       <div className="img-and-text">
         <img
           src={business_cards_img}
