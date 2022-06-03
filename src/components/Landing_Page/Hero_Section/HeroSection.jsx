@@ -1,7 +1,14 @@
 import './HeroSection.css';
 import heroImg from '../../../images/landing_page/hero-img@2x.png';
+import { HashLink as Link} from "react-router-hash-link";
 
 const HeroSection = () => {
+  const scrollWithOffset = (el) => {
+    const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+    const yOffset = -100; 
+    window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); 
+}
+
   return (
     <div id="hero-section">
       <div className="heading-primary-main">
@@ -16,7 +23,8 @@ const HeroSection = () => {
       {/* <C2A-btn />
             <Learn-more-btn /> */}
       <button className="C2A--btn">Order your TROWIT Card</button>
-      <button className="more--btn hover-underline">Learn More</button>
+      {/* <button className="more--btn hover-underline">Learn More</button> */}
+      <Link to='#section-features1' smooth className="more--btn hover-underline" scroll={el => scrollWithOffset(el)}>Learn More</Link>
 
       <img
         src={heroImg}
