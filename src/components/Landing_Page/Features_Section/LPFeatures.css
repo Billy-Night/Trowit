@@ -1,17 +1,37 @@
+:root {
+  --primary: #25dac5;
+  --subtitle: #1e0e62;
+  --primary-dark: #1eae9e;
+}
+
 .features-section {
-  display: block;
+  width: 95vw;
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  gap: 15vw;
 }
 .img-and-text {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 .description {
-}
-.img-and-text {
+  width: 10vw;
+  line-height: 1.5;
+  font-size: calc(0.6rem + 0.5vw);
+  color: var(--subtitle);
+  color: hsla(241, 47%, 15%, 0.5);
+  text-align: center;
 }
 
 .LPF-icon {
 }
 .business-cards {
+  width: 8vw;
+  height: auto;
 }
