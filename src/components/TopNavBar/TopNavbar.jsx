@@ -81,6 +81,7 @@ const TopNavbar = () => {
         </ul>
         <ul></ul>
         <ul></ul>
+      <br />
 
         {button && <ButtonSign buttonStyle="btn--outline">Sign Up</ButtonSign>}
         {button && (
