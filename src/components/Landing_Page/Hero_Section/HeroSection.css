@@ -66,14 +66,12 @@
 
 .more--btn {
   color: var(--subtitle);
-
   font-size: 2.1rem;
   font-weight: 500;
   width: 200px;
   height: 50px;
   background-color: transparent;
   border: none;
-
   grid-column: 2/4;
   grid-row: 6/7;
   justify-self: center;
