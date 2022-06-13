@@ -1,4 +1,5 @@
 import SideNavBar from "../Side_NavBar/SideNavBar.jsx";
+import React from "react";
 
 const CardsPage = () => {
 

@@ -2,18 +2,19 @@
 
 :root {
   --primary: #25dac5;
-  --subtitle: #1e0e62;
   --primary-dark: #1eae9e;
+  --subtitle: #1e0e62;
 }
 
 #hero-section {
-  width: 95vw;
+  /* width: inherit; */
   font-family: 'Raleway', sans-serif;
   font-style: normal;
   display: grid;
   grid-template-columns: repeat(14, 1fr);
   grid-template-rows: repeat(7, 1fr);
-  gap: 10px;
+  /* position: relative; */
+  /* gap: rem; */
 }
 
 .heading-primary-main {
@@ -21,11 +22,11 @@
   /* font-size: 7rem; */
   /* font-size: 4vw; */
   font-size: calc(3rem + 2vw);
-  letter-spacing: 1px;
+  letter-spacing: 0.1rem;
   font-weight: 700;
   line-height: 1.5;
 
-  grid-column: 2/7;
+  grid-column: 2/8;
   grid-row: 2/4;
   align-self: start;
   /* padding-right: 3rem; */
@@ -60,7 +61,7 @@
 .C2A--btn:hover {
   color: var(--primary);
   background: #fff;
-  border: 1px solid var(--primary);
+  border: 0.1rem solid var(--primary);
   transition: all 0.3s ease-out;
 }
 
@@ -68,8 +69,8 @@
   color: var(--subtitle);
   font-size: 2.1rem;
   font-weight: 500;
-  width: 200px;
-  height: 50px;
+  width: 20rem;
+  height: 5rem;
   background-color: transparent;
   border: none;
   grid-column: 2/4;
@@ -78,6 +79,7 @@
   align-self: end;
   margin-right: 3rem;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 /* hover effect more btn */
@@ -92,7 +94,7 @@
   position: absolute;
   width: 100%;
   transform: scaleX(0);
-  height: 2px;
+  height: 0.2rem;
   bottom: 0;
   left: 0;
   background-color: var(--primary-dark);
@@ -108,8 +110,123 @@
 .hero-img {
   grid-column: 9/14;
   grid-row: 1/13;
-  width: auto;
-  height: 100vh;
+  width: 130%;
+  height: auto;
 
   clip-path: inset(0 8% 0 0);
 }
+
+/* Tablet  */
+@media screen and (min-width: 888px) and (max-width: 1400px) {
+  * {
+    font-size: 40%;
+  }
+  .C2A--btn {
+    font-size: 3.5rem;
+    width: 50rem;
+    height: 10rem;
+  }
+
+  .more--btn {
+    font-size: 3rem;
+    padding-top: 3rem;
+  }
+
+  .hero-img {
+    max-width: 150%;
+    min-width: 40rem;
+  }
+}
+
+/* tablet    */
+@media screen and (min-width: 650px) and (max-width: 887px) {
+  * {
+    font-size: 50%;
+  }
+  .C2A--btn {
+    font-size: 3rem;
+    width: 40rem;
+    height: 8rem;
+    grid-row: 7/10;
+  }
+
+  #hero-section {
+    margin-left: 3rem;
+  }
+  .more--btn {
+    font-size: 2.8rem;
+    padding-top: 2rem;
+    grid-row: 7/8;
+  }
+
+  .heading-primary-main {
+    grid-column: 2/10;
+    padding-right: 1rem;
+    margin-top: -4rem;
+    font-size: 5rem;
+  }
+
+  .heading-primary-sub {
+    font-size: 2.3rem;
+    grid-column: 2/7;
+    padding: 0;
+    margin-top: 1rem;
+  }
+
+  .hero-img {
+    max-width: 150%;
+    min-width: 40rem;
+  }
+}
+
+/* mobile */
+
+@media screen and (min-width: 0px) and (max-width: 649px) {
+  * {
+    font-size: 10px;
+  }
+
+  #hero-section {
+    margin-inline: 2rem;
+    display: flex;
+    flex-direction: column;
+
+    gap: 3rem;
+    /* justify-content: center;
+    align-items: center; */
+  }
+
+  .heading-primary-main {
+    font-size: 4.5rem;
+    line-height: 5.5rem;
+    width: 80vw;
+  }
+
+  .heading-primary-sub {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    width: 80vw;
+  }
+
+  .C2A--btn {
+    font-size: 2.2rem;
+    width: 30rem;
+    height: 5.5rem;
+    margin: 0;
+    align-self: center;
+  }
+  .more--btn {
+    font-size: 2.3rem;
+    /* margin: 0; */
+    text-align: center;
+    /* background-color: #1eae9e; */
+    align-self: center;
+  }
+
+  .hero-img {
+    display: none;
+  }
+}
+/* 
+@media screen and (max-width: 600px) {
+} */
