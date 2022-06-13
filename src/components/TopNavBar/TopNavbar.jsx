@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../TopNavBar/TopNavbar.css';
-
 import { Button } from './Button';
-
 import { ButtonSign } from './ButtonSign';
 import { ButtonLogin } from './ButtonLogin';
 
@@ -47,8 +45,7 @@ const TopNavbar = () => {
             <Link
               to="/features"
               className="nav-links"
-              onClick={closeMobileMenu}
-            >
+              onClick={closeMobileMenu}>
               Features
             </Link>
           </li>
