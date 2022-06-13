@@ -13,7 +13,7 @@ const LPFeatures = () => {
       <div className="img-and-text">
         <img
           src={business_cards_img}
-          class="business-cards"
+          className="business-cards"
           alt="Business cards icon"
         />
         <p className="description">
