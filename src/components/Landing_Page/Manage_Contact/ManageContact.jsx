@@ -1,6 +1,10 @@
 import './ManageContact.css';
 import mergeContact from '../../../images/landing_page/merge_contact@2x.png';
 
+import ScrollWithOffset from '../../../utils/utils.jsx';
+
+import { HashLink as Link} from "react-router-hash-link";
+
 const ManageContact = () => {
   return (
     <div id="manage_contact">
@@ -13,9 +17,9 @@ const ManageContact = () => {
         Anyone can receive your digital card, even if they don't have an account
         on TROWIT!
       </p>
-      <button className="MC-learn-more--btn MC--hover-underline">
+      <Link to='#impress_your_peers' className="MC-learn-more--btn MC--hover-underline" scroll={el => ScrollWithOffset(el)}>
         Learn More
-      </button>
+      </Link>
       <button className="MC-order-trowit--btn">
         Order your physical TROWIT Business Card
       </button>

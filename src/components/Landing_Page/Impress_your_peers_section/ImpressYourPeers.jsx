@@ -17,6 +17,7 @@ const ImpressYourPeers = () => {
         Anyone can receive your digital card, even if they don't have an account
         on TROWIT!
       </p>
+      {/* Needs to be a link to expernal blog */}
       <button className="IYP-learn-more--btn MC--hover-underline">
         Learn More
       </button>
