@@ -55,7 +55,7 @@ const TopNavbar = () => {
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/order" className="nav-links" onClick={closeMobileMenu}>
+            <Link to="/order-card" className="nav-links" onClick={closeMobileMenu}>
               Order your TROWIT Card
             </Link>
           </li>

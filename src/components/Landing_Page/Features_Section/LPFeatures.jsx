@@ -3,10 +3,6 @@ import business_cards_img from '../../../images/landing_page/business_cards_img.
 import people_img from '../../../images/landing_page/people_img.svg';
 import business_card_img from '../../../images/landing_page/business_card_img.svg';
 
-import ScrollWithOffset from '../../../utils/utils.jsx';
-
-import { HashLink as Link} from "react-router-hash-link";
-
 
 const LPFeatures = () => {
   return (
@@ -17,7 +13,7 @@ const LPFeatures = () => {
       <div className="img-and-text">
         <img
           src={business_cards_img}
-          class="business-cards"
+          className="business-cards"
           alt="Business cards icon"
         />
         <p className="description">

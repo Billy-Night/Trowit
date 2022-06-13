@@ -1,11 +1,12 @@
 import './ManageContact.css';
 import mergeContact from '../../../images/landing_page/merge_contact@2x.png';
 
-import ScrollWithOffset from '../../../utils/utils.jsx';
+import { ScrollWithOffset } from '../../../utils/utils.jsx';
 
 import { HashLink as Link} from "react-router-hash-link";
 
-const ManageContact = () => {
+const ManageContact = (props) => {
+
   return (
     <div id="manage_contact">
       <img src={mergeContact} alt="profile preview" className="MC--main-img" />
@@ -20,7 +21,7 @@ const ManageContact = () => {
       <Link to='#impress_your_peers' className="MC-learn-more--btn MC--hover-underline" scroll={el => ScrollWithOffset(el)}>
         Learn More
       </Link>
-      <button className="MC-order-trowit--btn">
+      <button className="MC-order-trowit--btn" onClick={props.HandleClickOrdCard}>
         Order your physical TROWIT Business Card
       </button>
     </div>
