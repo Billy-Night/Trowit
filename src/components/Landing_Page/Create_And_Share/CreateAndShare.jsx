@@ -1,11 +1,13 @@
 import './CreateAndShare.css';
 import profilePreview from '../../../images/landing_page/create_and_share_img@2x.png';
 
-import ScrollWithOffset from '../../../utils/utils.jsx';
+import { ScrollWithOffset } from '../../../utils/utils.jsx';
 
 import { HashLink } from "react-router-hash-link";
 
-const CreateAndShare = () => {
+const CreateAndShare = (props) => {
+
+
   return (
     <div id="create_and_share">
       <img
@@ -24,7 +26,7 @@ const CreateAndShare = () => {
       <HashLink to='#impress_your_peers' smooth className="CAS-learn-more--btn CAS--hover-underline" scroll={el => ScrollWithOffset(el)}>
         Learn More
       </HashLink>
-      <button className="CAS-order-trowit--btn">
+      <button className="CAS-order-trowit--btn" onClick={props.HandleClickOrdCard}>
         Order your physical TROWIT Business Card
       </button>
     </div>
