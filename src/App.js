@@ -28,8 +28,8 @@ function App() {
           <Route path="/cards" element={<CardsPage />} />
           <Route path="/cards/newcard" element={<CreateNewCard />} />
           <Route path="/contacts" element={<Contacts />} />
-          <Route path="/background-image-gen" element={<BackgrdImgGen />} />
-          <Route path="/email-gen" element={<EmailGen />} />
+          <Route path="/backgrounds" element={<BackgrdImgGen />} />
+          <Route path="/email-signatures" element={<EmailGen />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/order-card" element={<OrderCard />} />
         </Routes>

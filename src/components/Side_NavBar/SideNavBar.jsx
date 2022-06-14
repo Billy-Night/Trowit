@@ -17,6 +17,12 @@ const SideNavBar = () => {
          <nav className="nav">
           <div>
           <div className='nav-list'  onClick={() => setShow(!show)}>
+
+          <Link to='/settings' className='nav-link' onClick={() => setShow(!show)}>
+              <img src="./Logo-Trowit-white.png" alt="" className="nav-link-icon" />
+              <span className="nav-link-name"></span>
+            </Link>
+
             <Link to='/cards' className='nav-link' onClick={() => setShow(!show)}>
               <img src="./id-card.png" alt="" className="nav-link-icon" />
               <span className="nav-link-name">Cards</span>
@@ -39,7 +45,7 @@ const SideNavBar = () => {
               <img src="./settings.png" alt="" className="nav-link-icon" />
               <span className="nav-link-name">Settings</span>
             </Link>
-            <Link to='/settings' className='nav-link'>
+            <Link to='/order-card' className='nav-link'>
               <img src="./card-yellow.png" alt="" className="nav-link-icon" />
               <span className="nav-link-name">Order Physical Card</span>
             </Link>
@@ -53,5 +59,5 @@ const SideNavBar = () => {
       </main>
     );
   };
-  
+
 export default SideNavBar
