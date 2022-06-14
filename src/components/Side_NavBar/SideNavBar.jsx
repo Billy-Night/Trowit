@@ -16,14 +16,14 @@ const SideNavBar = () => {
         <aside className={`sidebar ${show ? 'show' : null}`}>
          <nav className="nav">
           <div>
-          <div className='nav-list'  onClick={() => setShow(!show)}>
+          <div className='nav-list'  onMouseOver={() => setShow(!show)}>
 
-          <Link to='/settings' className='nav-link' onClick={() => setShow(!show)}>
+          <Link to='/settings' className='nav-link' onMouseOver={() => setShow(!show)}>
               <img src="./Logo-Trowit-white.png" alt="" className="nav-link-icon" />
               <span className="nav-link-name"></span>
             </Link>
 
-            <Link to='/cards' className='nav-link' onClick={() => setShow(!show)}>
+            <Link to='/cards' className='nav-link' onMouseOver={() => setShow(!show)}>
               <img src="./id-card.png" alt="" className="nav-link-icon" />
               <span className="nav-link-name">Cards</span>
             </Link>
