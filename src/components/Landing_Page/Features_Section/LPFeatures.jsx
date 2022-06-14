@@ -3,13 +3,17 @@ import business_cards_img from '../../../images/landing_page/business_cards_img.
 import people_img from '../../../images/landing_page/people_img.svg';
 import business_card_img from '../../../images/landing_page/business_card_img.svg';
 
+
 const LPFeatures = () => {
   return (
     <div className="features-section" id="section-features1">
+
+   
+
       <div className="img-and-text">
         <img
           src={business_cards_img}
-          class="business-cards"
+          className="business-cards"
           alt="Business cards icon"
         />
         <p className="description">

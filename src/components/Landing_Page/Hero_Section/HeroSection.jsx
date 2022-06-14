@@ -1,13 +1,13 @@
 import './HeroSection.css';
 import heroImg from '../../../images/landing_page/hero-img@2x.png';
-import { HashLink as Link } from 'react-router-hash-link';
+//The useNavigate hook returns a function that lets you navigate programmatically.
 
-const HeroSection = () => {
-  const scrollWithOffset = (el) => {
-    const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
-    const yOffset = -100;
-    window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' });
-  };
+
+import  { ScrollWithOffset } from '../../../utils/utils.jsx';
+import { HashLink } from "react-router-hash-link";
+
+
+const HeroSection = (props) => {
 
   return (
     <div id="hero-section">
@@ -22,16 +22,9 @@ const HeroSection = () => {
 
       {/* <C2A-btn />
             <Learn-more-btn /> */}
-      <button className="C2A--btn">Order your TROWIT Card</button>
+      <button className="C2A--btn" onClick={props.HandleClickOrdCard} > Order your TROWIT Card</button>
       {/* <button className="more--btn hover-underline">Learn More</button> */}
-      <Link
-        to="#section-features1"
-        smooth
-        className="more--btn hover-underline"
-        scroll={(el) => scrollWithOffset(el)}
-      >
-        Learn More
-      </Link>
+      <HashLink to='#section-features1' smooth className="more--btn hover-underline" scroll={el => ScrollWithOffset(el)}>Learn More</HashLink>
 
       <img
         src={heroImg}

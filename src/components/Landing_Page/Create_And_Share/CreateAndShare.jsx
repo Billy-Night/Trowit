@@ -1,7 +1,13 @@
 import './CreateAndShare.css';
 import profilePreview from '../../../images/landing_page/create_and_share_img@2x.png';
 
-const CreateAndShare = () => {
+import { ScrollWithOffset } from '../../../utils/utils.jsx';
+
+import { HashLink } from "react-router-hash-link";
+
+const CreateAndShare = (props) => {
+
+
   return (
     <div id="create_and_share">
       <img
@@ -17,10 +23,10 @@ const CreateAndShare = () => {
         Anyone can receive your digital card, even if they don't have an account
         on TROWIT!
       </p>
-      <button className="CAS-learn-more--btn CAS--hover-underline">
+      <HashLink to='#impress_your_peers' smooth className="CAS-learn-more--btn CAS--hover-underline" scroll={el => ScrollWithOffset(el)}>
         Learn More
-      </button>
-      <button className="CAS-order-trowit--btn">
+      </HashLink>
+      <button className="CAS-order-trowit--btn" onClick={props.HandleClickOrdCard}>
         Order your physical TROWIT Business Card
       </button>
     </div>

@@ -1,7 +1,7 @@
 import './ImpressYourPeers.css';
 import impress_your_peers from '../../../images/landing_page/hand_with_mobile@2x.png';
 
-const ImpressYourPeers = () => {
+const ImpressYourPeers = (props) => {
   return (
     <div id="impress_your_peers">
       <img
@@ -17,10 +17,11 @@ const ImpressYourPeers = () => {
         Anyone can receive your digital card, even if they don't have an account
         on TROWIT!
       </p>
+      {/* Needs to be a link to expernal blog */}
       <button className="IYP-learn-more--btn MC--hover-underline">
         Learn More
       </button>
-      <button className="IYP-order-trowit--btn">
+      <button className="IYP-order-trowit--btn" onClick={props.HandleClickOrdCard}>
         Order your physical TROWIT Business Card
       </button>
     </div>
