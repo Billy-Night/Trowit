@@ -54,6 +54,7 @@ main {
 .nav-link {
     display: grid;
     grid-template-columns: max-content max-content;
+    gap: 30px;
     column-gap: 2rem;
     padding: 0.7rem 0 0.7rem 1.2rem;
     position: relative;
@@ -124,7 +125,7 @@ main {
 
     .sidebar {
         left: 0;
-        padding: 1rem 0 0 0;
+        padding: rem 0 0 0;
     }
 
     .show {
