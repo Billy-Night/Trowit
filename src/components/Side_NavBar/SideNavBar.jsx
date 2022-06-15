@@ -13,7 +13,8 @@ const SideNavBar = () => {
         <aside className={`sidebar ${show ? 'show' : null}`}>
          <nav className="nav" onMouseOver={() => setShow(!show)}>
           <div>
-          <div className='nav-list' >
+
+          <div className='nav-list' onMouseOver={() => setShow(!show)}>
 
           <Link to='/settings' className='nav-link' onMouseOver={() => setShow(!show)}>
               <img src="./Logo-Trowit-white.png" alt="" className="nav-link-icon" />
