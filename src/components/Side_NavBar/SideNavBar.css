@@ -23,6 +23,7 @@ ul {
 
 main {
     position: relative;
+
     margin: var(--header-height) 0 0 0;
     padding: 0 1rem;
     font-size: 5rem;
@@ -32,6 +33,8 @@ main {
 
 .sidebar {
     position: fixed;
+    
+    gap: 10%;
     top: 0;
     left: -30%;
     padding-right: 9%;
@@ -42,7 +45,7 @@ main {
     transition: 0.5s;
     /* z-index: -1; */
     /* left: 0; */
-    /* padding: 1rem 0 0 0; */
+    padding: 1rem 0 0 0;
     /* padding-top: 30%; */
 }
 
@@ -59,7 +62,7 @@ main {
     grid-template-columns: max-content max-content;
     gap: 30px;
     column-gap: 2rem;
-    padding: 0.7rem 0 0.7rem 1.2rem;
+    padding: 0.7rem 0 2rem 1.2rem;
     position: relative;
     color: var(--white-color);
     transition: 0.5s;
@@ -68,6 +71,7 @@ main {
 }
 
 .nav-link-icon {
+    padding-top: 20%;
     font-size: 1.25rem;
     color: var(--white-color);
     cursor: pointer;
@@ -110,9 +114,9 @@ main {
 
 
 
-/* .space-toggle {
+.space-toggle {
     padding-left: calc(var(--nav-width) + 1rem);
-} */
+}
 
 @media screen and (min-width: 768px) {
     main {
