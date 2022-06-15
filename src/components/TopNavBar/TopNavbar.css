@@ -90,7 +90,8 @@
 
 .fa-bars {
   color: #25dac5;
-  font-size: 3.5rem;
+  margin-top: 25%;
+  font-size: 2.5rem;
 }
 
 .nav-links-mobile {
@@ -117,7 +118,8 @@
     height: 90vh;
     position: absolute;
     top: 80px;
-    margin-left: 0;
+    margin-left: -5%;
+    margin-right: -2%;
     /* left: -100%; */
     opacity: 1;
     transition: all 0.5s ease;
@@ -125,7 +127,6 @@
 
   .nav-menu.active {
     background: #25dac5;
-
     left: 0;
     opacity: 1;
     transition: all 0.5s ease;
@@ -150,7 +151,7 @@
     font-size: 50px;
     top: 0;
     left: 0;
-    margin-left: -15%;
+    margin-left: -25%;
     margin-top: 3%;
     font-size: 200rem;
     transform: translate(45%, 20%);
@@ -171,7 +172,7 @@
     font-size: 2rem;
   }
 
-  .nav-links-mobile {
+  .nav-links-mobile-in {
     display: block;
     text-align: center;
     margin: 2rem auto;
@@ -186,7 +187,7 @@
     transition: all 0.3s ease-out;
   }
 
-  .nav-links-mobile-in {
+  .nav-links-mobile {
     display: block;
     text-align: center;
     margin: 2rem auto;
