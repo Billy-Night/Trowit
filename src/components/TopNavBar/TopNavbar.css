@@ -112,7 +112,7 @@
   }
 
   .nav-menu {
-    display: flex;
+    display: none;
     flex-direction: column;
     width: 100%;
     height: 90vh;
@@ -131,11 +131,23 @@
     opacity: 1;
     transition: all 0.5s ease;
     z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    top: 80px;
+    margin-left: -5%;
+    margin-right: -2%;
+    /* left: -100%; */
+    opacity: 1;
+    transition: all 0.5s ease;
   }
 
   .nav-links {
     text-align: center;
-    padding: 2rem;
+    padding: 1rem;
     width: 100%;
     display: table;
   }
@@ -143,7 +155,7 @@
   .nav-links:hover {
     background-color: #25dac5;
     color: #ffffff;
-    border-radius: 0;
+
   }
 
   .logo {
@@ -182,9 +194,15 @@
     font-size: 1.5rem;
     background-color: transparent;
     color: #ffffff;
-    padding: 14px 20px;
+    padding: 14px;
     border: 1px solid #ffffff;
     transition: all 0.3s ease-out;
+  }
+
+  .nav-links-mobile-in:hover {
+    background-color: #ffff;
+    color: #25dac5;
+    border-radius: 0;
   }
 
   .nav-links-mobile {
@@ -203,8 +221,8 @@
   }
 
   .nav-links-mobile:hover {
-    background: #ffffff;
-    color: #25dac5;
+    background: #25dac5;
+    color: #fff;
     transition: 250ms;
   }
 }
