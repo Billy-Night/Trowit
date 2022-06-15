@@ -1,0 +1,12 @@
+   
+ .barStyling { 
+
+    width: 20rem;
+    background-color: "#F2F1F9";  
+    border-radius: 15px; 
+    padding: 0.5rem; 
+    margin-bottom: 2%;
+    margin-left: 2%;
+    font: 'Nunito';
+
+} 
