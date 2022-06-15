@@ -12,7 +12,7 @@ const CardsPage = () => {
     <div id="cardsPage">
       <div>
         <SideNavBar />
-        <p>This is the cards page</p>
+        <p className='title'> Cards</p>
       </div>
       {/* Added Dynamic cards from the fake data that can be found in the cardData.js file this will be replace by information from the Database */}
       <div className="CP_cards">

@@ -1,4 +1,5 @@
 #cardsPage {
+  margin-left: 5%;
 }
 
 .CP_cards {
@@ -8,8 +9,28 @@
 }
 
 .card {
+
   width: fit-content;
   height: auto;
   border: solid 5px #51dac4;
   border-radius: 20px;
+}
+
+
+.title {
+  margin-left: 2.5%;
+  padding-bottom: 2%;
+  font-size: 300%;
+
+  
+  font-family: 'Raleway';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 32px;
+
+/* identical to box height, or 160% */
+letter-spacing: 0.25px;
+
+color: #333333;
 }

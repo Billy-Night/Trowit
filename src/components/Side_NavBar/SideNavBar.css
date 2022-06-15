@@ -110,9 +110,9 @@ main {
 
 
 
-.space-toggle {
+/* .space-toggle {
     padding-left: calc(var(--nav-width) + 1rem);
-}
+} */
 
 @media screen and (min-width: 768px) {
     main {
