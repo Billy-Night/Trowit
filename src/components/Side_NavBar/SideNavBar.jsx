@@ -10,20 +10,17 @@ const SideNavBar = () => {
 
     return (
       <main className={show ? 'space-toggle' : null}>
-      
-  
-  
         <aside className={`sidebar ${show ? 'show' : null}`}>
-         <nav className="nav">
+         <nav className="nav" onMouseOver={() => setShow(!show)}>
           <div>
-          <div className='nav-list'  onMouseOver={() => setShow(!show)}>
+          <div className='nav-list' >
 
           <Link to='/settings' className='nav-link' onMouseOver={() => setShow(!show)}>
               <img src="./Logo-Trowit-white.png" alt="" className="nav-link-icon" />
               <span className="nav-link-name"></span>
             </Link>
 
-            <Link to='/cards' className='nav-link' onMouseOver={() => setShow(!show)}>
+            <Link to='/cards' className='nav-link' >
               <img src="./id-card.png" alt="" className="nav-link-icon" />
               <span className="nav-link-name">Cards</span>
             </Link>
