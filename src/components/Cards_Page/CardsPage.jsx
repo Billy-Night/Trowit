@@ -4,6 +4,7 @@ import SideNavBar from '../Side_NavBar/SideNavBar.jsx';
 // import cardPersonal from '../../images/cards_page/card_personal@2x.png';
 // import createCard from '../../images/cards_page/create_card@2x.png';
 import CardsData from '../../cardData';
+import SearchCard from './SearchCard';
 
 import Card from '../Organisims/Card';
 
@@ -13,6 +14,9 @@ const CardsPage = () => {
       <div>
         <SideNavBar />
         <p className='title'> Cards</p>
+        <SearchCard />
+        <br />
+        <br />
       </div>
       {/* Added Dynamic cards from the fake data that can be found in the cardData.js file this will be replace by information from the Database */}
       <div className="CP_cards">
