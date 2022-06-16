@@ -23,15 +23,6 @@ const CardsPage = () => {
         {CardsData.map((card, index) => (
           <Card key={index} src={card.image} alt={card.imgAlt} />
         ))}
-        {/* <div className="card">
-          <img src={cardWork} alt="card for work" />
-        </div>
-        <div className="card">
-          <img src={cardPersonal} alt="card for personal stuff" />
-        </div>
-        <div className="card">
-          <img src={createCard} alt="create a card" />
-        </div> */}
       </div>
     </div>
   );

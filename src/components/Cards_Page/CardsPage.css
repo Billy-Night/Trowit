@@ -15,7 +15,9 @@
   border: solid 5px #51dac4;
   border-radius: 20px;
 }
-
+.card img {
+  height: 200px;
+}
 
 .title {
   margin-left: 2.5%;
