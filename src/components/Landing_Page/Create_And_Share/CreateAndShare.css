@@ -16,39 +16,42 @@
 .CAS--main-img {
   clip-path: inset(0 0 0 25%);
   width: 35vw;
+  min-width: 60rem;
 
-  margin-left: -16rem;
+  margin-left: -20rem;
   grid-column: 1/5;
   grid-row: 1/4;
 }
 
 .CAS-text--p1,
 .CAS-text--p2 {
-  font-size: calc(1.8rem + 0.5vw);
+  font-size: calc(1.3rem + 0.5vw);
   color: var(--text);
-  line-height: 1.7;
+  line-height: 1.5;
+  font-weight: 300;
 }
 
 .CAS-text--p1 {
   grid-column: 5/10;
   grid-row: 1/2;
-  align-self: flex-end;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  /* align-self: flex-end; */
 }
 
 .CAS-text--p2 {
   grid-column: 5/11;
-  grid-row: 2/3;
-  align-self: flex-start;
+  grid-row: 2/4;
+
   margin-right: 3rem;
 }
 
 .CAS-learn-more--btn {
   color: var(--subtitle);
 
-  font-size: 1.4rem;
+  font-size: 2rem;
   font-weight: 500;
-  width: 100px;
-  height: 50px;
+  height: 5rem;
   background-color: transparent;
   border: none;
   width: fit-content;
@@ -57,8 +60,9 @@
 
   grid-column: 5/7;
   grid-row: 2/3;
-  justify-self: start;
+  /* justify-self: start; */
   align-self: flex-end;
+  padding-top: 2rem;
 }
 
 .CAS--hover-underline {
@@ -72,7 +76,7 @@
   width: 100%;
   transform: scaleX(0);
   height: 2px;
-  top: 65%;
+  top: 100%;
   left: 0;
   background-color: var(--primary-dark);
   transform-origin: bottom right;
@@ -86,18 +90,19 @@
 
 .CAS-order-trowit--btn {
   color: var(--secondary-color);
-  font-size: 1.3rem;
+  font-size: 2rem;
   background: #fff;
   border: 2px solid var(--primary);
   border-radius: 10px;
   transition: all 0.3s ease-out;
-  height: 3.5rem;
-  margin-top: 1rem;
+  height: fit-content;
   width: fit-content;
-  padding: 1rem;
+  margin-bottom: -1rem;
+  padding: 0.5rem 2rem;
 
-  grid-column: 6/9;
+  grid-column: 6/11;
   grid-row: 2/3;
+  justify-self: center;
   align-self: flex-end;
 }
 
