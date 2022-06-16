@@ -3,13 +3,9 @@ import business_cards_img from '../../../images/landing_page/business_cards_img.
 import people_img from '../../../images/landing_page/people_img.svg';
 import business_card_img from '../../../images/landing_page/business_card_img.svg';
 
-
 const LPFeatures = () => {
   return (
     <div className="features-section" id="section-features1">
-
-   
-
       <div className="img-and-text">
         <img
           src={business_cards_img}
@@ -23,7 +19,7 @@ const LPFeatures = () => {
       <div className="img-and-text">
         <img
           src={people_img}
-          class="business-cards"
+          className="business-cards"
           alt="People connecting icon"
         />
         <p className="description">
@@ -34,7 +30,7 @@ const LPFeatures = () => {
         <img
           className="LPF-icon"
           src={business_card_img}
-          class="business-cards"
+          className="business-cards"
           alt="Business card icon"
         />
         <p className="description">

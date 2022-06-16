@@ -10,18 +10,21 @@ const ImpressYourPeers = (props) => {
         className="IYP--main-img"
       />
       <p className="IYP-text--p1">
-        Create your beautifully designed Digital Business Card with just a few
-        clicks, and easily share it through email, social media and more.
+        Impress your peers with a slick business card, and share your
+        information with just a tap on their phone. That’s the magic of NFC!
       </p>
       <p className="IYP-text--p2">
-        Anyone can receive your digital card, even if they don't have an account
-        on TROWIT!
+        TROWIT is the last Business Card you’ll ever need! Not only they are
+        better for the environment, but they also make a great first impression!
       </p>
       {/* Needs to be a link to expernal blog */}
       <button className="IYP-learn-more--btn MC--hover-underline">
         Learn More
       </button>
-      <button className="IYP-order-trowit--btn" onClick={props.HandleClickOrdCard}>
+      <button
+        className="IYP-order-trowit--btn"
+        onClick={props.HandleClickOrdCard}
+      >
         Order your physical TROWIT Business Card
       </button>
     </div>
