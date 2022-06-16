@@ -3,15 +3,27 @@ import "./SearchCard.css"
 
 const SearchCard = ({keyword,setKeyword}) => {
 
-    // const BarStyling = {width:"20rem",background:"#F2F1F9", border:"none", padding:"0.5rem", margin: "2%", font: 'Nunito'};
+    
     return (
+      <div>
+         {/* <span class="input-group-addon fa fa-search" id="basic-addon2"></span> */}
+      
       <input 
-       className="barStyling"
+       className="barStyling"  
        key="random1"
        value={keyword}
        placeholder={"Search Card"}
+      //  aria-describedby="basic-addon2"
        onChange={(e) => setKeyword(e.target.value)}
+       
+       
       />
+      
+      <button class="fa fa-search">     </button>
+   
+
+
+      </div>
     );  
 }
 

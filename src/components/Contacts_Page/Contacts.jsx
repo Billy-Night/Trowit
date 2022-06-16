@@ -8,6 +8,8 @@ const Contact = () => {
         <div className='contact'>
             <SideNavBar />
             <p>This is the contacts page</p>
+            
+
             <ContactSortingOrder />
         </div>
     );
