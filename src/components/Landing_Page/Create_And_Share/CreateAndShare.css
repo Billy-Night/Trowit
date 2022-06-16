@@ -6,13 +6,11 @@
 
 #create_and_share {
   width: 95vw;
-  font-family: 'Raleway', sans-serif;
-  font-style: normal;
   display: grid;
   grid-template-columns: repeat(14, 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap: 1.5rem;
-  margin-top: 5rem;
+  margin-top: 15rem;
 }
 
 .CAS--main-img {
@@ -26,7 +24,7 @@
 
 .CAS-text--p1,
 .CAS-text--p2 {
-  font-size: calc(1rem + 0.5vw);
+  font-size: calc(1.8rem + 0.5vw);
   color: var(--text);
   line-height: 1.7;
 }
@@ -110,4 +108,16 @@
 
   /* border: 2px dotted #fff; */
   transition: all 0.3s ease-out;
+}
+
+@media screen and (min-width: 888px) and (max-width: 1400px) {
+  .CAS-text--p1,
+  .CAS-text--p2 {
+    font-size: 3rem;
+    grid-column: 5/11;
+  }
+}
+@media screen and (min-width: 650px) and (max-width: 887px) {
+}
+@media screen and (min-width: 0px) and (max-width: 649px) {
 }
