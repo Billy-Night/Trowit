@@ -54,12 +54,19 @@
 
 /* Tablet  */
 @media screen and (min-width: 888px) and (max-width: 1400px) {
-  .features-section {
+  .description {
+    font-size: 3rem;
   }
 }
 
 /* tablet    */
 @media screen and (min-width: 650px) and (max-width: 887px) {
+  .img-and-text {
+  }
+
+  .description {
+    font-size: 2.5rem;
+  }
 }
 
 /* mobile */
