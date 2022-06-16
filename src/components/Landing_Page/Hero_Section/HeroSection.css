@@ -13,7 +13,7 @@
   display: grid;
   grid-template-columns: repeat(14, 1fr);
   grid-template-rows: repeat(7, 1fr);
-  margin-bottom: 3rem;
+  margin-bottom: 10rem;
   /* position: relative; */
   /* gap: rem; */
 }
