@@ -4,9 +4,20 @@
     width: 20rem;
     background-color: "#F2F1F9";  
     border-radius: 15px; 
+    border-color: lightgray;
     padding: 0.5rem; 
     margin-bottom: 2%;
     margin-left: 2%;
     font: 'Nunito';
 
 } 
+
+.input-group .fa-search{
+    display: table-cell;
+  }
+
+.fa-search {
+    background-color: transparent;
+    border-color: transparent;
+    cursor: pointer;
+}
