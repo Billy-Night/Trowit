@@ -13,7 +13,7 @@ const LPFeatures = () => {
           alt="Business cards icon"
         />
         <p className="description">
-          Easily create and share your Digital Business Card(s)
+          Easily create & share your Digital Business Card(s)
         </p>
       </div>
       <div className="img-and-text">
@@ -23,7 +23,7 @@ const LPFeatures = () => {
           alt="People connecting icon"
         />
         <p className="description">
-          Manage your contacts and grow your network seamlessly
+          Manage your contacts & grow your network seamlessly
         </p>
       </div>
       <div className="img-and-text">
