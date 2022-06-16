@@ -1,0 +1,64 @@
+.HS__scroll-arrow {
+}
+
+.arrows {
+  width: 6rem;
+  height: 5rem;
+  position: absolute;
+  left: 50%;
+  margin-left: -30px;
+  bottom: 5rem;
+}
+
+.arrows path {
+  stroke: var(--primary);
+  fill: transparent;
+  stroke-width: 0.7rem;
+  animation: arrow 1s infinite;
+  -webkit-animation: arrow 2.5s infinite;
+}
+
+@keyframes arrow {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/ {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.arrows path.a1 {
+  animation-delay: -1s;
+  -webkit-animation-delay: -1s; /* Safari 和 Chrome */
+}
+
+.arrows path.a2 {
+  animation-delay: -0.5s;
+  -webkit-animation-delay: -0.5s; /* Safari 和 Chrome */
+}
+
+.arrows path.a3 {
+  animation-delay: 0s;
+  -webkit-animation-delay: 0s; /* Safari 和 Chrome */
+}
