@@ -10,7 +10,7 @@
     margin-left: 2%;
     font: 'Nunito';
 
-    /* position: absolute;
+/* position: absolute;
 width: 313px;
 height: 42px;
 left: 115px;
@@ -31,3 +31,32 @@ border-radius: 32px; */
     border-color: transparent;
     cursor: pointer;
 }
+
+.box{
+	width: 500px;
+	height: 50px;
+	background-color: white;
+	border-radius: 30px;
+	display: flex;
+	align-items: center;
+	padding: 20px;
+
+}
+
+/* .box > i {
+
+	font-size: 20px;
+	color: #777;
+
+}
+
+.box > input{
+
+	flex: 1;
+	height: 40px;
+	border: none;
+	outline: none;
+	font-size: 18px;
+	padding-left: 10px;
+
+} */
