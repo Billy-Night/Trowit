@@ -7,7 +7,7 @@ const OrderCard = () => {
         <div className='order-card'>
             <p>
                 <SideNavBar />
-                This is the order card page where the user selects their purchase option
+                <p className='title'> Order physical card</p>
             </p>
         </div>
     );

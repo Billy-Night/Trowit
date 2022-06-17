@@ -8,7 +8,7 @@ const Settings = () => {
         <div className="settings">
 
             <SideNavBar />
-            <p>This is the settings component</p>
+            <p className='title'> Settings</p>
             <EditProfile />
         </div>
     );

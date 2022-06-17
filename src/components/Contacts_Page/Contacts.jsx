@@ -7,7 +7,7 @@ const Contact = () => {
     return (
         <div className='contact'>
             <SideNavBar />
-            <p>This is the contacts page</p>
+            <p className='title'> Contacts</p>
             
 
             <ContactSortingOrder />
