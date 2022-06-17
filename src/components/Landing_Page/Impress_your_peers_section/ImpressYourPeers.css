@@ -111,3 +111,171 @@
   /* border: 2px dotted #fff; */
   transition: all 0.3s ease-out;
 }
+@media screen and (min-width: 1135px) and (max-width: 1401px) {
+  .IYP-text--p1,
+  .IYP-text--p2 {
+    font-size: 3.5rem;
+    grid-column: 5/13;
+  }
+
+  .IYP-text--p2 {
+    /* margin-bottom: -3rem; */
+  }
+
+  .IYP-learn-more--btn,
+  .IYP-order-trowit--btn {
+    align-self: center;
+    margin-top: 15rem;
+    font-size: 3rem;
+    justify-self: center;
+    margin: 0;
+  }
+  .IYP-order-trowit--btn {
+    grid-column: 5/11;
+    grid-row: 3/4;
+    justify-self: center;
+    align-self: flex-start;
+    height: fit-content;
+  }
+
+  .IYP-learn-more--btn {
+    /* margin-left: -3rem; */
+    grid-column: 11/13;
+    margin-left: -3rem;
+    grid-row: 3/4;
+    justify-self: center;
+    align-self: flex-start;
+    height: fit-content;
+    margin-top: 2rem;
+  }
+
+  .IYP--main-img {
+    margin-left: -20rem;
+    min-width: 80rem;
+    /* margin-right: 10rem; */
+  }
+}
+
+@media screen and (min-width: 891px) and (max-width: 1135px) {
+  #impress_your_peers {
+    gap: 4rem;
+  }
+
+  .IYP-text--p1,
+  .IYP-text--p2 {
+    font-size: 3rem;
+    grid-column: 5/13;
+  }
+
+  .IYP-order-trowit--btn {
+    margin-left: 10rem;
+    grid-column: 1/7;
+    font-size: 2.8rem;
+    grid-row: 3/4;
+    justify-self: flex-start;
+    align-self: flex-start;
+    height: fit-content;
+    margin: 3rem 2rem;
+  }
+
+  .IYP-learn-more--btn {
+    /* margin-left: -3rem; */
+    grid-column: 7/9;
+    font-size: 3rem;
+    /* margin-left: -3rem; */
+    margin-top: 3rem;
+    grid-row: 3/4;
+    justify-self: flex-start;
+    align-self: center;
+    height: fit-content;
+    margin: 0;
+    margin-left: -4rem;
+  }
+
+  .IYP--main-img {
+    /* margin-left: -20rem; */
+    min-width: 60rem;
+    /* margin-right: 10rem; */
+  }
+}
+
+@media screen and (min-width: 648px) and (max-width: 891px) {
+  #impress_your_peers {
+  }
+
+  .IYP-text--p1,
+  .IYP-text--p2 {
+    font-size: 2.5rem;
+    grid-column: 5/15;
+  }
+
+  .IYP-order-trowit--btn {
+    /* margin-left: 10rem; */
+    grid-column: 1/8;
+    font-size: 2.5rem;
+    grid-row: 3/4;
+    justify-self: flex-start;
+    align-self: center;
+    height: fit-content;
+  }
+
+  .IYP-learn-more--btn {
+    /* margin-left: -3rem; */
+    grid-column: 8/12;
+    font-size: 2.8rem;
+    margin: 0;
+    margin-top: 3rem;
+    grid-row: 3/4;
+    justify-self: flex-start;
+    align-self: center;
+    height: fit-content;
+  }
+
+  .IYP--main-img {
+    min-width: 50rem;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 649px) {
+  #impress_your_peers {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+  }
+
+  .IYP--main-img {
+    display: none;
+  }
+
+  .IYP-text--p1,
+  .IYP-text--p2 {
+    font-size: 2.2rem;
+    width: 90vw;
+    text-align: center;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .IYP-text--p2 {
+    margin-top: 3rem;
+  }
+
+  .IYP-learn-more--btn {
+    margin-inline: auto;
+    padding: 1rem;
+    font-size: 2rem;
+  }
+  .IYP-order-trowit--btn {
+    margin-inline: auto;
+    padding: 1rem;
+    font-size: 2rem;
+    height: fit-content;
+    width: fit-content;
+    padding-inline: 3rem;
+  }
+}

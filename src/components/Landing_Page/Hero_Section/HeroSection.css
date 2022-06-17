@@ -13,6 +13,8 @@
   display: grid;
   grid-template-columns: repeat(14, 1fr);
   grid-template-rows: repeat(7, 1fr);
+  margin-bottom: 10rem;
+
   /* position: relative; */
   /* gap: rem; */
 }
@@ -121,6 +123,11 @@
   * {
     font-size: 40%;
   }
+
+  #hero-section {
+    margin-bottom: 3rem;
+  }
+
   .C2A--btn {
     font-size: 3.5rem;
     width: 50rem;
@@ -143,6 +150,7 @@
   * {
     font-size: 50%;
   }
+
   .C2A--btn {
     font-size: 3rem;
     width: 40rem;
@@ -190,6 +198,7 @@
     margin-inline: 2rem;
     display: flex;
     flex-direction: column;
+    margin-bottom: 3rem;
 
     gap: 3rem;
     /* justify-content: center;
