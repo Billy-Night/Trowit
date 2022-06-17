@@ -21,6 +21,12 @@ const CreateAndShare = (props) => {
         Anyone can receive your digital card, even if they don’t have an account
         on TROWIT!
       </p>
+      <button
+        className="CAS-order-trowit--btn"
+        onClick={props.HandleClickOrdCard}
+      >
+        Order your physical TROWIT Business Card
+      </button>
       <HashLink
         to="#impress_your_peers"
         smooth
@@ -29,12 +35,6 @@ const CreateAndShare = (props) => {
       >
         Learn More
       </HashLink>
-      <button
-        className="CAS-order-trowit--btn"
-        onClick={props.HandleClickOrdCard}
-      >
-        Order your physical TROWIT Business Card
-      </button>
     </div>
   );
 };
