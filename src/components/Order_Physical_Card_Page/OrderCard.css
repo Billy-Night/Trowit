@@ -3,27 +3,29 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: hsla(0, 0%, 20%, 1);
 }
 
 .OC__main-container {
   height: 100vh;
+  width: 90vw;
+  float: right;
   display: flex;
   flex-direction: column;
+  gap: 3rem;
 }
 .OC__sub-container1__header-and-menu {
   position: relative;
-  width: 100vw;
-  min-height: 20vh;
+  min-height: 10rem;
   /* background-color: blue; */
 }
 
 .OC__sub-container1__header {
   font-weight: 700;
   font-size: 2.5rem;
-  margin-left: 10rem;
-  height: 40%;
+  height: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
 }
 .OC__sub-container1__drop-menu {
   background-image: url('../../images/Order_physical_card_page/drop_down_menu@2x.png');
@@ -42,15 +44,42 @@
   background-color: navajowhite;
 }
 .OC__sub-container2__sub-title {
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  margin-bottom: 3rem;
 }
 .OC__sub-container2__preview-cards {
+  display: flex;
+  gap: 3rem;
 }
 .OC__sub-container2__single-card {
+  background: url('../../images/Order_physical_card_page/card_preview@2x.png'),
+    white;
+  border: 0.4rem solid var(--primary);
+  border-radius: 2.5rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 30rem;
+  min-width: 25rem;
 }
+
+.OC__sub-container2__preview-card-category {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 100%;
+}
+
 .OC__sub-container3__price-table-and-buttons {
   background-color: fuchsia;
 }
 .OC__sub-container3__price-frame {
+  width: 24rem;
+  height: 30rem;
+  background-color: #fff;
+  border-radius: 0.7rem;
+  border: 0.3rem solid var(--primary);
 }
 .OC__sub-container3___header {
 }

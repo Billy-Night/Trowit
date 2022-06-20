@@ -15,7 +15,14 @@ const OrderCard = () => {
         <div className="OC__sub-container2__sub-title-and-preview-cards">
           <h2 className="OC__sub-container2__sub-title">Select your card:</h2>
           <div className="OC__sub-container2__preview-cards">
-            <div className="OC__sub-container2__single-card"></div>
+            <div className="OC__sub-container2__single-card">
+              {/* <p className="OC__sub-container2__preview-card-category">Work</p> */}
+            </div>
+            <div className="OC__sub-container2__single-card">
+              {/* <p className="OC__sub-container2__preview-card-category">
+                Personal
+              </p> */}
+            </div>
           </div>
         </div>
         {/* third part in the page  */}
