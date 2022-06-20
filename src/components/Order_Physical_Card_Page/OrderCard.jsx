@@ -1,5 +1,7 @@
 import './OrderCard.css';
 import SideNavBar from '../Side_NavBar/SideNavBar';
+import OderCardTemplate from './OderCardTemplate';
+import OderCardBusinessTemplate from './OderCardBusinessTemplate';
 
 const OrderCard = () => {
   return (
@@ -26,34 +28,43 @@ const OrderCard = () => {
           </div>
         </div>
         {/* third part in the page  */}
-        <div className="OC__sub-container3__price-table-and-buttons">
-          <div className="OC__sub-container3__price-frame">
-            <h3 className="OC__sub-container3___header">Basic</h3>
-            <p className="OC__sub-container3__price-frame__cta">
-              Choose from our 5 business card designs!
-            </p>
-            <ul className="OC__sub-container3__price-frame__benefits">
-              <li className="OC__sub-container3__price-frame__single-benefit">
-                ✔ NFC connectivity
-              </li>
-              <li className="OC__sub-container3__price-frame__single-benefit">
-                ✔ QR code on the card
-              </li>
-              <li className="OC__sub-container3__price-frame__single-benefit">
-                ✔ Lasting material
-              </li>
-              <li className="OC__sub-container3__price-frame__single-benefit">
-                - TROWIT watermark
-              </li>
-            </ul>
-          </div>
-          {/* price & fees part in the page  */}
-          <div className="OC__sub-container3__price-and-fees">
-            <h4 className="OC__sub-container3__price">€10</h4>
-            <p className="OC__sub-container3__fee">+ shipping fees</p>
-          </div>
-          {/* btn part in the page  */}
-          <button className="OC__sub-container3__button">Order</button>
+        <div className="OC__sub-container3__price-cards">
+          <OderCardTemplate
+            header="Basic"
+            cta="Choose from our 5 business card designs!"
+            benefit1="✔ NFC connectivity"
+            benefit2="✔ Lasting material"
+            benefit3="- TROWIT watermark"
+            price="€10"
+            fee="shipping fees"
+            button="order"
+          />
+          <OderCardTemplate
+            header="Customized"
+            cta="Upload your own design and customize your card!"
+            benefit1="✔ NFC connectivity"
+            benefit2="✔ Lasting material"
+            benefit3="✔ No watermark"
+            price="€20"
+            fee="shipping fees"
+            button="order"
+          />
+          <OderCardTemplate
+            header="Premium"
+            cta="Send us the details, and we’ll design your card!"
+            benefit1="✔ NFC connectivity"
+            benefit2="✔ Lasting material"
+            benefit3="✔ No watermark"
+            price="€30"
+            fee="shipping fees"
+            button="order"
+          />
+          <OderCardBusinessTemplate
+            header="Business"
+            cta1="Do you want to order TROWIT Business Cards for the whole team?"
+            cta2="Get in touch for a personalized quote!"
+            button="Contact Sales"
+          />
         </div>
       </div>
     </div>
