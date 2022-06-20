@@ -1,4 +1,70 @@
+#order-card {
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-.order-card {
-    color: blueviolet;
+.OC__main-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.OC__sub-container1__header-and-menu {
+  position: relative;
+  width: 100vw;
+  min-height: 20vh;
+  /* background-color: blue; */
+}
+
+.OC__sub-container1__header {
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-left: 10rem;
+  height: 40%;
+  display: flex;
+  align-items: center;
+}
+.OC__sub-container1__drop-menu {
+  background-image: url('../../images/Order_physical_card_page/drop_down_menu@2x.png');
+  min-width: 30rem;
+  width: 40rem;
+
+  height: 10rem;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: -3rem;
+  right: -3rem;
+}
+.OC__sub-container2__sub-title-and-preview-cards {
+  background-color: navajowhite;
+}
+.OC__sub-container2__sub-title {
+}
+.OC__sub-container2__preview-cards {
+}
+.OC__sub-container2__single-card {
+}
+.OC__sub-container3__price-table-and-buttons {
+  background-color: fuchsia;
+}
+.OC__sub-container3__price-frame {
+}
+.OC__sub-container3___header {
+}
+.OC__sub-container3__price-frame__cta {
+}
+.OC__sub-container3__price-frame__benefits {
+}
+
+.OC__sub-container3__price-frame__single-benefit {
+}
+.OC__sub-container4__price-and-fees {
+  background-color: greenyellow;
+}
+.OC__sub-container4__price {
+}
+.OC__sub-container4__fee {
 }
