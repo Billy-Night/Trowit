@@ -21,7 +21,7 @@ const CardsPage = () => {
       {/* Added Dynamic cards from the fake data that can be found in the cardData.js file this will be replace by information from the Database */}
       <div className="CP_cards">
         {CardsData.map((card, index) => (
-          <Card key={index} src={card.image} alt={card.imgAlt} address={card.address} />
+          <Card key={index} src={card.image} alt={card.imgAlt} id={card.id} address={card.address} />
         ))}
       </div>
     </div>
