@@ -22,7 +22,7 @@ const CardsData = [
 
     {
     
-        "id": 2,
+        "id": 3,
         "name": "Add Card",
         "image": createCard,
         "imgAlt": "Add card image",

@@ -6,7 +6,7 @@ import SideNavBar from '../Side_NavBar/SideNavBar.jsx';
 import CardsData from '../../cardData';
 import SearchCard from './SearchCard';
 
-import Card from '../Organisims/Card';
+import Card from './Card.jsx';
 
 const CardsPage = () => {
   return (
@@ -21,7 +21,7 @@ const CardsPage = () => {
       {/* Added Dynamic cards from the fake data that can be found in the cardData.js file this will be replace by information from the Database */}
       <div className="CP_cards">
         {CardsData.map((card, index) => (
-          <Card key={index} src={card.image} alt={card.imgAlt} address={card.address} />
+          <Card key={index} src={card.image} alt={card.imgAlt} id={card.id} address={card.address} />
         ))}
       </div>
     </div>
