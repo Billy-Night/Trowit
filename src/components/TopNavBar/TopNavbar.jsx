@@ -58,7 +58,7 @@ const TopNavbar = () => {
               Order your TROWIT Card
             </Link>
           </li>
-
+          
           <Link
             to="/log-in"
             className="nav-links-mobile-in"
@@ -77,7 +77,9 @@ const TopNavbar = () => {
         </ul>
         <ul></ul>
         <ul></ul>
-      <br />
+        <br />
+        <br />
+        
 
         {button && <ButtonSign buttonStyle="btn--outline">Sign Up</ButtonSign>}
         {button && (

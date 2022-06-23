@@ -3,7 +3,7 @@ const EditProfile = () => {
 
     return (
         <div className="edit-profile">
-            <p>This is the edit profile component</p>
+            <p></p>
         </div>
     );
 };

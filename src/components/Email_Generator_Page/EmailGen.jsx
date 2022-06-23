@@ -6,7 +6,7 @@ const EmailGen = () => {
     return (
         <div className="email-gen">
             <SideNavBar />
-            <p>This is the email generator page</p>
+            <p className='title'> Email Signature Generator</p>
         </div>
     );
 };

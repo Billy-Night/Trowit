@@ -4,7 +4,7 @@ const ContactSortingOrder = () => {
 
     return (
         <div className="sorting-order">
-            <p>This is the sorting order component</p>
+            <p></p>
         </div>
     );
 };

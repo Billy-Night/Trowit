@@ -4,6 +4,7 @@ import OderCardTemplate from './OderCardTemplate';
 import OderCardBusinessTemplate from './OderCardBusinessTemplate';
 
 const OrderCard = () => {
+
   return (
     <div id="order-card">
       <SideNavBar />
@@ -65,6 +66,7 @@ const OrderCard = () => {
             cta2="Get in touch for a personalized quote!"
             button="Contact Sales"
           />
+
         </div>
       </div>
     </div>
