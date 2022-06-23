@@ -6,7 +6,7 @@ import SideNavBar from '../Side_NavBar/SideNavBar.jsx';
 import CardsData from '../../cardData';
 import SearchCard from './SearchCard';
 
-import Card from '../Organisims/Card';
+import Card from './Card.jsx';
 
 const CardsPage = () => {
   return (
