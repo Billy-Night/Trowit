@@ -1,20 +1,187 @@
-
-.order-card {
-    color: blueviolet;
+#order-card {
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: hsla(0, 0%, 20%, 1);
 }
 
-.title {
-    margin-left: 7%;
-    padding-bottom: 2%;
-    font-size: 300%;
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 32px;
-  
-  /* identical to box height, or 160% */
-  letter-spacing: 0.25px;
-  
-  color: #333333;
-  }
+.OC__main-container {
+  height: 100vh;
+  width: 90vw;
+  float: right;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-around; */
+  gap: 3rem;
+}
+.OC__sub-container1__header-and-menu {
+  position: relative;
+  min-height: fit-content;
+  /* background-color: blue; */
+}
+
+.OC__sub-container1__header {
+  font-weight: 700;
+  font-size: 3rem;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+.OC__sub-container1__drop-menu {
+  background-image: url('../../images/Order_physical_card_page/drop_down_menu@2x.png');
+  min-width: 30rem;
+  width: 40rem;
+
+  height: 10rem;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: -3rem;
+  right: -3rem;
+}
+.OC__sub-container2__sub-title-and-preview-cards {
+  /* background-color: navajowhite; */
+}
+.OC__sub-container2__sub-title {
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+  margin-bottom: 1.5rem;
+}
+.OC__sub-container2__preview-cards {
+  display: flex;
+  gap: 3rem;
+}
+.OC__sub-container2__single-card {
+  background: url('../../images/Order_physical_card_page/card_preview@2x.png'),
+    white;
+  border: 0.4rem solid var(--primary);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 1.8rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 15rem;
+  min-width: 12rem;
+}
+
+.OC__sub-container2__preview-card-category {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 100%;
+}
+
+.OC__sub-container3__price-table-and-buttons {
+  width: fit-content;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.OC__sub-container3__price-cards {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 15rem;
+}
+
+.OC__sub-container3__price-frame {
+  width: 27rem;
+  height: 35rem;
+
+  background-color: #fff;
+  border-radius: 1rem;
+  border: 0.3rem solid var(--primary);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  margin-top: 6rem;
+}
+.OC__sub-container3__price-frame.business {
+  border: 0.3rem solid hsla(251, 75%, 22%, 1);
+  justify-content: space-between;
+}
+
+.OC__sub-container3___header {
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.OC__sub-container3___header.business {
+}
+
+.OC__sub-container3__price-frame__cta {
+  font-size: 1.8rem;
+  font-style: italic;
+  text-align: center;
+  width: 80%;
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+  /* height: 30%; */
+}
+
+.OC__sub-container3__price-frame__ctas.business {
+  width: 100%;
+  height: 70%;
+}
+
+.OC__sub-container3__price-frame__cta.business {
+  width: 80%;
+  margin-inline: auto;
+  margin-bottom: 4rem;
+}
+
+.OC__sub-container3__price-frame__benefits {
+  /* height: 50%; */
+  /* gap: 2rem; */
+}
+
+.OC__sub-container3__price-frame__single-benefit {
+  font-weight: 300;
+  font-size: 1.8rem;
+  margin-top: 0.5rem;
+}
+.OC__sub-container4__price-and-fees {
+  background-color: greenyellow;
+}
+.OC__sub-container3__price {
+  color: var(--primary);
+  font-size: 5rem;
+  font-weight: 900;
+  text-align: center;
+}
+.OC__sub-container3__fee {
+  font-weight: 400;
+  font-size: 2rem;
+  color: #9b9b9ba1;
+  padding-bottom: 3rem;
+}
+
+.OC__sub-container3__button {
+  padding: 0.2rem 6rem;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  border-color: transparent;
+  background-color: var(--primary);
+  color: #fff;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+.OC__sub-container3__button.business {
+  /* width: fit-content; */
+  padding: 0.5rem 2rem;
+  font-size: 2.2rem;
+  background-color: hsla(251, 75%, 22%, 1);
+}
