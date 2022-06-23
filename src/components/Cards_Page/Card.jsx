@@ -15,7 +15,7 @@ import { useNavigate } from 'react-router-dom';
 
 // export default Card;
 
-//ToDo Billys approcah to selecting an individual card.
+//ToDo Billys approach to selecting an individual card.
 //This gives the id of each individual card
   //I think now we would need to do a request to the Database to show the card in regards to the id
 const Card = (props) => {
