@@ -32,6 +32,7 @@ function App() {
           <Route path="/email-signatures" element={<EmailGen />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/order-card" element={<OrderCard />} />
+          
         </Routes>
       </Router>
     </MyProvider>
