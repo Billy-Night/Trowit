@@ -13,6 +13,7 @@ import EmailGen from './components/Email_Generator_Page/EmailGen.jsx';
 import Settings from './components/Settings_Page/Settings.jsx';
 import OrderCard from './components/Order_Physical_Card_Page/OrderCard.jsx';
 import TermsConditions from './components/Terms_and_Conditions/TermsConditions.jsx';
+import Error from './components/pages/Error.jsx';
 
 function App() {
   // const context = useContext(MyContext);
@@ -32,7 +33,7 @@ function App() {
           <Route path="/email-signatures" element={<EmailGen />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/order-card" element={<OrderCard />} />
-          
+          <Route path="/error" element={<Error />} />
         </Routes>
       </Router>
     </MyProvider>
