@@ -1,45 +1,45 @@
 import React, { useContext } from 'react';
 import './CreateNewCard.css';
 import SideNavBar from '../Side_NavBar/SideNavBar.jsx';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import { MyContext } from '../../context/MyProvider'
 
 const CreateNewCard = () => {
 
     const context = useContext(MyContext);
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
 
-    // const handleSubmit = (event) => {
-    //     event.preventDefault();
-    //     fetch("http://http://localhost:3306/createcard", {
-    //         method: "POST",
-    //         headers: new Header({
-    //             "Content-Type": "application/json",
-    //         }),
-    //         body: JSON.stringify({
-    //             type: context.crtCard.type,
-    //             first_name: context.crtCard.first_name,
-    //             last_name: context.crtCard.last_name,
-    //             title: context.crtCard.title,
-    //             department: context.crtCard.department,
-    //             company: context.crtCard.company,
-    //             phone: context.crtCard.phone,
-    //             email: context.crtCard.email,
-    //             address: context.crtCard.address,
-    //             website: context.crtCard.website,
-    //             link: context.crtCard.link
-    //         }),
-    //     })
-    //     .then((response) => {
-    //         if (response.status === 201) {
-    //             navigate("/cards");
-    //             context.setCrtCard(context.newCard)
-    //         } else {
-    //             navigate("/error")
-    //         }
-    //     });
-    // };
+    const handleSubmitOfCreateNewCard = (event) => {
+        event.preventDefault();
+        fetch("http://http://localhost:3306/createcard", {
+            method: "POST",
+            headers: new Headers({
+                "Content-Type": "application/json",
+            }),
+            body: JSON.stringify({
+                type: context.crtCard.type,
+                first_name: context.crtCard.first_name,
+                last_name: context.crtCard.last_name,
+                title: context.crtCard.title,
+                department: context.crtCard.department,
+                company: context.crtCard.company,
+                phone: context.crtCard.phone,
+                email: context.crtCard.email,
+                address: context.crtCard.address,
+                website: context.crtCard.website,
+                link: context.crtCard.link
+            }),
+        })
+        .then((response) => {
+            if (response.status === 201) {
+                navigate("/cards");
+                context.setCrtCard(context.newCard)
+            } else {
+                navigate("/error")
+            }
+        });
+    };
 
     return (
 
@@ -47,7 +47,7 @@ const CreateNewCard = () => {
             <SideNavBar />
             <p>This is the create new cards page</p>
             <div className="create-card-form-container">
-            <form onChange={context.handleCreateNewCardForm}>
+            <form onSubmit={handleSubmitOfCreateNewCard}>
                 <input value={context.crtCard.type} onChange={context.handleCreateNewCardForm} id="type" name="type" placeholder="Card Type" />
 
                 <input value={context.crtCard.first_name} onChange={context.handleCreateNewCardForm} id="first_name" name="first_name" placeholder="First Name" />
