@@ -8,7 +8,7 @@ const SearchCard = ({keyword,setKeyword}) => {
       <div className='box'>
          {/* <span class="input-group-addon fa fa-search" id="basic-addon2"></span> */}
          {/* <button class="fa fa-search">     </button> */}
-      <form>
+         <form className="searchForm">
       <input 
       // className="barStyling"  
        key="random1"

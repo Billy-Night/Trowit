@@ -1,7 +1,8 @@
-form {
+.searchForm {
+	font-size: 1.5rem;
     width: 25rem;
 	display: flex;
-	align-items: baseline;
+	align-items: center;
     background-color: "#F2F1F9";  
 	border: 2px solid;
     border-radius: 15px; 
@@ -10,19 +11,27 @@ form {
 	margin-left: 5%;
 }
 
-input[type="search"] {
+.searchForm > input[type="search"] {
+	margin: 0;
+	width: auto;
+	height: auto;
+	box-sizing: initial;
 	background-color: transparent;
 	border: 0;
-    padding: 0.5rem;
+    padding: .4rem .8rem;
     font: 'Nunito';
 	flex-grow: 1;
-	margin-left: .5rem;
 }
 
-.fa-search, input[type="submit"] {
+.searchForm > input[type="search"]:focus-visible {
+	outline: none;
+}
+
+.fa-search, .searchForm > [type="submit"] {
 	background-color: transparent;
     border-color: transparent;
     cursor: pointer;
 	overflow: hidden;
-	padding: 0 .5rem;
+	padding-inline-start: .8rem;
+	border: none;
 }
