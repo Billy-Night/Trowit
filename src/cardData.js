@@ -1,7 +1,6 @@
 import cardWork from '../src/images/cards_page/card_work@2x.png';
 import cardPersonal from '../src/images/cards_page/card_personal@2x.png';
 import createCard from '../src/images/cards_page/create_card@2x.png';
-import React, {Link} from 'react';
 
 const CardsData = [
  
@@ -19,9 +18,7 @@ const CardsData = [
         "imgAlt": "Personal card image",
         "address": "#"
     },
-
     {
-    
         "id": 3,
         "name": "Add Card",
         "image": createCard,

@@ -7,7 +7,7 @@ const CreateNewCard = () => {
 
         <div>
             <SideNavBar />
-            <p>This is the create new cards page</p>
+            <p className='title'>This is the create new cards page</p>
         </div>
     );
 };
