@@ -10,15 +10,14 @@ const SearchCard = ({keyword,setKeyword}) => {
          {/* <button class="fa fa-search">     </button> */}
       <form>
       <input 
-       className="barStyling"  
+      // className="barStyling"  
        key="random1"
+       type="search"
        value={keyword}
        placeholder="Search Card"
 
       //  aria-describedby="basic-addon2"
-       onChange={(e) => setKeyword(e.target.value)}
-       
-       
+       onChange={(e) => setKeyword(e.target.value)} 
       />
       <button type="submit" class="fa fa-search"></button>
       </form>
