@@ -1,7 +1,10 @@
 #body {
   /* margin-left: 350px; */
-  /* width: 100vw;
-  display: flex;
+  /* width: min(90%, 200rem); */
+  /* display: flex;
   flex-direction: column;
   align-items: center; */
+  /* margin-inline: 5rem; */
+  overflow-x: hidden;
+  /* margin-left: 2rem; */
 }

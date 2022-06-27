@@ -1,10 +1,12 @@
 import './EmailGen.css';
+import SideNavBar from '../Side_NavBar/SideNavBar';
 
 const EmailGen = () => {
 
     return (
         <div className="email-gen">
-            <p>This is the email generator page</p>
+            <SideNavBar />
+            <p className='title'> Email Signature Generator</p>
         </div>
     );
 };

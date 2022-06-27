@@ -1,11 +1,13 @@
 import './BackgrdImgGen.css';
+import SideNavBar from '../Side_NavBar/SideNavBar';
 
 const BackgrdImgGen = () => {
 
 
     return (
         <div className='backgrd-img-gen'>
-            <p>This is the background image generator page</p>
+            <SideNavBar />
+            <p className='title'> Backgrounds</p>
         </div>
     );
 };

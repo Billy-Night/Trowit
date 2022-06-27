@@ -6,15 +6,24 @@ import CreateAndShare from './Create_And_Share/CreateAndShare.jsx';
 import ManageContact from './Manage_Contact/ManageContact.jsx';
 import './LandingPage.css';
 
+import { useNavigate } from 'react-router-dom';
+//The useNavigate hook returns a function that lets you navigate programmatically.
+
 const LandingPage = () => {
+  const navigate = useNavigate();
+
+  const HandleClickOrdCard = () => {
+    navigate("./order-card");
+  }
+
   return (
-    <div>
+    <div id="body">
       <TopNavbar />
-      <HeroSection />
-      <LPFeatures />
-      <CreateAndShare />
-      <ManageContact />
-      <ImpressYourPeers />
+      <HeroSection HandleClickOrdCard={HandleClickOrdCard}/>
+      <LPFeatures HandleClickOrdCard={HandleClickOrdCard}/>
+      <CreateAndShare HandleClickOrdCard={HandleClickOrdCard}/>
+      <ManageContact HandleClickOrdCard={HandleClickOrdCard}/>
+      <ImpressYourPeers HandleClickOrdCard={HandleClickOrdCard}/>
     </div>
   );
 };

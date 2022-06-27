@@ -9,28 +9,28 @@ const LPFeatures = () => {
       <div className="img-and-text">
         <img
           src={business_cards_img}
-          class="business-cards"
+          className="business-cards"
           alt="Business cards icon"
         />
         <p className="description">
-          Easily create and share your Digital Business Card(s)
+          Easily create & share your Digital Business Card(s)
         </p>
       </div>
       <div className="img-and-text">
         <img
           src={people_img}
-          class="business-cards"
+          className="business-cards"
           alt="People connecting icon"
         />
         <p className="description">
-          Manage your contacts and grow your network seamlessly
+          Manage your contacts & grow your network seamlessly
         </p>
       </div>
       <div className="img-and-text">
         <img
           className="LPF-icon"
           src={business_card_img}
-          class="business-cards"
+          className="business-cards"
           alt="Business card icon"
         />
         <p className="description">

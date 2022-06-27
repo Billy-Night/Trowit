@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../TopNavBar/TopNavbar.css';
-
-import { Button } from './Button';
-
 import { ButtonSign } from './ButtonSign';
 import { ButtonLogin } from './ButtonLogin';
 
@@ -47,8 +44,7 @@ const TopNavbar = () => {
             <Link
               to="/features"
               className="nav-links"
-              onClick={closeMobileMenu}
-            >
+              onClick={closeMobileMenu}>
               Features
             </Link>
           </li>
@@ -58,11 +54,11 @@ const TopNavbar = () => {
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/order" className="nav-links" onClick={closeMobileMenu}>
+            <Link to="/order-card" className="nav-links" onClick={closeMobileMenu}>
               Order your TROWIT Card
             </Link>
           </li>
-
+          
           <Link
             to="/log-in"
             className="nav-links-mobile-in"
@@ -81,6 +77,9 @@ const TopNavbar = () => {
         </ul>
         <ul></ul>
         <ul></ul>
+        <br />
+        <br />
+        
 
         {button && <ButtonSign buttonStyle="btn--outline">Sign Up</ButtonSign>}
         {button && (
