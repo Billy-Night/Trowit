@@ -19,7 +19,7 @@ const SearchCard = ({keyword,setKeyword}) => {
       //  aria-describedby="basic-addon2"
        onChange={(e) => setKeyword(e.target.value)} 
       />
-      <button type="submit" class="fa fa-search"></button>
+      <button type="submit" className="fa fa-search"></button>
       </form>
       </div>
     );  
