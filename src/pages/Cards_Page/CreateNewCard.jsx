@@ -1,60 +1,57 @@
-import React, { useContext } from 'react';
-import './CreateNewCard.css';
-import SideNavBar from '../../components/Side_NavBar/SideNavBar.jsx';
-import { useNavigate } from 'react-router-dom';
+import React, { useContext } from "react";
+import "./CreateNewCard.css";
+import SideNavBar from "../../components/Side_NavBar/SideNavBar.jsx";
+import { useNavigate } from "react-router-dom";
 
-import { MyContext } from '../../context/MyProvider'
+import { MyContext } from "../../context/MyProvider";
+import AvatarEditor from "../../components/AvatarEditor/AvatarEditor";
 
 const CreateNewCard = () => {
+  const context = useContext(MyContext);
+  const navigate = useNavigate();
 
-    const context = useContext(MyContext);
-    const navigate = useNavigate();
+  const handleSubmitOfCreateNewCard = (event) => {
+    event.preventDefault();
+    fetch("http://http://localhost:3306/createcard", {
+      method: "POST",
+      headers: new Headers({
+        "Content-Type": "application/json",
+      }),
+      body: JSON.stringify({
+        type: context.crtCard.type,
+        first_name: context.crtCard.first_name,
+        last_name: context.crtCard.last_name,
+        title: context.crtCard.title,
+        department: context.crtCard.department,
+        company: context.crtCard.company,
+        phone: context.crtCard.phone,
+        email: context.crtCard.email,
+        address: context.crtCard.address,
+        website: context.crtCard.website,
+        link: context.crtCard.link,
+      }),
+    }).then((response) => {
+      if (response.status === 201) {
+        navigate("/cards");
+        context.setCrtCard(context.newCard);
+      } else {
+        navigate("/error");
+      }
+    });
+  };
 
-    const handleSubmitOfCreateNewCard = (event) => {
-        event.preventDefault();
-        fetch("http://http://localhost:3306/createcard", {
-            method: "POST",
-            headers: new Headers({
-                "Content-Type": "application/json",
-            }),
-            body: JSON.stringify({
-                type: context.crtCard.type,
-                first_name: context.crtCard.first_name,
-                last_name: context.crtCard.last_name,
-                title: context.crtCard.title,
-                department: context.crtCard.department,
-                company: context.crtCard.company,
-                phone: context.crtCard.phone,
-                email: context.crtCard.email,
-                address: context.crtCard.address,
-                website: context.crtCard.website,
-                link: context.crtCard.link
-            }),
-        })
-        .then((response) => {
-            if (response.status === 201) {
-                navigate("/cards");
-                context.setCrtCard(context.newCard)
-            } else {
-                navigate("/error")
-            }
-        });
-    };
-
-    return (
-      <section id="create-card-page">
-        <SideNavBar />
-        <h1>Cards / New Card</h1>
-        <div className="create-card-form-container">
-          <form onSubmit={handleSubmitOfCreateNewCard}>
-            <input
-              value={context.crtCard.type}
-              onChange={context.handleCreateNewCardForm}
-              id="type"
-              name="type"
-              placeholder="Card Type"
-            />
-
+  return (
+    <section id="create-card-page">
+      <SideNavBar />
+      <h1>Cards / New Card</h1>
+      <span>
+        {/* back button */}
+        {/* rounded input for Card Name */}
+      </span>
+      <div>
+        <div id="create-card-left">
+          <AvatarEditor />
+          <div id="create-card-form">
             <input
               value={context.crtCard.first_name}
               onChange={context.handleCreateNewCardForm}
@@ -93,6 +90,21 @@ const CreateNewCard = () => {
               id="company"
               name="company"
               placeholder="company"
+            />
+
+            {/* TODO: load other input fields conditionally and make them depend on the state of the information panel*/}
+          </div>
+          <input id="create-card-button-save" type="submit" value="submit" />
+        </div>
+        <div id="create-card-right">{/* add more information container */}</div>
+
+        {/* <form onSubmit={handleSubmitOfCreateNewCard}>
+            <input
+              value={context.crtCard.type}
+              onChange={context.handleCreateNewCardForm}
+              id="type"
+              name="type"
+              placeholder="Card Type"
             />
 
             <input
@@ -134,16 +146,10 @@ const CreateNewCard = () => {
               name="link"
               placeholder="link"
             />
-
-            <input
-              className="btn-create-card-form"
-              type="submit"
-              value="submit"
-            />
-          </form>
-        </div>
-      </section>
-    );
+          </form> */}
+      </div>
+    </section>
+  );
 };
 
 export default CreateNewCard;
