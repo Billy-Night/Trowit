@@ -1,5 +1,5 @@
 import './OrderCard.css';
-import SideNavBar from '../Side_NavBar/SideNavBar';
+import SideNavBar from "../../components/Side_NavBar/SideNavBar";
 import OderCardTemplate from './OderCardTemplate';
 import OderCardBusinessTemplate from './OderCardBusinessTemplate';
 

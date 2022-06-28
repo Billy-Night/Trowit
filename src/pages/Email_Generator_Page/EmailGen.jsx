@@ -1,5 +1,5 @@
 import './EmailGen.css';
-import SideNavBar from '../Side_NavBar/SideNavBar';
+import SideNavBar from "../../components//Side_NavBar/SideNavBar";
 
 const EmailGen = () => {
 

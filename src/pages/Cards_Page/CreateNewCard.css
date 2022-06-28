@@ -1,0 +1,14 @@
+/* .create-card-form-container {
+    margin-left: 100px;
+} */
+
+#create-card-page {
+    height: 100vh;
+    margin-left: 8rem;
+    padding: 2rem 4rem;
+}
+
+#create-card-page > h1 {
+    font-size: 3rem;
+    color: black;
+}
