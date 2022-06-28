@@ -43,7 +43,9 @@ const SignUpPage = () => {
           <div className= "trowitLogo">  
             <img
             src={trowit_logo_img}
+
             className="logo"
+
             alt="Trowit logo"
             />
           </div>
