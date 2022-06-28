@@ -10,7 +10,7 @@ const SignUpPage = () => {
           <div className= "trowitLogo">  
             <img
             src={trowit_logo_img}
-            class="logo"
+            class="logo_signup"
             alt="Trowit logo"
             />
           </div>
