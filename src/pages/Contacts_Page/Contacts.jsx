@@ -1,4 +1,4 @@
-import SideNavBar from '../Side_NavBar/SideNavBar.jsx';
+import SideNavBar from '../../components/Side_NavBar/SideNavBar.jsx';
 import './Contacts.css';
 import ContactSortingOrder from './ContactSortingOrder.jsx';
 
