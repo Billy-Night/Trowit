@@ -1,5 +1,5 @@
 import './CardsPage.css';
-import SideNavBar from '../Side_NavBar/SideNavBar.jsx';
+import SideNavBar from '../../components/Side_NavBar/SideNavBar.jsx';
 // import cardWork from '../../images/cards_page/card_work@2x.png';
 // import cardPersonal from '../../images/cards_page/card_personal@2x.png';
 // import createCard from '../../images/cards_page/create_card@2x.png';

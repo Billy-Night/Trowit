@@ -1,6 +1,6 @@
 import './Settings.css';
 import EditProfile from './EditProfile.jsx';
-import SideNavBar from '../Side_NavBar/SideNavBar';
+import SideNavBar from '../../components/Side_NavBar/SideNavBar';
 
 const Settings = () => {
 
