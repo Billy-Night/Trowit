@@ -12,6 +12,8 @@ import BackgrdImgGen from './components/Background_Image_Generator/BackgrdImgGen
 import EmailGen from './components/Email_Generator_Page/EmailGen.jsx';
 import Settings from './components/Settings_Page/Settings.jsx';
 import OrderCard from './components/Order_Physical_Card_Page/OrderCard.jsx';
+import OrderCrdBasic from './components/Order_Physical_Card_Page/OrderCrdBasic.jsx';
+
 import TermsConditions from './components/Terms_and_Conditions/TermsConditions.jsx';
 
 function App() {
@@ -24,7 +26,7 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/sign-up" element={<SignUpPage />} />
           <Route path="/log-in" element={<LoginPage />} />
-          <Route path="/termsandconditions" element={<TermsConditions/>} />
+          <Route path="/termsandconditions" element={<TermsConditions />} />
           <Route path="/cards" element={<CardsPage />} />
           <Route path="/cards/newcard" element={<CreateNewCard />} />
           <Route path="/contacts" element={<Contacts />} />
@@ -32,6 +34,7 @@ function App() {
           <Route path="/email-signatures" element={<EmailGen />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/order-card" element={<OrderCard />} />
+          <Route path="/order-cardb" element={<OrderCrdBasic />} />
         </Routes>
       </Router>
     </MyProvider>

@@ -1,34 +1,36 @@
-#order-card {
+#order-crd-basic {
   font-family: 'Raleway', sans-serif;
-  margin: 0;
   padding: 0;
   box-sizing: border-box;
   color: hsla(0, 0%, 20%, 1);
 }
 
-.OC__main-container {
-  height: 100vh;
+/* header section  */
+
+/* .OCB__container {
   width: 90vw;
-  float: right;
-  display: flex;
-  flex-direction: column;
-  /* justify-content: space-around; */
-  gap: 3rem;
-}
-.OC__sub-container1__header-and-menu {
+  height: fit-content;
+  background-color: aqua;
+} */
+
+.OCB__sub-container__header-and-menu {
   position: relative;
   min-height: fit-content;
+  /* height: 100vh;*/
+  width: 90.5vw;
+  margin-inline: auto;
   /* background-color: blue; */
 }
 
-.OC__sub-container1__header {
+.OCB__sub-container__header {
   font-weight: 700;
   font-size: 3rem;
   height: 100%;
   display: flex;
   align-items: flex-start;
 }
-.OC__sub-container1__drop-menu {
+
+.OCB__sub-container__drop-menu {
   background-image: url('../../images/Order_physical_card_page/drop_down_menu@2x.png');
   min-width: 30rem;
   width: 40rem;
@@ -41,20 +43,23 @@
   top: -3rem;
   right: -3rem;
 }
-.OC__sub-container2__sub-title-and-preview-cards {
+
+/* main section  */
+
+.OCB__sub-container2__sub-title-and-preview-cards {
   /* background-color: navajowhite; */
 }
-.OC__sub-container2__sub-title {
+.OCB__sub-container2__sub-title {
   font-size: 2rem;
   font-weight: 500;
   letter-spacing: 0.05rem;
   margin-bottom: 1.5rem;
 }
-.OC__sub-container2__preview-cards {
+.OCB__sub-container2__preview-cards {
   display: flex;
   gap: 3rem;
 }
-.OC__sub-container2__single-card {
+.OCB__sub-container2__single-card {
   background: url('../../images/Order_physical_card_page/card_preview@2x.png'),
     white;
   border: 0.4rem solid var(--primary);
@@ -111,7 +116,7 @@
   justify-content: space-between;
 }
 
-.OC__sub-container3___header {
+.OCB__sub-container3___header {
   font-weight: 700;
   font-size: 2.5rem;
   margin-top: 1rem;
@@ -179,13 +184,25 @@
   text-transform: uppercase;
 }
 
-.OC__sub-container3__button.color-grey {
-  background-color: #898989;
-}
-
 .OC__sub-container3__button.business {
   /* width: fit-content; */
   padding: 0.5rem 2rem;
   font-size: 2.2rem;
   background-color: hsla(251, 75%, 22%, 1);
+}
+
+.OCB__sub-container1__divider {
+  margin-left: 3rem;
+  opacity: 0.3;
+  height: 90vh;
+}
+
+.OCB__sub-container1__content-and-divider {
+  display: flex;
+  gap: 50rem;
+}
+
+main {
+  display: flex;
+  align-items: center;
 }
