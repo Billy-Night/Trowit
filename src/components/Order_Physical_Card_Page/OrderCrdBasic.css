@@ -1,44 +1,46 @@
 #order-crd-basic {
   font-family: 'Raleway', sans-serif;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
   color: hsla(0, 0%, 20%, 1);
+  /* height: 98vw; */
+  width: 98vw;
 }
 
+.OCB__main-container {
+  float: right;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-around; */
+  gap: 3rem;
+}
 /* header section  */
-
-/* .OCB__container {
-  width: 90vw;
-  height: fit-content;
-  background-color: aqua;
-} */
 
 .OCB__sub-container__header-and-menu {
   position: relative;
   min-height: fit-content;
-  /* height: 100vh;*/
-  width: 90.5vw;
   margin-inline: auto;
+  width: 90vw;
+  display: flex;
+
   /* background-color: blue; */
 }
 
 .OCB__sub-container__header {
   font-weight: 700;
   font-size: 3rem;
-  height: 100%;
-  display: flex;
-  align-items: flex-start;
 }
 
 .OCB__sub-container__drop-menu {
   background-image: url('../../images/Order_physical_card_page/drop_down_menu@2x.png');
   min-width: 30rem;
   width: 40rem;
-
   height: 10rem;
   background-size: 70%;
   background-repeat: no-repeat;
   background-position: center;
+
   position: absolute;
   top: -3rem;
   right: -3rem;
@@ -200,9 +202,35 @@
 .OCB__sub-container1__content-and-divider {
   display: flex;
   gap: 50rem;
+  width: 30vw;
 }
 
 main {
   display: flex;
-  align-items: center;
+  height: 20vh;
+  height: fit-content;
+  background-color: antiquewhite;
+}
+
+hr {
+  margin-left: -45rem;
+  opacity: 0.3;
+  /* height: 100vh; */
+}
+
+.OCB__sub-container2__mein-card-front-back {
+  background-color: grey;
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+
+  background-color: aqua;
+  /* height: 50vh; */
+}
+
+.OCB__main-card-preview {
+}
+
+.OCB__main-card-preview > img {
+  width: 100%;
 }
