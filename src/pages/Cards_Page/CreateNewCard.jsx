@@ -12,10 +12,11 @@ const CreateNewCard = () => {
 
   const handleSubmitOfCreateNewCard = (event) => {
     event.preventDefault();
-    fetch("http://http://localhost:3306/createcard", {
-      method: "POST",
+    fetch('http://localhost:3306/createcard', {
+      method: 'POST',
+      mode: 'cors',
       headers: new Headers({
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json'
       }),
       body: JSON.stringify({
         type: context.crtCard.type,
@@ -30,7 +31,8 @@ const CreateNewCard = () => {
         website: context.crtCard.website,
         link: context.crtCard.link,
       }),
-    }).then((response) => {
+    })
+    .then((response) => {
       if (response.status === 201) {
         navigate("/cards");
         context.setCrtCard(context.newCard);
@@ -51,7 +53,7 @@ const CreateNewCard = () => {
       <div>
         <div id="create-card-left">
           <AvatarEditor />
-          <div id="create-card-form">
+          <form id="create-card-form" onSubmit={handleSubmitOfCreateNewCard}>
             <input
               value={context.crtCard.first_name}
               onChange={context.handleCreateNewCardForm}
@@ -93,8 +95,8 @@ const CreateNewCard = () => {
             />
 
             {/* TODO: load other input fields conditionally and make them depend on the state of the information panel*/}
-          </div>
           <input id="create-card-button-save" type="submit" value="submit" />
+          </form>
         </div>
         <div id="create-card-right">{/* add more information container */}</div>
 
@@ -153,3 +155,16 @@ const CreateNewCard = () => {
 };
 
 export default CreateNewCard;
+
+
+// type: context.crtCard.type,
+//         first_name: context.crtCard.type,
+//         last_name: context.crtCard.type,
+//         title: context.crtCard.type,
+//         department: context.crtCard.type,
+//         company: context.crtCard.type,
+//         phone: context.crtCard.type,
+//         email: context.crtCard.type,
+//         address: context.crtCard.type,
+//         website: context.crtCard.type,
+//         link: context.crtCard.type,
