@@ -25,7 +25,16 @@ const OderCardTemplate = (props) => {
       </div>
       {/* price & fees part in the page  */}
       {/* btn part in the page  */}
-      <button className="OC__sub-container3__button">{props.button}</button>
+
+      {/* rendering the class according to the title (still dummy) */}
+      {props.button === 'upgrade' && (
+        <button className="OC__sub-container3__button color-grey">
+          {props.button}
+        </button>
+      )}
+      {props.button !== 'upgrade' && (
+        <button className="OC__sub-container3__button ">{props.button}</button>
+      )}
     </div>
   );
 };
