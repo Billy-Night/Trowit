@@ -17,13 +17,14 @@ const MyProvider = (props) => {
         email: "",
         address: "",
         website: "",
-        link: ""
+        link: "" 
     };
     //Then create a state and set it to the empty object of newCard
-    let [crtCard, setCrtCard] = useState(newCard);
+    let [crtCard, setCrtCard] = useState({});
 
     const handleCreateNewCardForm = (event) => {
-        const { name,  value } = event.target;
+        setCrtCard(newCard);
+        const { name,  value } = event.currentTarget;
 
         setCrtCard({
             ...crtCard,
@@ -32,14 +33,14 @@ const MyProvider = (props) => {
     };
 
     //Below will be the code for registering a new user
-    //First set-up an empty object that is ready to recieve the information from the user
+    //First set-up an empty object that is ready to receive the information from the user
     const newUser = {
         email: "",
         password: "",
         verifypassword: ""
     };
 
-    //Now set-up the state which is ready to recieve the info
+    //Now set-up the state which is ready to receive the info
     let [newReg, setNewReg] = useState(newUser);
 
     //Then create the handler function to take the new information
@@ -51,9 +52,6 @@ const MyProvider = (props) => {
             [name]: value,
         });
     };
-
-
-
 
     return (
         <MyContext.Provider 
