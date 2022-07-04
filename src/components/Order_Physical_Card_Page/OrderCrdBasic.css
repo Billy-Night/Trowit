@@ -136,6 +136,7 @@ p.OCB__main-card__description {
 p.OCB__main-card__description > span {
   color: #25dac5;
   font-weight: 700;
+  font-size: 1.5rem;
 }
 
 .OCB__cards-img-container {
@@ -144,7 +145,7 @@ p.OCB__main-card__description > span {
   align-items: center;
   gap: 1rem;
   width: 100%;
-  background-color: blueviolet;
+  /* background-color: blueviolet; */
 }
 
 .OCB__cards-img-container > img {

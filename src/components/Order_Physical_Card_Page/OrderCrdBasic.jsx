@@ -65,15 +65,15 @@ const OrderCrdBasic = () => {
             <div className="OCB__main-card-font">
               <h1 className="OBC__subtitle">Choose design - back</h1>
               <article className="OCB__cards-img-container">
-                <img src={cardfront6} alt="" />
-                <img src={cardfront8} alt="" />
-                <img src={cardfront6} alt="" />
-                <img src={cardfront8} alt="" />
-                <img src={cardfront6} alt="" />
+                <img src={cardfront6} alt="display the card's design" />
+                <img src={cardfront8} alt="display the card's design" />
+                <img src={cardfront6} alt="display the card's design" />
+                <img src={cardfront8} alt="display the card's design" />
+                <img src={cardfront6} alt="display the card's design" />
               </article>
               <p className="OCB__main-card__description">
                 Do you want to customize the design, add a picture on the back
-                or rearrange the fields on the card? <span>+UPGRADE</span>
+                or rearrange the fields on the card? <span> +UPGRADE</span>
               </p>
             </div>
           </section>
