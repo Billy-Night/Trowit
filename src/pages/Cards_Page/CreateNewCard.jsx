@@ -35,7 +35,7 @@ const CreateNewCard = () => {
     .then((response) => {
       if (response.status === 201) {
         navigate("/cards");
-        // context.setCrtCard(context.newCard);
+        context.setCrtCard(context.newCard);
       } else {
         navigate("/error");
       }
