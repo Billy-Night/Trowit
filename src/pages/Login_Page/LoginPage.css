@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;700&display=swap');
+
+.login_page{
+  /* justify-content: center; */
+  width: 95vw;
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  gap: 12rem;
+ }
+
+.loginForm{
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
+  gap: 1rem;
+}
+
+:root {
+    --primary: #25dac5;
+    --subtitle: #1e0e62;
+    --primary-dark: #1eae9e;
+  }
+
+#body {
+  }
+
+.trowitLogo {
+  width: 10rem;
+  height: 6rem;
+  align-self: flex-start;
+  margin-left: 470px;
+}
+
+.logo_login{
+  /* display: block; */
+  /* margin-left: 275px;
+  margin-right: auto; */
+  width: 35%;
+
+  }
+
+.text{
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-size: 45px;
+  color: rgb(67, 67, 67);
+  height: 2rem;
+}
+
+.textLower{
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-size: 30px;
+  color: rgb(67, 67, 67);
+  height: 2rem;
+}
+
+.textLowerHL{
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-size: 30px;
+  height: 2rem;
+  color: rgb(0, 140, 255);
+}
+
+input {
+  width: 60rem;
+  height:  6rem
+ }
+
+input[type="text"]
+{
+  font-size: 24px;
+}
+
+input[type="submit"]
+{
+  font-size: 24px;
+  background-color: #25dac5;
+}
+
+.forgotPassword {
+  
+}
+
+.google_sign_up{
+  background-image: "../../images/landing_page/google_sign_up.png";
+  height: 80px;
+  width: 700px;
+}
+
+.button{
+  border: 0ch;
+}
+
+/* input {
+  height: 2em;
+  width: 2em;
+  vertical-align: middle;
+} */
+
+.inputCB {
+  height: 2em;
+  width: 2em;
+  vertical-align: middle;
+ }

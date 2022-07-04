@@ -7,7 +7,7 @@ const BackgrdImgGen = () => {
     return (
         <div className='backgrd-img-gen'>
             <SideNavBar />
-            <p>This is the background image generator page</p>
+            <p className='title'> Backgrounds</p>
         </div>
     );
 };

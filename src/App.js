@@ -2,19 +2,19 @@ import MyProvider from './context/MyProvider.js';
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import LandingPage from './components/Landing_Page/LandingPage.jsx';
-import SignUpPage from './components/Sign_Up_Page/SignUpPage.jsx';
-import LoginPage from './components/Login_Page/LoginPage.jsx';
-import CardsPage from './components/Cards_Page/CardsPage.jsx';
-import Contacts from './components/Contacts_Page/Contacts.jsx';
-import CreateNewCard from './components/Cards_Page/CreateNewCard.jsx';
+import LandingPage from './pages/Landing_Page/LandingPage.jsx';
+import SignUpPage from './pages/Sign_Up_Page/SignUpPage.jsx';
+import LoginPage from './pages/Login_Page/LoginPage.jsx';
+import CardsPage from './pages/Cards_Page/CardsPage.jsx';
+import Contacts from './pages/Contacts_Page/Contacts.jsx';
+import CreateNewCard from './pages/Cards_Page/CreateNewCard.jsx';
 import BackgrdImgGen from './components/Background_Image_Generator/BackgrdImgGen.jsx';
-import EmailGen from './components/Email_Generator_Page/EmailGen.jsx';
-import Settings from './components/Settings_Page/Settings.jsx';
-import OrderCard from './components/Order_Physical_Card_Page/OrderCard.jsx';
-import OrderCrdBasic from './components/Order_Physical_Card_Page/OrderCrdBasic.jsx';
-
-import TermsConditions from './components/Terms_and_Conditions/TermsConditions.jsx';
+import EmailGen from './pages/Email_Generator_Page/EmailGen.jsx';
+import Settings from './pages/Settings_Page/Settings.jsx';
+import OrderCard from './pages/Order_Physical_Card_Page/OrderCard.jsx';
+import TermsConditions from './pages/Terms_and_Conditions/TermsConditions.jsx';
+import Error from './pages/Error.jsx';
+import OrderCrdBasic from './pages/Order_Physical_Card_Page/OrderCrdBasic.jsx';
 
 function App() {
   // const context = useContext(MyContext);
@@ -35,6 +35,7 @@ function App() {
           <Route path="/settings" element={<Settings />} />
           <Route path="/order-card" element={<OrderCard />} />
           <Route path="/order-cardb" element={<OrderCrdBasic />} />
+          <Route path="/error" element={<Error />} />
         </Routes>
       </Router>
     </MyProvider>
