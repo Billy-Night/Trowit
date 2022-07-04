@@ -4,10 +4,11 @@
   padding: 0;
   box-sizing: border-box;
   color: hsla(0, 0%, 20%, 1);
+  width: 98vw;
 }
 
 .OC__main-container {
-  height: 100vh;
+  height: 90vh;
   width: 90vw;
   float: right;
   display: flex;
@@ -177,6 +178,10 @@
   color: #fff;
   font-size: 2.5rem;
   text-transform: uppercase;
+}
+
+.OC__sub-container3__button.color-grey {
+  background-color: #898989;
 }
 
 .OC__sub-container3__button.business {
