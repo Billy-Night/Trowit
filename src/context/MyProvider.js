@@ -59,8 +59,10 @@ const MyProvider = (props) => {
 
     //Create the log in process
 
+    //A state to check the status of wether the user is logged in or not
+    let [loggedIn, SetLogIn] = useState(false);
 
-
+    
     return (
         <MyContext.Provider 
             value={{
@@ -71,7 +73,9 @@ const MyProvider = (props) => {
                 blankUser: blankUser,
                 user: user,
                 setUser: setUser,
-                handleLogReg: handleLogReg
+                handleLogReg: handleLogReg,
+                SetLogIn: SetLogIn,
+                loggedIn: loggedIn
             }} >
                 { props.children }
         </MyContext.Provider> 

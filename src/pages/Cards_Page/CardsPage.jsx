@@ -7,6 +7,7 @@ import CardsData from '../../cardData';
 import SearchCard from './SearchCard';
 
 import Card from './Card.jsx';
+import Avatar from '../../components/Avatar/Avatar';
 
 const CardsPage = () => {
   return (
@@ -15,8 +16,12 @@ const CardsPage = () => {
         <SideNavBar />
         <p className='title'> Cards</p>
         <SearchCard />
+        {/* I don't think using line <br> is good practice  */}
         <br />
         <br />
+      </div>
+      <div>
+        <Avatar />
       </div>
       {/* Added Dynamic cards from the fake data that can be found in the cardData.js file this will be replace by information from the Database */}
       <div className="CP_cards">

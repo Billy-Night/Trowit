@@ -31,6 +31,7 @@ const LoginPage = () => {
     .then((data) => {
       console.log(data);
       navigate("/cards")
+      context.SetLogIn(true);
     })
   }
 
