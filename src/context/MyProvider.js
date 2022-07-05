@@ -36,8 +36,8 @@ const MyProvider = (props) => {
     //First set-up an empty object that is ready to receive the information from the user
     const newUser = {
         email: "",
-        password: "",
-        verifypassword: ""
+        hash_password: "",
+        verify_password: "",
     };
 
     //Now set-up the state which is ready to receive the info
@@ -45,7 +45,7 @@ const MyProvider = (props) => {
 
     //Then create the handler function to take the new information
     const handleRegistration = (event) => {
-        const { name, value } = event.target;
+        const { name, value } = event.currentTarget;
 
         setNewReg({
             ...newReg,

@@ -16,7 +16,7 @@ const SignUpPage = () => {
 
   const handleRegistrationSubmit = (event) => {
     event.preventDefault();
-     fetch("http://http://localhost:3306/registration",
+     fetch("http://localhost:3306/registration",
      {
       method: "POST",
       headers: new Headers({
@@ -24,8 +24,8 @@ const SignUpPage = () => {
       }),
       body: JSON.stringify({
           email: context.newReg.email,
-          password: context.newReg.password,
-      }),
+          hash_password: context.newReg.hash_password,
+        }),
   })
   .then((response) => {
       if (response.status === 201) {
@@ -36,9 +36,7 @@ const SignUpPage = () => {
       }
   });
 };
-
     return (
-        
         <div className="registration_page">
           <div className= "trowitLogo">  
             <img
@@ -55,35 +53,32 @@ const SignUpPage = () => {
                 value={context.newReg.email} 
                 onChange={context.handleRegistration}
                 name="email"
-                placeholder="Email"
-                />
+                placeholder="Email"/>
               <input 
-                value={context.newReg.password} 
+                value={context.newReg.hash_password} 
                 onChange={context.handleRegistration}
-                name="password"
-                placeholder="Password"
-                />
+                name="hash_password"
+                placeholder="Password"/>
               <input
-                value={context.newReg.verifypassword}
+                value={context.newReg.verify_password}
                 onChange={context.handleRegistration}  
-                name="verifypassword" 
+                name="verify_password" 
                 placeholder="Verify Password"/>
               <input className='btn-register' 
                 type="submit" 
-                value= "submit"
-                />
+                value= "Submit"/>
           </form>
           <div className="tacbox">
           <input id="checkbox" type="checkbox" className= "inputCB"/>
-          <label htmlFor="checkbox"> I agree to these <a href="#">Terms of Service</a> and <a href="#">Acceptable Use Policy</a>.</label>
+          {/* <label htmlFor="checkbox"> I agree to these <a href="#">Terms of Service</a> and <a href="#">Acceptable Use Policy</a>.</label> */}
           </div>  
-            <button className= "button"><img 
+            <button className="button"><img 
              src={google_sign_up} 
              className="google_sign_up"
              alt="Google Sign-up button"
             /></button>
           <div>
-            <h1 className="textLower">Already have an account? <a href="#" className= "textLowerHL">Login</a></h1>
+            {/* <h1 className="textLower">Already have an account? <a href="#" className="textLowerHL">Login</a></h1> */}
           </div>  
         </div>
     );

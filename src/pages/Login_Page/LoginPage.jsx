@@ -1,8 +1,14 @@
+// import React, { useContext } from "react";
 import './LoginPage.css';
 import trowit_logo_img from '../../images/landing_page/logo_small@4x.png';
 import google_sign_up from '../../images/landing_page/google_sign_in.png';
+// import { MyContext } from '../../context/MyProvider';
+
 
 const LoginPage = () => {
+// const context = useContext(MyContext);
+
+
 
     return (
         
@@ -10,7 +16,7 @@ const LoginPage = () => {
           <div className= "trowitLogo">  
             <img
             src={trowit_logo_img}
-            class="logo_login"
+            className="logo_login"
             alt="Trowit logo"
             />
           </div>
@@ -31,14 +37,14 @@ const LoginPage = () => {
               <input 
                 type="submit" 
                 value= "Login"
-                class= "reg"/>
+                className= "reg"/>
           </form>
-          <div class="forgotPassword">
+          <div className="forgotPassword">
             <a href="https://www.w3schools.com">Forgot password?</a> 
           </div>  
             <button className= "button"><img 
              src={google_sign_up} 
-             class="google_sign_up"
+             className="google_sign_up"
              alt="Google Sign-up button"
             /></button>  
         </div>
