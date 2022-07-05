@@ -23,14 +23,14 @@ const SignUpPage = () => {
           "Content-Type": "application/json",
       }),
       body: JSON.stringify({
-          email: context.newReg.email,
-          hash_password: context.newReg.hash_password,
+          email: context.user.email,
+          hash_password: context.user.hash_password,
         }),
   })
   .then((response) => {
       if (response.status === 201) {
           navigate("/log-in");
-          context.setNewReg(context.newUser)
+          context.setUser(context.blankUser)
       } else {
           navigate("/error")
       }
@@ -50,20 +50,20 @@ const SignUpPage = () => {
             </div>
           <form onSubmit={handleRegistrationSubmit} className="registrationForm">
               <input 
-                value={context.newReg.email} 
-                onChange={context.handleRegistration}
+                value={context.user.email} 
+                onChange={context.handleLogReg}
                 name="email"
                 placeholder="Email"/>
               <input 
-                value={context.newReg.hash_password} 
-                onChange={context.handleRegistration}
+                value={context.user.hash_password} 
+                onChange={context.handleLogReg}
                 name="hash_password"
                 placeholder="Password"/>
-              <input
-                value={context.newReg.verify_password}
-                onChange={context.handleRegistration}  
+              {/* <input
+                value={context.user.verify_password}
+                onChange={context.handleLogReg}  
                 name="verify_password" 
-                placeholder="Verify Password"/>
+                placeholder="Verify Password"/> */}
               <input className='btn-register' 
                 type="submit" 
                 value= "Submit"/>

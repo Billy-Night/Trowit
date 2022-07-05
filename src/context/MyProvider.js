@@ -33,24 +33,33 @@ const MyProvider = (props) => {
 
     //Below will be the code for registering a new user
     //First set-up an empty object that is ready to receive the information from the user
-    const newUser = {
+    const blankUser = {
+        image_url: "",
+        first_name: "",
+        last_name: "",
         email: "",
         hash_password: "",
-        verify_password: "",
+        birthday: 0,
+        subscription: "",
+        date: 0,
     };
 
     //Now set-up the state which is ready to receive the info
-    let [newReg, setNewReg] = useState(newUser);
+    let [user, setUser] = useState(blankUser);
 
     //Then create the handler function to take the new information
-    const handleRegistration = (event) => {
+    const handleLogReg = (event) => {
         const { name, value } = event.currentTarget;
 
-        setNewReg({
-            ...newReg,
+        setUser({
+            ...user,
             [name]: value,
         });
     };
+
+    //Create the log in process
+
+
 
     return (
         <MyContext.Provider 
@@ -59,10 +68,10 @@ const MyProvider = (props) => {
                 crtCard: crtCard,
                 setCrtCard: setCrtCard,
                 handleCreateNewCardForm: handleCreateNewCardForm,
-                newUser: newUser,
-                newReg: newReg,
-                setNewReg: setNewReg,
-                handleRegistration: handleRegistration
+                blankUser: blankUser,
+                user: user,
+                setUser: setUser,
+                handleLogReg: handleLogReg
             }} >
                 { props.children }
         </MyContext.Provider> 

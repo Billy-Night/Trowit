@@ -1,13 +1,25 @@
-// import React, { useContext } from "react";
+//import React, { useContext } from "react";
 import './LoginPage.css';
 import trowit_logo_img from '../../images/landing_page/logo_small@4x.png';
 import google_sign_up from '../../images/landing_page/google_sign_in.png';
-// import { MyContext } from '../../context/MyProvider';
+//import { MyContext } from '../../context/MyProvider';
 
 
 const LoginPage = () => {
-// const context = useContext(MyContext);
+  // const context = useContext(MyContext);
 
+  // const handleLogin = (event) => {
+  //   event.preventDefault();
+  //   fetch("http://localhost:3306/log", {
+  //     method: "POST",
+  //     headers: new Headers({
+  //       "Content-Type": "application/json",
+  //     }),
+  //     body: JSON.stringify({
+  //       email: 
+  //     })
+  //   })
+  // }
 
 
     return (
