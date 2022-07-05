@@ -29,7 +29,7 @@ const CreateNewCard = () => {
         email: context.crtCard.email,
         address: context.crtCard.address,
         website: context.crtCard.website,
-        link: context.crtCard.link,
+        link: context.crtCard.link
       }),
     })
     .then((response) => {

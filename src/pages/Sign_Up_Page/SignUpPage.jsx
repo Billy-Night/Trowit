@@ -16,29 +16,27 @@ const SignUpPage = () => {
 
   const handleRegistrationSubmit = (event) => {
     event.preventDefault();
-     fetch("http://http://localhost:3306/registration",
+     fetch("http://localhost:3306/registration",
      {
       method: "POST",
       headers: new Headers({
           "Content-Type": "application/json",
       }),
       body: JSON.stringify({
-          email: context.newReg.email,
-          password: context.newReg.password,
-      }),
+          email: context.user.email,
+          hash_password: context.user.hash_password,
+        }),
   })
   .then((response) => {
       if (response.status === 201) {
           navigate("/log-in");
-          context.setNewReg(context.newUser)
+          context.setUser(context.blankUser)
       } else {
           navigate("/error")
       }
   });
 };
-
     return (
-        
         <div className="registration_page">
           <div className= "trowitLogo">  
             <img
@@ -52,38 +50,35 @@ const SignUpPage = () => {
             </div>
           <form onSubmit={handleRegistrationSubmit} className="registrationForm">
               <input 
-                value={context.newReg.email} 
-                onChange={context.handleRegistration}
+                value={context.user.email} 
+                onChange={context.handleLogReg}
                 name="email"
-                placeholder="Email"
-                />
+                placeholder="Email"/>
               <input 
-                value={context.newReg.password} 
-                onChange={context.handleRegistration}
-                name="password"
-                placeholder="Password"
-                />
-              <input
-                value={context.newReg.verifypassword}
-                onChange={context.handleRegistration}  
-                name="verifypassword" 
-                placeholder="Verify Password"/>
+                value={context.user.hash_password} 
+                onChange={context.handleLogReg}
+                name="hash_password"
+                placeholder="Password"/>
+              {/* <input
+                value={context.user.verify_password}
+                onChange={context.handleLogReg}  
+                name="verify_password" 
+                placeholder="Verify Password"/> */}
               <input className='btn-register' 
                 type="submit" 
-                value= "submit"
-                />
+                value= "Submit"/>
           </form>
           <div className="tacbox">
           <input id="checkbox" type="checkbox" className= "inputCB"/>
-          <label htmlFor="checkbox"> I agree to these <a href="#">Terms of Service</a> and <a href="#">Acceptable Use Policy</a>.</label>
+          {/* <label htmlFor="checkbox"> I agree to these <a href="#">Terms of Service</a> and <a href="#">Acceptable Use Policy</a>.</label> */}
           </div>  
-            <button className= "button"><img 
+            <button className="button"><img 
              src={google_sign_up} 
              className="google_sign_up"
              alt="Google Sign-up button"
             /></button>
           <div>
-            <h1 className="textLower">Already have an account? <a href="#" className= "textLowerHL">Login</a></h1>
+            {/* <h1 className="textLower">Already have an account? <a href="#" className="textLowerHL">Login</a></h1> */}
           </div>  
         </div>
     );

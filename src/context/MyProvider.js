@@ -13,17 +13,16 @@ const MyProvider = (props) => {
         title: "",
         department: "",
         company: "",
-        phone: "",
+        phone: 0,
         email: "",
         address: "",
         website: "",
-        link: "" 
+        link: "",
     };
     //Then create a state and set it to the empty object of newCard
-    let [crtCard, setCrtCard] = useState({});
+    let [crtCard, setCrtCard] = useState(newCard);
 
     const handleCreateNewCardForm = (event) => {
-        setCrtCard(newCard);
         const { name,  value } = event.currentTarget;
 
         setCrtCard({
@@ -34,25 +33,36 @@ const MyProvider = (props) => {
 
     //Below will be the code for registering a new user
     //First set-up an empty object that is ready to receive the information from the user
-    const newUser = {
+    const blankUser = {
+        image_url: "",
+        first_name: "",
+        last_name: "",
         email: "",
-        password: "",
-        verifypassword: ""
+        hash_password: "",
+        birthday: 0,
+        subscription: "",
+        date: 0,
     };
 
     //Now set-up the state which is ready to receive the info
-    let [newReg, setNewReg] = useState(newUser);
+    let [user, setUser] = useState(blankUser);
 
     //Then create the handler function to take the new information
-    const handleRegistration = (event) => {
-        const { name, value } = event.target;
+    const handleLogReg = (event) => {
+        const { name, value } = event.currentTarget;
 
-        setNewReg({
-            ...newReg,
+        setUser({
+            ...user,
             [name]: value,
         });
     };
 
+    //Create the log in process
+
+    //A state to check the status of wether the user is logged in or not
+    let [loggedIn, SetLogIn] = useState(false);
+
+    
     return (
         <MyContext.Provider 
             value={{
@@ -60,10 +70,12 @@ const MyProvider = (props) => {
                 crtCard: crtCard,
                 setCrtCard: setCrtCard,
                 handleCreateNewCardForm: handleCreateNewCardForm,
-                newUser: newUser,
-                newReg: newReg,
-                setNewReg: setNewReg,
-                handleRegistration: handleRegistration
+                blankUser: blankUser,
+                user: user,
+                setUser: setUser,
+                handleLogReg: handleLogReg,
+                SetLogIn: SetLogIn,
+                loggedIn: loggedIn
             }} >
                 { props.children }
         </MyContext.Provider> 
