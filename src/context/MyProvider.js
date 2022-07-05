@@ -13,17 +13,16 @@ const MyProvider = (props) => {
         title: "",
         department: "",
         company: "",
-        phone: "",
+        phone: 0,
         email: "",
         address: "",
         website: "",
-        link: "" 
+        link: "",
     };
     //Then create a state and set it to the empty object of newCard
-    let [crtCard, setCrtCard] = useState({});
+    let [crtCard, setCrtCard] = useState(newCard);
 
     const handleCreateNewCardForm = (event) => {
-        setCrtCard(newCard);
         const { name,  value } = event.currentTarget;
 
         setCrtCard({
