@@ -17,7 +17,6 @@
     display: inline-block;
     width: 56rem;
     height: 6rem;
-    background-color: blueviolet;
 }
 
 #create-card-page > div {
@@ -28,7 +27,7 @@
 }
 
 #create-card-left {
-    background-color: azure;
+    /* background-color: azure; */
     width: 60rem;
     padding-inline-end: 24rem;
 }
@@ -65,9 +64,52 @@
 #create-card-form {
     width: 100%;
     max-width: 36rem;
-    margin-block: 4rem;
+    
+    /* margin-block: 4rem; */
     overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-around; */
     /* scrollbar-customization: https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp */
+    width: 25vw;
+    height: 80vh;
+    padding: 0;
+    border: none;
+    gap: none;
+  }
+
+#create-card-form > .create-card-form__input-title {
+  font-family: 'Raleway', 'sans-serif';
+  font-weight: 500;
+  font-size: 1.7rem;
+  letter-spacing: 0.08rem;
+  /* background-color: bisque; */
+  width: 100%;
+}
+
+#create-card-form > input {
+  border: none;
+  width: 100%;
+  /* background-color: blueviolet; */
+  /* padding-block: 1rem; */
+}
+#create-card-form > input::placeholder {
+  color: #a8a8a8;
+  font-family: 'Raleway';
+  font-weight: 10;
+  font-size: 1.6rem;
+  /* line-height: 1rem; */
+  letter-spacing: 1px;
+}
+
+
+.create-card-form-divider {
+  margin: 0;
+  /* margin-top: -2rem; */
+  width: 100%;
+  border-top: rgba(0, 0, 0, 0.185);
+  border-inline: none;
 }
 
 #create-card-form > input {
@@ -75,5 +117,25 @@
 }
 
 #create-card-button-save {
-    width: 100%;
+  padding: 0.5rem 2rem;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  border-color: transparent;
+  background-color: var(--primary);
+  color: #fff;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  justify-self: flex-end;
+  cursor: pointer;
 }
+
+#order-crd-basic {
+    font-family: 'Raleway', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: hsla(0, 0%, 20%, 1);
+    /* height: 98vw; */
+    width: 98vw;
+  }
+  
