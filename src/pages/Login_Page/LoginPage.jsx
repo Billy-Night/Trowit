@@ -5,10 +5,13 @@ import google_sign_up from '../../images/landing_page/google_sign_in.png';
 import { MyContext } from '../../context/MyProvider';
 import { useNavigate } from "react-router-dom";
 
+import { AuthContext } from '../../context/AuthContext';
+
 
 const LoginPage = () => {
   const navigate = useNavigate();
   const context = useContext(MyContext);
+  const { authToken, setAuthToken } = useContext(AuthContext);
 
   const handleLogin = (event) => {
     event.preventDefault();
@@ -24,17 +27,19 @@ const LoginPage = () => {
     })
     .then((response) => {
       if (response.status === 500) {
-        context.setUser(context.user);
+        context.setUser(context.blankUser);
       }
       return response.json()
     })
     .then((data) => {
-      console.log(data);
-      navigate("/cards")
+      // console.log(data);
+      setAuthToken(data.token);
       context.SetLogIn(true);
+      console.log(authToken);
+      navigate("/cards");
+      context.setUser(context.blankUser);
     })
   }
-
 
     return (
         
