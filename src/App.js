@@ -1,4 +1,10 @@
 import MyProvider from './context/MyProvider.js';
+
+//!imported the new context which handles storing the authentication
+import { AuthContext } from './context/AuthContext';
+//! import the useLocalStorage hook
+import { useLocalStorage } from './hooks/useLocalStorage';
+
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -20,25 +26,27 @@ function App() {
   // const context = useContext(MyContext);
 
   return (
-    <MyProvider>
-      <Router>
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/sign-up" element={<SignUpPage />} />
-          <Route path="/log-in" element={<LoginPage />} />
-          <Route path="/termsandconditions" element={<TermsConditions />} />
-          <Route path="/cards" element={<CardsPage />} />
-          <Route path="/cards/newcard" element={<CreateNewCard />} />
-          <Route path="/contacts" element={<Contacts />} />
-          <Route path="/backgrounds" element={<BackgrdImgGen />} />
-          <Route path="/email-signatures" element={<EmailGen />} />
-          <Route path="/settings" element={<Settings />} />
-          <Route path="/order-card" element={<OrderCard />} />
-          <Route path="/order-cardb" element={<OrderCrdBasic />} />
-          <Route path="/error" element={<Error />} />
-        </Routes>
-      </Router>
-    </MyProvider>
+    <AuthContext.Provider >
+      <MyProvider>
+        <Router>
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/sign-up" element={<SignUpPage />} />
+            <Route path="/log-in" element={<LoginPage />} />
+            <Route path="/termsandconditions" element={<TermsConditions />} />
+            <Route path="/cards" element={<CardsPage />} />
+            <Route path="/cards/newcard" element={<CreateNewCard />} />
+            <Route path="/contacts" element={<Contacts />} />
+            <Route path="/backgrounds" element={<BackgrdImgGen />} />
+            <Route path="/email-signatures" element={<EmailGen />} />
+            <Route path="/settings" element={<Settings />} />
+            <Route path="/order-card" element={<OrderCard />} />
+            <Route path="/order-cardb" element={<OrderCrdBasic />} />
+            <Route path="/error" element={<Error />} />
+          </Routes>
+        </Router>
+      </MyProvider>
+    </AuthContext.Provider>
   );
 }
 
