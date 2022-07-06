@@ -5,6 +5,8 @@ import { useNavigate } from "react-router-dom";
 
 import { MyContext } from "../../context/MyProvider";
 import AvatarEditor from "../../components/AvatarEditor/AvatarEditor";
+import InformationButton from "../../components/InformationButton/InformationButton";
+import { CardInformationData } from "./CardInformationData";
 
 const CreateNewCard = () => {
   const context = useContext(MyContext);
@@ -12,11 +14,11 @@ const CreateNewCard = () => {
 
   const handleSubmitOfCreateNewCard = (event) => {
     event.preventDefault();
-    fetch('http://localhost:3306/createcard', {
-      method: 'POST',
-      mode: 'cors',
+    fetch("http://localhost:3306/createcard", {
+      method: "POST",
+      mode: "cors",
       headers: new Headers({
-        'Content-Type': 'application/json'
+        "Content-Type": "application/json",
       }),
       body: JSON.stringify({
         type: context.crtCard.type,
@@ -29,10 +31,9 @@ const CreateNewCard = () => {
         email: context.crtCard.email,
         address: context.crtCard.address,
         website: context.crtCard.website,
-        link: context.crtCard.link
+        link: context.crtCard.link,
       }),
-    })
-    .then((response) => {
+    }).then((response) => {
       if (response.status === 201) {
         navigate("/cards");
         context.setCrtCard(context.newCard);
@@ -95,10 +96,18 @@ const CreateNewCard = () => {
             />
 
             {/* TODO: load other input fields conditionally and make them depend on the state of the information panel*/}
-          <input id="create-card-button-save" type="submit" value="submit" />
+            <input id="create-card-button-save" type="submit" value="submit" />
           </form>
         </div>
-        <div id="create-card-right">{/* add more information container */}</div>
+        <div id="create-card-right">
+          {/* add more information container */}
+          <h1>Add more information:</h1>
+          <div id="create-card-right-grid">
+            {CardInformationData.map((item) => (
+              <InformationButton svg={item.svg} label={item.label} />
+            ))}
+          </div>
+        </div>
 
         {/* <form onSubmit={handleSubmitOfCreateNewCard}>
             <input
@@ -155,7 +164,6 @@ const CreateNewCard = () => {
 };
 
 export default CreateNewCard;
-
 
 // type: context.crtCard.type,
 //         first_name: context.crtCard.type,
