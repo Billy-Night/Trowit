@@ -24,9 +24,11 @@ import OrderCrdBasic from './pages/Order_Physical_Card_Page/OrderCrdBasic.jsx';
 
 function App() {
   // const context = useContext(MyContext);
+  //! deconstruct the object stored in local storage
+  const [storedValue, setValue] = useLocalStorage("authToken", null);
 
   return (
-    <AuthContext.Provider >
+    <AuthContext.Provider value={{ authToken: storedValue, setAuthToken: setValue }}>
       <MyProvider>
         <Router>
           <Routes>
