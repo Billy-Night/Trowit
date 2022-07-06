@@ -6,6 +6,7 @@
   display: flex;
   width: 90vw;
   justify-content: space-around;
+
 }
 
 .card {
@@ -14,6 +15,7 @@
   height: auto;
   border: solid 5px #51dac4;
   border-radius: 20px;
+  cursor: pointer;
 }
 .card img {
   height: 200px;
