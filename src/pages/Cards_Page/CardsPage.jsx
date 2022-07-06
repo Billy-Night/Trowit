@@ -16,7 +16,7 @@ const CardsPage = () => {
         <SideNavBar />
         <p className='title'> Cards</p>
         <SearchCard />
-        {/* I don't think using line <br> is good practice  */}
+        {/* I don't think using line <br> is good practice whats best then???  */}
         <br />
         <br />
       </div>
