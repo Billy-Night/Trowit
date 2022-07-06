@@ -126,6 +126,7 @@
   font-size: 2.5rem;
   text-transform: uppercase;
   justify-self: flex-end;
+  cursor: pointer;
 }
 
 #order-crd-basic {
