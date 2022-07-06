@@ -11,7 +11,7 @@ import { AuthContext } from '../../context/AuthContext';
 const LoginPage = () => {
   const navigate = useNavigate();
   const context = useContext(MyContext);
-  const { authToken, setAuthToken } = useContext(AuthContext);
+  const { setAuthToken } = useContext(AuthContext);
 
   const handleLogin = (event) => {
     event.preventDefault();
@@ -35,7 +35,7 @@ const LoginPage = () => {
       // console.log(data);
       setAuthToken(data.token);
       context.SetLogIn(true);
-      console.log(authToken);
+      // console.log(authToken);
       navigate("/cards");
       context.setUser(context.blankUser);
     })

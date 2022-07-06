@@ -1,5 +1,5 @@
-import React, { useContext, useState } from "react";
-import { MyContext } from '../../context/MyProvider';
+import React, { useContext, useState, useEffect } from "react";
+// import { MyContext } from '../../context/MyProvider';
 
 import { AuthContext } from '../../context/AuthContext';
 
@@ -9,12 +9,12 @@ import './Avatar.css';
 
 
 const Avatar = () => {
-    const context = useContext(MyContext);
-    const { authToken, setAuthToken } = useContext(AuthContext);
+    // const context = useContext(MyContext);
+    const { authToken } = useContext(AuthContext);
 
     let [avatarData, setAvatarData] = useState({});
 
-    const handleGetUserData = () => {
+    useEffect(() => {
         fetch("http://localhost:3306/avatar", {
             headers: {
                 Authorization: `Bearer ${authToken}`
@@ -25,16 +25,13 @@ const Avatar = () => {
             setAvatarData(data)
             );
         return;
-    }
-
-    console.log(avatarData);
-
+        //think about adding some clean up function here
+    }, [authToken])
 
     return (
         <div className="avatar">
             <h1>This is the avatar component</h1>
-            <h2>{authToken}</h2>
-            <button onClick={handleGetUserData}>Press me to get info</button>
+            <h2>The Web token {authToken}</h2>
             {avatarData ?
             <div>
                 <p>First Name: {avatarData.first_name}</p>
