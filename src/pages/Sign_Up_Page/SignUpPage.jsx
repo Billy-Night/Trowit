@@ -2,10 +2,10 @@ import React, { useContext } from "react";
 import "./SignUpPage.css";
 import trowit_logo_img from "../../images/landing_page/logo_small@4x.png";
 import google_sign_up from "../../images/landing_page/google_sign_up.png";
-
 import { MyContext } from "../../context/MyProvider";
-
 import { useNavigate } from "react-router-dom";
+
+
 
 const SignUpPage = () => {
   const context = useContext(MyContext);
@@ -40,6 +40,20 @@ const SignUpPage = () => {
         <h1 className="text">Create an account to get started!</h1>
       </div>
       <form className="registrationForm" onSubmit={handleRegistrationSubmit}>
+      <input
+          value={context.user.email}
+          onChange={context.handleLogReg}
+          name="name"
+          placeholder="Name"
+        />
+        <hr className="create-card-form-divider" />
+        <input
+          value={context.user.email}
+          onChange={context.handleLogReg}
+          name="Last Name"
+          placeholder="Last Name"
+        />
+        <hr className="create-card-form-divider" />
         <input
           value={context.user.email}
           onChange={context.handleLogReg}

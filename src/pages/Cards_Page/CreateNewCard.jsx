@@ -62,13 +62,12 @@ const CreateNewCard = () => {
             />
           </svg>
         </a>
-
         <input type="search" />
       </span>
       <div>
         <div id="create-card-left">
           <AvatarEditor />
-
+          
           <form id="create-card-form" onSubmit={handleSubmitOfCreateNewCard}>
             <input
               value={context.crtCard.first_name}
