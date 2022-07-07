@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import trowit_logo_img from "../../images/landing_page/logo_small@4x.png";
+import trowit_logo_img from "../../images/landing_page/logo_small.svg";
 import google_sign_up from "../../images/landing_page/google_sign_in.png";
 import { MyContext } from "../../context/MyProvider";
 import { useNavigate } from "react-router-dom";
@@ -42,44 +42,46 @@ const LoginPage = () => {
   };
 
   return (
-    <div className={styles["login_page"]}>
-      <div className={styles["trowitLogo"]}>
+    <div className={styles["login-page-container"]}>
+      <div className={styles["logo-center"]}>
         <img
           src={trowit_logo_img}
           className={styles["logo_login"]}
           alt="Trowit logo"
         />
       </div>
-      <div>
-        <h1 className={styles["text"]}>Log in to your account</h1>
+      <div className={styles["login_page"]}>
+        <div>
+          <h1 className={styles["text"]}>Log in to your account</h1>
+        </div>
+        <form className={styles["loginForm"]} onSubmit={handleLogin}>
+          <input
+            value={context.user.email}
+            onChange={context.handleLogReg}
+            name="email"
+            placeholder="Email"
+          />
+          <hr className={styles["create-card-form-divider"]} />
+          <input
+            value={context.user.hash_password}
+            onChange={context.handleLogReg}
+            name="hash_password"
+            placeholder="Password"
+          />
+          <hr className={styles["create-card-form-divider"]} />
+        </form>
+        <input className={styles["reg"]} type="submit" value="Submit" />
+        <span className={styles["forgotPassword"]}>
+          <a href="https://www.w3schools.com">Forgot password?</a>
+        </span>
+        <button className={styles["button"]}>
+          <img
+            src={google_sign_up}
+            className={styles["google_sign_up"]}
+            alt="Google Sign-up button"
+          />
+        </button>
       </div>
-      <form className={styles["loginForm"]} onSubmit={handleLogin}>
-        <input
-          value={context.user.email}
-          onChange={context.handleLogReg}
-          name="email"
-          placeholder="Email"
-        />
-        <hr className={styles["create-card-form-divider"]} />
-        <input
-          value={context.user.hash_password}
-          onChange={context.handleLogReg}
-          name="hash_password"
-          placeholder="Password"
-        />
-        <hr className={styles["create-card-form-divider"]} />
-      </form>
-      <input className={styles["reg"]} type="submit" value="Submit" />
-      <span className={styles["forgotPassword"]}>
-        <a href="https://www.w3schools.com">Forgot password?</a>
-      </span>
-      <button className={styles["button"]}>
-        <img
-          src={google_sign_up}
-          className={styles["google_sign_up"]}
-          alt="Google Sign-up button"
-        />
-      </button>
     </div>
   );
 };
