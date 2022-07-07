@@ -8,7 +8,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 9rem;
+  gap: 12rem;
 }
 
 .registrationForm {
@@ -33,26 +33,29 @@
 
 .registrationForm > input {
   border: none;
-  /* background-color: blueviolet; */
-  /* padding-block: 1rem; */
-}
-
-.registrationForm > .registrationForm__input-name {
-  font-family: "Raleway", "sans-serif";
   font-weight: 500;
   font-size: 1.7rem;
   letter-spacing: 1rem;
   /* background-color: bisque; */
   width: 100%;
+  /* background-color: blueviolet; */
+  padding-block: 1rem;
+
+}
+
+.registrationForm > .registrationForm__input-name {
+  font-weight: 500;
+  font-size: 1.7rem;
+  letter-spacing: 1rem;
+  width: 100%;
 }
 
 .registrationForm > input::placeholder {
   color: #a8a8a8;
-  font-family: "Raleway";
   font-weight: 10;
   font-size: 1.6rem;
-  /* line-height: 1rem; */
-  letter-spacing: 1px;
+  line-height: 1em;
+  letter-spacing: 0;
 }
 
 :root {
@@ -70,9 +73,6 @@
 }
 
 .logo_signup {
-  /* display: block; */
-  /* margin-left: 275px;
-  margin-right: auto; */
   width: 35%;
 }
 
@@ -103,30 +103,14 @@
   color: rgb(0, 140, 255);
 }
 
-/* input {
-  width: 60rem;
-  height:  6rem
- }
-
-input[type="text"]
-{
-    font-size: 24px;
-}
-
-input[type="submit"]
-{
-    font-size: 24px;
-    background-color: #25dac5;
-} */
-
 .btn-register {
-  padding: 0.5rem 2rem;
+  padding: 0.1rem 2rem;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   border-color: transparent;
   background-color: var(--primary);
   color: #fff;
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   text-transform: uppercase;
   justify-self: flex-end;
   cursor: pointer;
@@ -143,8 +127,7 @@ input[type="submit"]
 
 .google_sign_up {
   background-image: "../../images/landing_page/google_sign_up.png";
-  height: 80px;
-  width: 700px;
+  height: 4rem;
 }
 
 /* input {
