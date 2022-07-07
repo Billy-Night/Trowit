@@ -67,7 +67,16 @@ const CreateNewCard = () => {
       <div>
         <div id="create-card-left">
           <AvatarEditor />
-          
+          <div className="box-container">
+            <div className="box red"></div>
+            <div className="box green"></div>
+            <div className="box blue"></div>
+            <div className="box yellow"></div>
+            <div className="box violet"></div>
+            
+          </div>
+
+
           <form id="create-card-form" onSubmit={handleSubmitOfCreateNewCard}>
             <input
               value={context.crtCard.first_name}
