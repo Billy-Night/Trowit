@@ -18,6 +18,8 @@ const MyProvider = (props) => {
         address: "",
         website: "",
         link: "",
+        colour: "",
+        users_id: 0,
     };
     //Then create a state and set it to the empty object of newCard
     let [crtCard, setCrtCard] = useState(newCard);
@@ -62,6 +64,7 @@ const MyProvider = (props) => {
     //A state to check the status of wether the user is logged in or not
     let [loggedIn, SetLogIn] = useState(false);
 
+    let [userId, setUserID] = useState(0);
     
     return (
         <MyContext.Provider 
@@ -75,7 +78,9 @@ const MyProvider = (props) => {
                 setUser: setUser,
                 handleLogReg: handleLogReg,
                 SetLogIn: SetLogIn,
-                loggedIn: loggedIn
+                loggedIn: loggedIn,
+                userId: userId,
+                setUserID: setUserID,
             }} >
                 { props.children }
         </MyContext.Provider> 

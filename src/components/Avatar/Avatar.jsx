@@ -21,12 +21,17 @@ const Avatar = () => {
             }
         })
             .then((res) => res.json())
-            .then((data) => 
+            .then((data) => {
             setAvatarData(data)
-            );
-        return;
+    });
         //think about adding some clean up function here
     }, [authToken])
+
+    // useEffect(() => {
+    //     context.setCrtCard(avatarData.id)
+    // }, [avatarData])
+
+    
 
     return (
         <div className="avatar">

@@ -38,6 +38,7 @@ const LoginPage = () => {
       // console.log(authToken);
       navigate("/cards");
       context.setUser(context.blankUser);
+      context.setUserID(data.id);
     })
   }
 

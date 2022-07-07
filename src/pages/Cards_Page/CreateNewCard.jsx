@@ -35,6 +35,8 @@ const CreateNewCard = () => {
         address: context.crtCard.address,
         website: context.crtCard.website,
         link: context.crtCard.link,
+        colour: context.crtCard.colour,
+        users_id: context.userId,
       }),
     }).then((response) => {
       if (response.status === 201) {
