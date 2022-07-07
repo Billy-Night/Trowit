@@ -1,26 +1,26 @@
-import MyProvider from './context/MyProvider.js';
+import MyProvider from "./context/MyProvider.js";
 
 //!imported the new context which handles storing the authentication
-import { AuthContext } from './context/AuthContext';
+import { AuthContext } from "./context/AuthContext";
 //! import the useLocalStorage hook
-import { useLocalStorage } from './hooks/useLocalStorage';
+import { useLocalStorage } from "./hooks/useLocalStorage";
 
-import React from 'react';
-import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import LandingPage from './pages/Landing_Page/LandingPage.jsx';
-import SignUpPage from './pages/Sign_Up_Page/SignUpPage.jsx';
-import LoginPage from './pages/Login_Page/LoginPage.jsx';
-import CardsPage from './pages/Cards_Page/CardsPage.jsx';
-import Contacts from './pages/Contacts_Page/Contacts.jsx';
-import CreateNewCard from './pages/Cards_Page/CreateNewCard.jsx';
-import BackgrdImgGen from './components/Background_Image_Generator/BackgrdImgGen.jsx';
-import EmailGen from './pages/Email_Generator_Page/EmailGen.jsx';
-import Settings from './pages/Settings_Page/Settings.jsx';
-import OrderCard from './pages/Order_Physical_Card_Page/OrderCard.jsx';
-import TermsConditions from './pages/Terms_and_Conditions/TermsConditions.jsx';
-import Error from './pages/Error.jsx';
-import OrderCrdBasic from './pages/Order_Physical_Card_Page/OrderCrdBasic.jsx';
+import React from "react";
+import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import LandingPage from "./pages/Landing_Page/LandingPage.jsx";
+import SignUpPage from "./pages/Sign_Up_Page/SignUpPage.jsx";
+import LoginPage from "./pages/Login_Page/LoginPage.jsx";
+import CardsPage from "./pages/Cards_Page/CardsPage.jsx";
+import Contacts from "./pages/Contacts_Page/Contacts.jsx";
+import CreateNewCard from "./pages/Cards_Page/CreateNewCard.jsx";
+import BackgrdImgGen from "./components/Background_Image_Generator/BackgrdImgGen.jsx";
+import EmailGen from "./pages/Email_Generator_Page/EmailGen.jsx";
+import Settings from "./pages/Settings_Page/Settings.jsx";
+import OrderCard from "./pages/Order_Physical_Card_Page/OrderCard.jsx";
+import TermsConditions from "./pages/Terms_and_Conditions/TermsConditions.jsx";
+import Error from "./pages/Error.jsx";
+import OrderCrdBasic from "./pages/Order_Physical_Card_Page/OrderCrdBasic.jsx";
 
 function App() {
   // const context = useContext(MyContext);
@@ -28,7 +28,9 @@ function App() {
   const [storedValue, setValue] = useLocalStorage("authToken", null);
 
   return (
-    <AuthContext.Provider value={{ authToken: storedValue, setAuthToken: setValue }}>
+    <AuthContext.Provider
+      value={{ authToken: storedValue, setAuthToken: setValue }}
+    >
       <MyProvider>
         <Router>
           <Routes>

@@ -1,6 +1,6 @@
 :root {
   --primary: #25dac5;
-  font-family: 'Nunito Sans';
+  font-family: "Nunito Sans";
 }
 
 .btn {
@@ -8,7 +8,7 @@
   outline: none;
   border: none;
   cursor: pointer;
-  font-family: 'Nunito Sans';
+  font-family: "Nunito Sans";
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -23,7 +23,7 @@
 
 .btn--outline {
   background-color: transparent;
-  font-family: 'Nunito Sans';
+  font-family: "Nunito Sans";
   color: #15143966;
   padding: 8px 20px;
   transition: all 0.3s ease-out;
@@ -32,7 +32,7 @@
 .btn--outline-in {
   background-color: var(--primary);
   color: #fff;
-  font-family: 'Nunito Sans';
+  font-family: "Nunito Sans";
   padding: 8px 20px;
   border: 1px solid var(--primary);
   border-radius: 25px;

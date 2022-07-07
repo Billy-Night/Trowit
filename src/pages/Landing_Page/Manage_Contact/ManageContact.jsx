@@ -1,9 +1,9 @@
-import './ManageContact.css';
-import mergeContact from '../../../images/landing_page/merge_contact@2x.png';
+import "./ManageContact.css";
+import mergeContact from "../../../images/landing_page/merge_contact@2x.png";
 
-import { ScrollWithOffset } from '../../../utils/utils.jsx';
+import { ScrollWithOffset } from "../../../utils/utils.jsx";
 
-import { HashLink as Link } from 'react-router-hash-link';
+import { HashLink as Link } from "react-router-hash-link";
 
 const ManageContact = (props) => {
   return (

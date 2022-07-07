@@ -1,5 +1,5 @@
-import './ImpressYourPeers.css';
-import impress_your_peers from '../../../images/landing_page/hand_with_mobile@2x.png';
+import "./ImpressYourPeers.css";
+import impress_your_peers from "../../../images/landing_page/hand_with_mobile@2x.png";
 
 const ImpressYourPeers = (props) => {
   return (

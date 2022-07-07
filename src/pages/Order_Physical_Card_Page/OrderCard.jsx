@@ -1,10 +1,9 @@
-import './OrderCard.css';
+import "./OrderCard.css";
 import SideNavBar from "../../components/Side_NavBar/SideNavBar";
-import OderCardTemplate from './OderCardTemplate';
-import OderCardBusinessTemplate from './OderCardBusinessTemplate';
+import OderCardTemplate from "./OderCardTemplate";
+import OderCardBusinessTemplate from "./OderCardBusinessTemplate";
 
 const OrderCard = () => {
-
   return (
     <div id="order-card">
       <SideNavBar />
@@ -66,7 +65,6 @@ const OrderCard = () => {
             cta2="Get in touch for a personalized quote!"
             button="Contact Sales"
           />
-
         </div>
       </div>
     </div>

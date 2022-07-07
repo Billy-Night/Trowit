@@ -1,9 +1,9 @@
-import './CreateAndShare.css';
-import profilePreview from '../../../images/landing_page/create_and_share_img@2x.png';
+import "./CreateAndShare.css";
+import profilePreview from "../../../images/landing_page/create_and_share_img@2x.png";
 
-import { ScrollWithOffset } from '../../../utils/utils.jsx';
+import { ScrollWithOffset } from "../../../utils/utils.jsx";
 
-import { HashLink } from 'react-router-hash-link';
+import { HashLink } from "react-router-hash-link";
 
 const CreateAndShare = (props) => {
   return (

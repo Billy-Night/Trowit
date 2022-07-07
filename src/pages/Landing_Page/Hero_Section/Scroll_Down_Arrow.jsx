@@ -1,5 +1,5 @@
-import React from 'react';
-import './Scroll_Down_Arrow.css';
+import React from "react";
+import "./Scroll_Down_Arrow.css";
 
 const Scroll_Down_Arrow = () => {
   return (
