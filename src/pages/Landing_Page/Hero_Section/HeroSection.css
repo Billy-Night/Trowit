@@ -120,7 +120,7 @@
 
 /* Tablet  */
 @media screen and (min-width: 888px) and (max-width: 1400px) {
-  * {
+  #hero-section > * {
     font-size: 40%;
   }
 

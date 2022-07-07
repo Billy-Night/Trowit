@@ -1,22 +1,45 @@
-/* .create-card-form-container {
-    margin-left: 100px;
-} */
-
 #create-card-page {
   height: 100vh;
   margin-left: 8rem;
   padding: 2rem 4rem;
+  font-size: 1rem;
 }
 
 #create-card-page > h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: black;
 }
 
-#create-card-page > span {
-  display: inline-block;
+#create-card-page > span.search-area {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   width: 56rem;
-  height: 6rem;
+}
+
+#create-card-page > span.search-area > a {
+  height: 3rem;
+  width: 3rem;
+  display: inline-block;
+  margin-inline-end: 1.5rem;
+}
+
+#create-card-page > span.search-area > a > svg {
+  height: 100%;
+  width: 100%;
+}
+
+#create-card-page > span.search-area > input {
+  height: 4rem;
+  font-size: 1.6rem;
+  width: 48rem;
+  padding-inline: 1.6rem;
+  min-width: 24rem;
+  display: inline-block;
+  border: none;
+  border-radius: 2rem;
+  background-color: white;
+  box-shadow: 0 .4rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 #create-card-page > div {
@@ -64,19 +87,10 @@
 #create-card-form {
   width: 100%;
   max-width: 36rem;
-
-  /* margin-block: 4rem; */
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: space-around; */
-  /* scrollbar-customization: https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp */
-  width: 25vw;
-  height: 80vh;
-  padding: 0;
-  border: none;
-  gap: none;
 }
 
 #create-card-form > .create-card-form__input-title {
@@ -84,28 +98,25 @@
   font-weight: 500;
   font-size: 1.7rem;
   letter-spacing: 0.08rem;
-  /* background-color: bisque; */
   width: 100%;
 }
 
 #create-card-form > input {
   border: none;
   width: 100%;
-  /* background-color: blueviolet; */
-  /* padding-block: 1rem; */
+  padding-block: 0.6rem;
+  padding-inline: 1.2rem;
 }
 #create-card-form > input::placeholder {
   color: #a8a8a8;
   font-family: "Raleway";
   font-weight: 10;
   font-size: 1.6rem;
-  /* line-height: 1rem; */
   letter-spacing: 1px;
 }
 
 .create-card-form-divider {
   margin: 0;
-  /* margin-top: -2rem; */
   width: 100%;
   border-top: rgba(0, 0, 0, 0.185);
   border-inline: none;
@@ -134,6 +145,5 @@
   margin: 0;
   box-sizing: border-box;
   color: hsla(0, 0%, 20%, 1);
-  /* height: 98vw; */
   width: 98vw;
 }
