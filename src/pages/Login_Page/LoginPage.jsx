@@ -4,7 +4,6 @@ import trowit_logo_img from '../../images/landing_page/logo_small@4x.png';
 import google_sign_up from '../../images/landing_page/google_sign_in.png';
 import { MyContext } from '../../context/MyProvider';
 import { useNavigate } from "react-router-dom";
-
 import { AuthContext } from '../../context/AuthContext';
 
 
@@ -54,27 +53,30 @@ const LoginPage = () => {
             <div>
                 <h1 className= "text">Log in to your account</h1>
             </div>
-          <form onSubmit={handleLogin} className= "loginForm">
+          <form  className= "loginForm" onSubmit={handleLogin}>
               <input 
                 value={context.user.email}
                 onChange={context.handleLogReg} 
                 name="email" 
                 placeholder="Email"
                 />
+                <hr className="create-card-form-divider" />
               <input 
                 value={context.user.hash_password} 
                 onChange={context.handleLogReg}
                 name="hash_password" 
                 placeholder="Password"
                 />
-              <input className= "reg"
+                <hr className="create-card-form-divider" />
+
+          </form>
+          <input className= "reg"
                 type="submit" 
                 value= "Submit"
                 />
-          </form>
-          <div className="forgotPassword">
+          <span className="forgotPassword">
             <a href="https://www.w3schools.com">Forgot password?</a> 
-          </div>  
+          </span>  
             <button className= "button"><img 
              src={google_sign_up} 
              className="google_sign_up"

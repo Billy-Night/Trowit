@@ -2,7 +2,7 @@
 
 .login_page{
   /* justify-content: center; */
-  width: 95vw;
+  width: 100vw;
   font-family: 'Raleway', sans-serif;
   font-style: normal;
   display: flex; 
@@ -12,11 +12,49 @@
  }
 
 .loginForm{
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
+
   height: 20vh;
   gap: 1rem;
+  /* width: 100%; */
+  max-width: 36rem;
+  /* margin-block: 4rem; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  gap: none;
+}
+
+.loginForm > input {
+  border: none;
+  font-family: 'Raleway', 'sans-serif';
+  font-weight: 500;
+  font-size: 1.7rem;
+  letter-spacing: 1rem;
+  /* background-color: bisque; */
+  width: 100%;
+  /* background-color: blueviolet; */
+  padding-block: 1rem;
+}
+
+.loginForm > .loginForm__input-name {
+  font-family: 'Raleway', 'sans-serif';
+  font-weight: 500;
+  font-size: 1.7rem;
+  letter-spacing: 1rem;
+  /* background-color: bisque; */
+  width: 100%;
+}
+
+.loginForm > input::placeholder {
+  color: #a8a8a8;
+  font-family: 'Raleway';
+  font-weight: 10;
+  font-size: 1.6rem;
+  line-height: 1rem;
+  letter-spacing: 1px;
 }
 
 :root {
@@ -25,14 +63,13 @@
     --primary-dark: #1eae9e;
   }
 
-#body {
-  }
 
 .trowitLogo {
-  width: 10rem;
+  width: 100rem;
   height: 6rem;
-  align-self: flex-start;
-  margin-left: 470px;
+  align-self: center;
+  margin-left: 60rem;
+  margin-top: 4rem;
 }
 
 .logo_login{
@@ -70,24 +107,21 @@
   color: rgb(0, 140, 255);
 }
 
-input {
+/* input {
   width: 60rem;
   height:  6rem
- }
+ } */
 
-input[type="text"]
-{
-  font-size: 24px;
-}
-
-input[type="submit"]
-{
-  font-size: 24px;
-  background-color: #25dac5;
+ .create-card-form-divider {
+  margin: 0;
+  /* margin-top: -2rem; */
+  width: 100%;
+  border-top: rgba(0, 0, 0, 0.185);
+  border-inline: none;
 }
 
 .forgotPassword {
-  
+  font-size: 5rem;
 }
 
 .google_sign_up{
@@ -98,6 +132,19 @@ input[type="submit"]
 
 .button{
   border: 0ch;
+}
+
+.reg {
+  padding: 0.5rem 2rem;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  border-color: transparent;
+  background-color: var(--primary);
+  color: #fff;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  justify-self: flex-end;
+  cursor: pointer;
 }
 
 /* input {
