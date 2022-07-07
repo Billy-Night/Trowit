@@ -6,7 +6,7 @@
 
 #manage_contact {
   width: 95vw;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-style: normal;
   display: grid;
   grid-template-columns: repeat(14, 1fr);
@@ -71,7 +71,7 @@
 }
 
 .MC--hover-underline:after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   transform: scaleX(0);

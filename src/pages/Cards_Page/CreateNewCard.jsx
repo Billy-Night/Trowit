@@ -6,9 +6,8 @@ import { MyContext } from "../../context/MyProvider";
 import AvatarEditor from "../../components/AvatarEditor/AvatarEditor";
 import InformationButton from "../../components/InformationButton/InformationButton";
 import { CardInformationData } from "./CardInformationData";
-import "./SearchCard.css"
-import SearchCard from "./SearchCard.jsx"
- 
+import "./SearchCard.css";
+import SearchCard from "./SearchCard.jsx";
 
 const CreateNewCard = () => {
   const context = useContext(MyContext);
@@ -51,31 +50,74 @@ const CreateNewCard = () => {
       <h1>Cards / New Card</h1>
       <br />
       <span>
-      <svg width="24" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M22.7144 13.5C23.4245 13.5 24.0001 12.8284 24.0001 12C24.0001 11.1716 23.4245 10.5 22.7144 10.5V13.5ZM0.805288 10.9393C0.303185 11.5251 0.303185 12.4749 0.805288 13.0607L8.98754 22.6066C9.48965 23.1924 10.3037 23.1924 10.8058 22.6066C11.3079 22.0208 11.3079 21.0711 10.8058 20.4853L3.5327 12L10.8058 3.51476C11.3079 2.92897 11.3079 1.97923 10.8058 1.39344C10.3037 0.807654 9.48965 0.807654 8.98754 1.39344L0.805288 10.9393ZM22.7144 10.5H1.71443V13.5H22.7144V10.5Z" fill="black"/>
-      </svg>       
-      
-      <svg width="323" height="52" viewBox="0 0 323 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <g filter="url(#filter0_d_212_555)">
-      <path d="M5 17C5 8.71573 11.7157 2 20 2H303C311.284 2 318 8.71573 318 17V29C318 37.2843 311.284 44 303 44H20C11.7157 44 5 37.2843 5 29V17Z" fill="white"/>
-      </g>
-      <defs>
-      <filter id="filter0_d_212_555" x="0" y="0" width="323" height="52" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-      <feOffset dy="3"/>
-      <feGaussianBlur stdDeviation="2.5"/>
-      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
-      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_212_555"/>
-      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_212_555" result="shape"/>
-      </filter>
-      </defs>
-      </svg>        
+        <svg
+          width="24"
+          height="50"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M22.7144 13.5C23.4245 13.5 24.0001 12.8284 24.0001 12C24.0001 11.1716 23.4245 10.5 22.7144 10.5V13.5ZM0.805288 10.9393C0.303185 11.5251 0.303185 12.4749 0.805288 13.0607L8.98754 22.6066C9.48965 23.1924 10.3037 23.1924 10.8058 22.6066C11.3079 22.0208 11.3079 21.0711 10.8058 20.4853L3.5327 12L10.8058 3.51476C11.3079 2.92897 11.3079 1.97923 10.8058 1.39344C10.3037 0.807654 9.48965 0.807654 8.98754 1.39344L0.805288 10.9393ZM22.7144 10.5H1.71443V13.5H22.7144V10.5Z"
+            fill="black"
+          />
+        </svg>
+
+        <svg
+          width="323"
+          height="52"
+          viewBox="0 0 323 52"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g filter="url(#filter0_d_212_555)">
+            <path
+              d="M5 17C5 8.71573 11.7157 2 20 2H303C311.284 2 318 8.71573 318 17V29C318 37.2843 311.284 44 303 44H20C11.7157 44 5 37.2843 5 29V17Z"
+              fill="white"
+            />
+          </g>
+          <defs>
+            <filter
+              id="filter0_d_212_555"
+              x="0"
+              y="0"
+              width="323"
+              height="52"
+              filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB"
+            >
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feColorMatrix
+                in="SourceAlpha"
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha"
+              />
+              <feOffset dy="3" />
+              <feGaussianBlur stdDeviation="2.5" />
+              <feColorMatrix
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"
+              />
+              <feBlend
+                mode="normal"
+                in2="BackgroundImageFix"
+                result="effect1_dropShadow_212_555"
+              />
+              <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="effect1_dropShadow_212_555"
+                result="shape"
+              />
+            </filter>
+          </defs>
+        </svg>
       </span>
       <div>
         <div id="create-card-left">
           <AvatarEditor />
-          
+
           <form id="create-card-form" onSubmit={handleSubmitOfCreateNewCard}>
             <input
               value={context.crtCard.first_name}

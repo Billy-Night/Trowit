@@ -1,10 +1,10 @@
-import './HeroSection.css';
-import heroImg from '../../../images/landing_page/hero-img@2x.png';
-import Scroll_Down_Arrow from './Scroll_Down_Arrow';
+import "./HeroSection.css";
+import heroImg from "../../../images/landing_page/hero-img@2x.png";
+import Scroll_Down_Arrow from "./Scroll_Down_Arrow";
 //The useNavigate hook returns a function that lets you navigate programmatically.
 
-import { ScrollWithOffset } from '../../../utils/utils.jsx';
-import { HashLink } from 'react-router-hash-link';
+import { ScrollWithOffset } from "../../../utils/utils.jsx";
+import { HashLink } from "react-router-hash-link";
 
 const HeroSection = (props) => {
   return (
@@ -21,7 +21,7 @@ const HeroSection = (props) => {
       {/* <C2A-btn />
             <Learn-more-btn /> */}
       <button className="C2A--btn" onClick={props.HandleClickOrdCard}>
-        {' '}
+        {" "}
         Order your TROWIT Card
       </button>
       {/* <button className="more--btn hover-underline">Learn More</button> */}

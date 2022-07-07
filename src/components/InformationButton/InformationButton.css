@@ -1,24 +1,24 @@
 .information-button-base {
-    width: 12rem;
-    height: 12rem;
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 2rem;
+  width: 12rem;
+  height: 12rem;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
 }
 
 .information-button-base > svg {
-    width: 4rem;
-    height: 4rem;
+  width: 4rem;
+  height: 4rem;
 }
 
 .information-button-base > p {
-    margin-top: 1rem;
-    font-size: 1.6rem;
-    text-align: center;
+  margin-top: 1rem;
+  font-size: 1.6rem;
+  text-align: center;
 }
 
 .information-button-base:hover {
-    background-color: #00000010;
+  background-color: #00000010;
 }
