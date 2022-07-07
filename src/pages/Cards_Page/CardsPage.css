@@ -10,12 +10,12 @@
 }
 
 .card {
-
   width: fit-content;
   height: auto;
   border: solid 5px #51dac4;
   border-radius: 20px;
   cursor: pointer;
+  font-size: 60px;
 }
 .card img {
   height: 200px;

@@ -14,6 +14,8 @@ const Avatar = () => {
 
     let [avatarData, setAvatarData] = useState({});
 
+    // To send a cross-origin request with headers like Authorization, you have to drop the no-cors mode and support preflight requests (OPTIONS).
+
     useEffect(() => {
         fetch("http://localhost:3306/avatar", {
             headers: {

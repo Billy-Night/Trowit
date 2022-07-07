@@ -29,9 +29,12 @@ const Card = (props) => {
   };
 
     return (
-        <div className="card">
-          <img onClick={() => handleClick(props.id)}  src={props.src} alt={props.alt} id={props.id} />
-        </div>
+      <div className="card" onClick={() => handleClick(props.id)}>
+          <p>{props.type}</p> 
+      </div>
+        // <div className="card">
+        //   <img onClick={() => handleClick(props.id)}  src={props.src} alt={props.alt} id={props.id} />
+        // </div>
     );
 };
 

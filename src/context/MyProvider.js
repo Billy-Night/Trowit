@@ -64,7 +64,7 @@ const MyProvider = (props) => {
     //A state to check the status of wether the user is logged in or not
     let [loggedIn, SetLogIn] = useState(false);
 
-    let [userId, setUserID] = useState(0);
+    let [userId, setUserID] = useState(null);
     
     return (
         <MyContext.Provider 
