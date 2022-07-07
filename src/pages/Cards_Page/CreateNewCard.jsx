@@ -7,7 +7,8 @@ import AvatarEditor from "../../components/AvatarEditor/AvatarEditor";
 import InformationButton from "../../components/InformationButton/InformationButton";
 import { CardInformationData } from "./CardInformationData";
 import "./SearchCard.css"
-import SearchCard from "./SearchCard.jsx"
+// import SearchCard from "./SearchCard.jsx";
+import Avatar from "../../components/Avatar/Avatar.jsx";
  
 
 const CreateNewCard = () => {
@@ -73,6 +74,7 @@ const CreateNewCard = () => {
       </svg>        
       </span>
       <div>
+        <Avatar />
         <div id="create-card-left">
           <AvatarEditor />
           
