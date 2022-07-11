@@ -21,6 +21,7 @@ import OrderCard from "./pages/Order_Physical_Card_Page/OrderCard.jsx";
 import TermsConditions from "./pages/Terms_and_Conditions/TermsConditions.jsx";
 import Error from "./pages/Error.jsx";
 import OrderCrdBasic from "./pages/Order_Physical_Card_Page/OrderCrdBasic.jsx";
+import LPFeatures from "./pages/Landing_Page/Features_Section/LPFeatures.jsx";
 
 function App() {
   // const context = useContext(MyContext);
@@ -37,6 +38,7 @@ function App() {
             <Route path="/" element={<LandingPage />} />
             <Route path="/sign-up" element={<SignUpPage />} />
             <Route path="/log-in" element={<LoginPage />} />
+            <Route path="/features" element={<LPFeatures/>} />
             <Route path="/termsandconditions" element={<TermsConditions />} />
             <Route path="/cards" element={<CardsPage />} />
             <Route path="/cards/newcard" element={<CreateNewCard />} />
