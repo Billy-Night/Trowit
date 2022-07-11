@@ -63,7 +63,42 @@ const MyProvider = (props) => {
   //A state to check the status of wether the user is logged in or not
   let [loggedIn, SetLogIn] = useState(false);
 
-    let [userId, setUserID] = useState(null);
+  let [userId, setUserID] = useState(null);
+
+  const contactBlank = {
+    image: "",
+    full_name: "",
+    title: "",
+    company: "",
+    email: "",
+    phone: 0,
+    website: "",
+    linkdin: "",
+    documents: "",
+    files: "",
+    add_date: "",
+    add_time: "",
+    contact_type: "",
+    tag1: "",
+    tag2: "",
+    tag3: "",
+    tag4: "",
+    notes: "",
+    connection_date: "",
+    contact_type: "",
+    user_id: null
+  }
+
+  let [contact, setContact] = useState(contactBlank);
+
+  const handleContact = (event) => {
+    const { name, value } = event.currentTarget;
+
+    setContact({
+    ...contact,
+    [name]: value,
+  });
+  };
     
     return (
         <MyContext.Provider 
@@ -80,6 +115,9 @@ const MyProvider = (props) => {
                 loggedIn: loggedIn,
                 userId: userId,
                 setUserID: setUserID,
+                contact: contact,
+                setContact: setContact,
+                handleContact: handleContact
             }} >
                 { props.children }
         </MyContext.Provider> 
