@@ -1,9 +1,10 @@
 import "./AvatarEditor.css";
+import avatarPlaceholderImg from "../../images/cards_page/avatar.png";
 
 const AvatarEditor = () => (
   <div id="avatar-editor">
     <span>
-      <img src="../images/cards_page/avatar.png" alt="avatar" className="img" />
+      <img src={avatarPlaceholderImg} alt="avatar" className="img" />
     </span>
   </div>
 );
