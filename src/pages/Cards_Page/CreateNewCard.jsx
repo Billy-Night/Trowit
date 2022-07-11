@@ -6,8 +6,10 @@ import { MyContext } from "../../context/MyProvider";
 import AvatarEditor from "../../components/AvatarEditor/AvatarEditor";
 import InformationButton from "../../components/InformationButton/InformationButton";
 import { CardInformationData } from "./CardInformationData";
-import "./SearchCard.css";
-import SearchCard from "./SearchCard.jsx";
+import "./SearchCard.css"
+// import SearchCard from "./SearchCard.jsx";
+import Avatar from "../../components/Avatar/Avatar.jsx";
+ 
 
 const CreateNewCard = () => {
   const context = useContext(MyContext);
@@ -33,6 +35,8 @@ const CreateNewCard = () => {
         address: context.crtCard.address,
         website: context.crtCard.website,
         link: context.crtCard.link,
+        colour: context.crtCard.colour,
+        users_id: context.userId,
       }),
     }).then((response) => {
       if (response.status === 201) {
@@ -49,35 +53,51 @@ const CreateNewCard = () => {
       <SideNavBar />
       <h1>Cards / New Card</h1>
       <br />
-      <span className="search-area">
-        <a href="#">
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M22.7144 13.5C23.4245 13.5 24.0001 12.8284 24.0001 12C24.0001 11.1716 23.4245 10.5 22.7144 10.5V13.5ZM0.805288 10.9393C0.303185 11.5251 0.303185 12.4749 0.805288 13.0607L8.98754 22.6066C9.48965 23.1924 10.3037 23.1924 10.8058 22.6066C11.3079 22.0208 11.3079 21.0711 10.8058 20.4853L3.5327 12L10.8058 3.51476C11.3079 2.92897 11.3079 1.97923 10.8058 1.39344C10.3037 0.807654 9.48965 0.807654 8.98754 1.39344L0.805288 10.9393ZM22.7144 10.5H1.71443V13.5H22.7144V10.5Z"
-              fill="black"
-            />
-          </svg>
-        </a>
-        <input type="search" />
+      <span>
+      <svg width="24" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M22.7144 13.5C23.4245 13.5 24.0001 12.8284 24.0001 12C24.0001 11.1716 23.4245 10.5 22.7144 10.5V13.5ZM0.805288 10.9393C0.303185 11.5251 0.303185 12.4749 0.805288 13.0607L8.98754 22.6066C9.48965 23.1924 10.3037 23.1924 10.8058 22.6066C11.3079 22.0208 11.3079 21.0711 10.8058 20.4853L3.5327 12L10.8058 3.51476C11.3079 2.92897 11.3079 1.97923 10.8058 1.39344C10.3037 0.807654 9.48965 0.807654 8.98754 1.39344L0.805288 10.9393ZM22.7144 10.5H1.71443V13.5H22.7144V10.5Z" fill="black"/>
+      </svg>       
+      
+      <svg width="323" height="52" viewBox="0 0 323 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+      
+      <g filter="url(#filter0_d_212_555)">
+      <path d="M5 17C5 8.71573 11.7157 2 20 2H303C311.284 2 318 8.71573 318 17V29C318 37.2843 311.284 44 303 44H20C11.7157 44 5 37.2843 5 29V17Z" fill="white"/>
+      </g>
+      <defs>
+      <filter id="filter0_d_212_555" x="0" y="0" width="323" height="52" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="3"/>
+      <feGaussianBlur stdDeviation="2.5"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_212_555"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_212_555" result="shape"/>
+      </filter>
+      </defs>
+      </svg>        
       </span>
       <div>
+        <Avatar />
         <div id="create-card-left">
+        <form onSubmit={handleSubmitOfCreateNewCard}> 
+          <section>
+            <input
+                value={context.crtCard.type}
+                onChange={context.handleCreateNewCardForm}
+                id="type"
+                name="type"
+                placeholder="Card Type"
+              />
+          </section>
           <AvatarEditor />
+          <section id="create-card-form">
           <div className="box-container">
             <div className="box red"></div>
             <div className="box green"></div>
             <div className="box blue"></div>
             <div className="box yellow"></div>
             <div className="box violet"></div>
-            
           </div>
-
-
-          <form id="create-card-form" onSubmit={handleSubmitOfCreateNewCard}>
             <input
               value={context.crtCard.first_name}
               onChange={context.handleCreateNewCardForm}
@@ -119,10 +139,10 @@ const CreateNewCard = () => {
             />
             <hr className="create-card-form-divider" />
             <br />
-
             {/* TODO: load other input fields conditionally and make them depend on the state of the information panel*/}
             <input id="create-card-button-save" type="submit" value="SAVE" />
-          </form>
+          </section>
+        </form>
         </div>
         <div id="create-card-right">
           {/* add more information container */}
@@ -189,15 +209,3 @@ const CreateNewCard = () => {
 };
 
 export default CreateNewCard;
-
-// type: context.crtCard.type,
-//         first_name: context.crtCard.type,
-//         last_name: context.crtCard.type,
-//         title: context.crtCard.type,
-//         department: context.crtCard.type,
-//         company: context.crtCard.type,
-//         phone: context.crtCard.type,
-//         email: context.crtCard.type,
-//         address: context.crtCard.type,
-//         website: context.crtCard.type,
-//         link: context.crtCard.type,
