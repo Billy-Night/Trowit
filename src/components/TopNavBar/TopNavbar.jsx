@@ -31,9 +31,7 @@ const TopNavbar = () => {
         <img className="logo" src="./logo_small@4x.png" alt="logo" />
       </Link>
       <div className="navbar-container">
-        <div className="menu-icon" onClick={handleClick}>
-          <i className={click ? "fas fa-times" : "fas fa-bars"} />
-        </div>
+
         <ul className={click ? "nav-menu active" : "nav-menu"}>
           <li className="nav-item">
             <Link to="/home" className="nav-links" onClick={closeMobileMenu}>
@@ -89,6 +87,11 @@ const TopNavbar = () => {
         {button && (
           <ButtonLogin buttonStyle="btn--outline-in">Log In</ButtonLogin>
         )}
+
+
+        <div className="menu-icon" onClick={handleClick}>
+          <i className={click ? "fas fa-times" : "fas fa-bars"} />
+        </div>
       </div>
     </nav>
   );
