@@ -84,8 +84,6 @@ const MyProvider = (props) => {
     tag3: "",
     tag4: "",
     notes: "",
-    connection_date: "",
-    contact_type: "",
     user_id: null
   }
 
