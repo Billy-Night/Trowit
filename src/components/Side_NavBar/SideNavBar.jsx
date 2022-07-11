@@ -8,7 +8,7 @@ const SideNavBar = () => {
       <nav className="nav">
         <Link to="/" className="nav-link trowit">
           <img
-            src="./logo_white_no_text@4x.png"
+            src="/logo_white_no_text@4x.png"
             alt=""
             className="nav-link-icon"
           />
@@ -16,28 +16,28 @@ const SideNavBar = () => {
         </Link>
 
         <Link to="/cards" className="nav-link">
-          <img src="./id-card.png" alt="" className="nav-link-icon" />
+          <img src="/id-card.png" alt="" className="nav-link-icon" />
           <span className="nav-link-name">Cards</span>
         </Link>
 
         <Link to="/contacts" className="nav-link">
-          <img src="./contacts.png" alt="" className="nav-link-icon" />
+          <img src="/contacts.png" alt="" className="nav-link-icon" />
           <span className="nav-link-name">Contacts</span>
         </Link>
         <Link to="/backgrounds" className="nav-link">
-          <img src="./backgrounds.png" alt="" className="nav-link-icon" />
+          <img src="/backgrounds.png" alt="" className="nav-link-icon" />
           <span className="nav-link-name">Backgrounds</span>
         </Link>
         <Link to="/email-signatures" className="nav-link">
-          <img src="./email.png" alt="" className="nav-link-icon" />
+          <img src="/email.png" alt="" className="nav-link-icon" />
           <span className="nav-link-name">Email Signatures</span>
         </Link>
         <Link to="/settings" className="nav-link">
-          <img src="./settings.png" alt="" className="nav-link-icon" />
+          <img src="/settings.png" alt="" className="nav-link-icon" />
           <span className="nav-link-name">Settings</span>
         </Link>
         <Link to="/order-card" className="nav-link">
-          <img src="./card-yellow.png" alt="" className="nav-link-icon" />
+          <img src="/card-yellow.png" alt="" className="nav-link-icon" />
           <span className="nav-link-name">Order Physical Card</span>
         </Link>
       </nav>
