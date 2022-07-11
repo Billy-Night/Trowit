@@ -31,17 +31,6 @@ const LoginPage = () => {
         }
         return response.json();
       })
-      .then((data) => {
-        // console.log(data);
-        setAuthToken(data.token);
-        context.SetLogIn(true);
-        console.log(authToken);
-        navigate("/cards");
-        context.setUser(context.blankUser);
-<<<<<<< HEAD
-      }
-      return response.json()
-    })
     .then((data) => {
       // console.log(data);
       setAuthToken(data.token);
@@ -52,10 +41,6 @@ const LoginPage = () => {
       context.setUserID(data.id);
     })
   }
-=======
-      });
-  };
->>>>>>> eb85b19c77e0700ef3bbc72128bffd20ded7d5df
 
   return (
     <div className={styles["login-page-container"]}>
@@ -70,7 +55,7 @@ const LoginPage = () => {
         <div>
           <h1 className={styles["text"]}>Log in to your account</h1>
         </div>
-        <form className={styles["loginForm"]} onSubmit={handleLogin}>
+        <form onSubmit={handleLogin} className={styles["loginForm"]} >
           <input
             value={context.user.email}
             onChange={context.handleLogReg}
@@ -85,8 +70,8 @@ const LoginPage = () => {
             placeholder="Password"
           />
           <hr className={styles["create-card-form-divider"]} />
+          <input className={styles["reg"]} type="submit" value="Submit" />
         </form>
-        <input className={styles["reg"]} type="submit" value="Submit" />
         <span className={styles["forgotPassword"]}>
           <a href="https://www.w3schools.com">Forgot password?</a>
         </span>
