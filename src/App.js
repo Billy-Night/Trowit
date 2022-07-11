@@ -24,6 +24,7 @@ import OrderCrdBasic from './pages/Order_Physical_Card_Page/OrderCrdBasic.jsx';
 import LPFeatures from './pages/Landing_Page/Features_Section/LPFeatures.jsx';
 import OrderCrdCustomized from './pages/Order_Physical_Card_Page/OrderCrdCust.jsx';
 import OrderCrdPremium from './pages/Order_Physical_Card_Page/OrderCrdPrem.jsx';
+import ContactCard from './pages/View_Contact_Card_Page/ContactCard.jsx';
 
 function App() {
   // const context = useContext(MyContext);
@@ -53,6 +54,7 @@ function App() {
             <Route path="/order-cardcust" element={<OrderCrdCustomized />} />
             <Route path="/order-cardprem" element={<OrderCrdPremium />} />
             <Route path="/error" element={<Error />} />
+            <Route path="/contact-card" element={<ContactCard />} />
           </Routes>
         </Router>
       </MyProvider>
