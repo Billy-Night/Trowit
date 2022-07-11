@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const OderCardTemplate = (props) => {
   return (
@@ -27,12 +27,12 @@ const OderCardTemplate = (props) => {
       {/* btn part in the page  */}
 
       {/* rendering the class according to the title (still dummy) */}
-      {props.button === 'upgrade' && (
+      {props.button === "upgrade" && (
         <button className="OC__sub-container3__button color-grey">
           {props.button}
         </button>
       )}
-      {props.button !== 'upgrade' && (
+      {props.button !== "upgrade" && (
         <button className="OC__sub-container3__button ">{props.button}</button>
       )}
     </div>

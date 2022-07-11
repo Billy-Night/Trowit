@@ -1,14 +1,14 @@
-import './OrderCrdBasic.css';
+import "./OrderCrdBasic.css";
 
-import OderCardTemplate from './OderCardTemplate';
+import OderCardTemplate from "./OderCardTemplate";
 
 //* import images
-import mainCard from '../../images/order_physical_card_basic/card_img@2x.png';
-import cardfront1 from '../../images/order_physical_card_basic/small_card1@2x.png';
-import cardfront2 from '../../images/order_physical_card_basic/small_card2@2x.png';
-import cardfront6 from '../../images/order_physical_card_basic/small_card6@2x.png';
-import cardfront8 from '../../images/order_physical_card_basic/small_card8@2x.png';
-import SideNavBar from '../../components/Side_NavBar/SideNavBar';
+import mainCard from "../../images/order_physical_card_basic/card_img@2x.png";
+import cardfront1 from "../../images/order_physical_card_basic/small_card1@2x.png";
+import cardfront2 from "../../images/order_physical_card_basic/small_card2@2x.png";
+import cardfront6 from "../../images/order_physical_card_basic/small_card6@2x.png";
+import cardfront8 from "../../images/order_physical_card_basic/small_card8@2x.png";
+import SideNavBar from "../../components/Side_NavBar/SideNavBar";
 
 const OrderCrdBasic = () => {
   return (

@@ -91,6 +91,13 @@ const CreateNewCard = () => {
           </section>
           <AvatarEditor />
           <section id="create-card-form">
+          <div className="box-container">
+            <div className="box red"></div>
+            <div className="box green"></div>
+            <div className="box blue"></div>
+            <div className="box yellow"></div>
+            <div className="box violet"></div>
+          </div>
             <input
               value={context.crtCard.first_name}
               onChange={context.handleCreateNewCardForm}
@@ -132,7 +139,6 @@ const CreateNewCard = () => {
             />
             <hr className="create-card-form-divider" />
             <br />
-
             {/* TODO: load other input fields conditionally and make them depend on the state of the information panel*/}
             <input id="create-card-button-save" type="submit" value="SAVE" />
           </section>

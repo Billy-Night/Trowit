@@ -1,5 +1,5 @@
 #order-crd-basic {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -33,7 +33,7 @@
 }
 
 .OCB__sub-container__drop-menu {
-  background-image: url('../../images/Order_physical_card_page/drop_down_menu@2x.png');
+  background-image: url("../../images/Order_physical_card_page/drop_down_menu@2x.png");
   min-width: 30rem;
   width: 40rem;
   height: 10rem;
@@ -62,7 +62,7 @@
   gap: 3rem;
 }
 .OCB__sub-container2__single-card {
-  background: url('../../images/Order_physical_card_page/card_preview@2x.png'),
+  background: url("../../images/Order_physical_card_page/card_preview@2x.png"),
     white;
   border: 0.4rem solid var(--primary);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -117,7 +117,7 @@ section.OCB__sub-container1__content-and-divider {
 }
 
 h1.OBC__subtitle {
-  font-family: 'Raleway', 'sans-serif';
+  font-family: "Raleway", "sans-serif";
   font-style: normal;
   font-weight: 500;
   font-size: 2rem;
@@ -125,7 +125,7 @@ h1.OBC__subtitle {
 }
 
 p.OCB__main-card__description {
-  font-family: 'Raleway', 'sans-serif';
+  font-family: "Raleway", "sans-serif";
   color: #333333;
   font-weight: 300;
   font-size: 1.5rem;
@@ -165,7 +165,7 @@ p.OCB__main-card__description > span {
 }
 
 .OCB__submit-order > .OCB__input-title {
-  font-family: 'Raleway', 'sans-serif';
+  font-family: "Raleway", "sans-serif";
   font-weight: 500;
   font-size: 1.7rem;
   letter-spacing: 0.08rem;
@@ -182,7 +182,7 @@ p.OCB__main-card__description > span {
 
 .OCB__submit-order > input::placeholder {
   color: #a8a8a8;
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-weight: 500;
   font-size: 1.6rem;
   line-height: 3rem;

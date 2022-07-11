@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import '../TopNavBar/TopNavbar.css';
-import { ButtonSign } from './ButtonSign';
-import { ButtonLogin } from './ButtonLogin';
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import "../TopNavBar/TopNavbar.css";
+import { ButtonSign } from "./ButtonSign";
+import { ButtonLogin } from "./ButtonLogin";
 
 const TopNavbar = () => {
   const [click, setClick] = useState(false);
@@ -23,7 +23,7 @@ const TopNavbar = () => {
     showButton();
   }, []);
 
-  window.addEventListener('resize', showButton);
+  window.addEventListener("resize", showButton);
 
   return (
     <nav className="navbar">
@@ -31,12 +31,10 @@ const TopNavbar = () => {
         <img className="logo" src="./logo_small@4x.png" alt="logo" />
       </Link>
       <div className="navbar-container">
-        <div className="menu-icon" onClick={handleClick}>
-          <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
-        </div>
-        <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+
+        <ul className={click ? "nav-menu active" : "nav-menu"}>
           <li className="nav-item">
-            <Link to="/home" className="nav-links" onClick={closeMobileMenu}>
+            <Link to="/" className="nav-links" onClick={closeMobileMenu}>
               Home
             </Link>
           </li>
@@ -44,7 +42,8 @@ const TopNavbar = () => {
             <Link
               to="/features"
               className="nav-links"
-              onClick={closeMobileMenu}>
+              onClick={closeMobileMenu}
+            >
               Features
             </Link>
           </li>
@@ -54,11 +53,15 @@ const TopNavbar = () => {
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/order-card" className="nav-links" onClick={closeMobileMenu}>
+            <Link
+              to="/order-card"
+              className="nav-links"
+              onClick={closeMobileMenu}
+            >
               Order your TROWIT Card
             </Link>
           </li>
-          
+
           <Link
             to="/log-in"
             className="nav-links-mobile-in"
@@ -79,12 +82,16 @@ const TopNavbar = () => {
         <ul></ul>
         <br />
         <br />
-        
 
         {button && <ButtonSign buttonStyle="btn--outline">Sign Up</ButtonSign>}
         {button && (
           <ButtonLogin buttonStyle="btn--outline-in">Log In</ButtonLogin>
         )}
+
+
+        <div className="menu-icon" onClick={handleClick}>
+          <i className={click ? "fas fa-times" : "fas fa-bars"} />
+        </div>
       </div>
     </nav>
   );
