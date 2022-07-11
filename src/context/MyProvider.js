@@ -4,22 +4,24 @@ import React, { useState } from "react";
 export const MyContext = React.createContext();
 
 const MyProvider = (props) => {
-  //first for the create new card form, set-up the object that will be filled by the information filled in
-  const newCard = {
-    type: "",
-    first_name: "",
-    last_name: "",
-    title: "",
-    department: "",
-    company: "",
-    phone: 0,
-    email: "",
-    address: "",
-    website: "",
-    link: "",
-  };
-  //Then create a state and set it to the empty object of newCard
-  let [crtCard, setCrtCard] = useState(newCard);
+    //first for the create new card form, set-up the object that will be filled by the information filled in
+    const newCard = {
+        type: "",
+        first_name: "",
+        last_name: "",
+        title: "",
+        department: "",
+        company: "",
+        phone: 0,
+        email: "",
+        address: "",
+        website: "",
+        link: "",
+        colour: "",
+        users_id: 0,
+    };
+    //Then create a state and set it to the empty object of newCard
+    let [crtCard, setCrtCard] = useState(newCard);
 
   const handleCreateNewCardForm = (event) => {
     const { name, value } = event.currentTarget;
@@ -61,24 +63,27 @@ const MyProvider = (props) => {
   //A state to check the status of wether the user is logged in or not
   let [loggedIn, SetLogIn] = useState(false);
 
-  return (
-    <MyContext.Provider
-      value={{
-        newCard: newCard,
-        crtCard: crtCard,
-        setCrtCard: setCrtCard,
-        handleCreateNewCardForm: handleCreateNewCardForm,
-        blankUser: blankUser,
-        user: user,
-        setUser: setUser,
-        handleLogReg: handleLogReg,
-        SetLogIn: SetLogIn,
-        loggedIn: loggedIn,
-      }}
-    >
-      {props.children}
-    </MyContext.Provider>
-  );
+    let [userId, setUserID] = useState(null);
+    
+    return (
+        <MyContext.Provider 
+            value={{
+                newCard: newCard,
+                crtCard: crtCard,
+                setCrtCard: setCrtCard,
+                handleCreateNewCardForm: handleCreateNewCardForm,
+                blankUser: blankUser,
+                user: user,
+                setUser: setUser,
+                handleLogReg: handleLogReg,
+                SetLogIn: SetLogIn,
+                loggedIn: loggedIn,
+                userId: userId,
+                setUserID: setUserID,
+            }} >
+                { props.children }
+        </MyContext.Provider> 
+    )
 };
 
 export default MyProvider;
