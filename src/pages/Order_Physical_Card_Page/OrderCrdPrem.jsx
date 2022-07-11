@@ -12,7 +12,7 @@ import SideNavBar from '../../components/Side_NavBar/SideNavBar';
 import bigCard from '../../images/order_physical_card_basic/big_card@2x.png';
 import uploadImg from '../../images/order_physical_card_basic/upload@2x.png';
 
-const OrderCrdCustomized = () => {
+const OrderCrdPremium = () => {
   return (
     <div id="order-crd-basic">
       <SideNavBar />
@@ -35,12 +35,12 @@ const OrderCrdCustomized = () => {
                   <div className="OCB__sub-container2__single-card"></div>
                 </div>
                 <OderCardTemplate
-                  header="Customized"
-                  cta="Upload your own design and customize your card!"
+                  header="Premium"
+                  cta="Send us the details, and we’ll design your card!"
                   benefit1="✔ NFC connectivity"
                   benefit2="✔ Lasting material"
                   benefit3="✔ No watermark"
-                  price="€20"
+                  price="€30"
                   fee="+ shipping fees"
                   button="order"
                 />
@@ -67,7 +67,7 @@ const OrderCrdCustomized = () => {
             <div className="OCB__main-card-font">
               <h1 className="OBC__subtitle">Choose design - back</h1>
               <article className="OCB__cards-img-container">
-                <img src={uploadImg} alt="display the card's design" />
+                <img src={cardfront6} alt="display the card's design" />
                 <img src={cardfront8} alt="display the card's design" />
                 <img src={cardfront6} alt="display the card's design" />
                 <img src={cardfront8} alt="display the card's design" />
@@ -119,4 +119,4 @@ const OrderCrdCustomized = () => {
   );
 };
 
-export default OrderCrdCustomized;
+export default OrderCrdPremium;
