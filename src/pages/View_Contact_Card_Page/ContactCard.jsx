@@ -10,7 +10,8 @@ const ContactCard = () => {
     const navigate = useNavigate();
     const context = useContext(MyContext);
 
-    const handleContactSubmit = () => {
+    const handleContactSubmit = (event) => {
+        event.preventDefault();
         fetch('http://localhost:3306/create-contact', {
             method: "POST", 
             headers: new Headers ({
@@ -35,11 +36,10 @@ const ContactCard = () => {
                 tag3: context.contact.tag3,
                 tag4: context.contact.tag4,
                 notes: context.contact.notes,
-                users_id: context.userId
+                users_id: context.userId,
             }),
-        })
-        .then((response) => {
-            if (response.status === 201) {
+        }).then((res) => {
+            if (res.status === 201) {
                 navigate("/contacts");
                 context.setContact(context.contactBlank);
             } else {
@@ -75,9 +75,9 @@ const ContactCard = () => {
 
                 <input value={context.contact.files} onChange={context.handleContact} name="files" placeholder="files" />
 
-                <input value={context.contact.add_date} onChange={context.handleContact} name="add_date" placeholder="Connection Date" />
+                {/* <input value={context.contact.add_date} onChange={context.handleContact} name="add_date" placeholder="Connection Date" /> */}
 
-                <input value={context.contact.add_time} onChange={context.handleContact} name="add_time" placeholder="Connection Time" />
+                {/* <input value={context.contact.add_time} onChange={context.handleContact} name="add_time" placeholder="Connection Time" /> */}
 
                 <input value={context.contact.contact_type} onChange={context.handleContact} name="contact_type" placeholder="Contact Type" />
 

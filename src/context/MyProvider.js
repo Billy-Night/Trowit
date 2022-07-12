@@ -76,15 +76,15 @@ const MyProvider = (props) => {
     linkdin: "",
     documents: "",
     files: "",
-    add_date: "",
-    add_time: "",
+    add_date: null,
+    add_time: null,
     contact_type: "",
     tag1: "",
     tag2: "",
     tag3: "",
     tag4: "",
     notes: "",
-    users_id: null
+    users_id: null,
   }
 
   let [contact, setContact] = useState(contactBlank);
