@@ -1,17 +1,60 @@
 import React, { useContext } from "react";
 import { MyContext } from '../../context/MyProvider.js';
+import { useNavigate } from 'react-router-dom';
 import SideNavBar from '../../components/Side_NavBar/SideNavBar.jsx';
 import './ContactCard.css';
+import Avatar from "../../components/Avatar/Avatar.jsx";
 
 
 const ContactCard = () => {
+    const navigate = useNavigate();
     const context = useContext(MyContext);
+
+    const handleContactSubmit = () => {
+        fetch('http://localhost:3306/create-contact', {
+            method: "POST", 
+            headers: new Headers ({
+                "Content-Type" : "application/json",
+            }),
+            body: JSON.stringify({
+                image: context.contact.image,
+                full_name: context.contact.full_name,
+                title: context.contact.title,
+                company: context.contact.company,
+                email: context.contact.email,
+                phone: context.contact.phone,
+                website: context.contact.website,
+                linkdin: context.contact.linkdin,
+                documents: context.contact.documents,
+                files: context.contact.files,
+                add_date: context.contact.add_date,
+                add_time: context.contact.add_time,
+                contact_type: context.contact.contact_type,
+                tag1: context.contact.tag1,
+                tag2: context.contact.tag2,
+                tag3: context.contact.tag3,
+                tag4: context.contact.tag4,
+                notes: context.contact.notes,
+                users_id: context.userId
+            }),
+        })
+        .then((response) => {
+            if (response.status === 201) {
+                navigate("/contacts");
+                context.setContact(context.contactBlank);
+            } else {
+                navigate("/error");
+                console.log("error sending contact to backend");
+            }
+        });
+    };
 
     return (
         <div className="contact-card">
             <SideNavBar />
             <h1 className="contact-card-title">Contacts/TROWIT/Contact Name</h1>
-            <form onSubmit={context.handleSubmit} className="contact-card-form">
+            <Avatar />
+            <form onSubmit={handleContactSubmit} className="contact-card-form">
                 <input value={context.contact.image} onChange={context.handleContact}  name="image" placeholder="image"/>
 
                 <input value={context.contact.full_name} onChange={context.handleContact} name="full_name" placeholder="Full Name" />
@@ -32,9 +75,9 @@ const ContactCard = () => {
 
                 <input value={context.contact.files} onChange={context.handleContact} name="files" placeholder="files" />
 
-                <input value={context.contact.add_date} onChange={context.handleContact} name="add_date" placeholder="Add Date" />
+                <input value={context.contact.add_date} onChange={context.handleContact} name="add_date" placeholder="Connection Date" />
 
-                <input value={context.contact.add_time} onChange={context.handleContact} name="add_time" placeholder="Add Time" />
+                <input value={context.contact.add_time} onChange={context.handleContact} name="add_time" placeholder="Connection Time" />
 
                 <input value={context.contact.contact_type} onChange={context.handleContact} name="contact_type" placeholder="Contact Type" />
 
@@ -47,6 +90,8 @@ const ContactCard = () => {
                 <input value={context.contact.tag4} onChange={context.handleContact} name="tag4" placeholder="Tag 4" />
 
                 <input value={context.contact.notes} onChange={context.handleContact} name="notes" placeholder="Notes" />
+
+                <input id="create-contact-btn-save" type='submit' value="SAVE" />
 
             </form>
         </div>
