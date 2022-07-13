@@ -1,5 +1,5 @@
-export const CardInformationData = [
-  {
+export const CardInformationData = (context) => ({
+  phone: {
     svg: (
       <svg
         width="18"
@@ -15,8 +15,9 @@ export const CardInformationData = [
       </svg>
     ),
     label: "Phone",
+    value: context.crtCard.phone
   },
-  {
+  email: {
     svg: (
       <svg
         width="20"
@@ -32,8 +33,9 @@ export const CardInformationData = [
       </svg>
     ),
     label: "Email",
+    value: context.crtCard.email
   },
-  {
+  address: {
     svg: (
       <svg
         width="14"
@@ -51,8 +53,9 @@ export const CardInformationData = [
       </svg>
     ),
     label: "Address",
+    value: context.crtCard.address
   },
-  {
+  website: {
     svg: (
       <svg
         width="20"
@@ -70,8 +73,9 @@ export const CardInformationData = [
       </svg>
     ),
     label: "Website",
+    value: context.crtCard.website
   },
-  {
+  link: {
     svg: (
       <svg
         width="24"
@@ -91,8 +95,9 @@ export const CardInformationData = [
       </svg>
     ),
     label: "Link",
+    value: context.crtCard.link
   },
-  {
+  pdf: {
     svg: (
       <svg
         width="24"
@@ -127,8 +132,9 @@ export const CardInformationData = [
       </svg>
     ),
     label: "PDF",
+    value: context.crtCard.pdf
   },
-  {
+  twitter: {
     svg: (
       <svg
         width="22"
@@ -144,8 +150,9 @@ export const CardInformationData = [
       </svg>
     ),
     label: "Twitter",
+    value: context.crtCard.twitter
   },
-  {
+  instagram: {
     svg: (
       <svg
         width="20"
@@ -161,8 +168,9 @@ export const CardInformationData = [
       </svg>
     ),
     label: "Instagram",
+    value: context.crtCard.instagram
   },
-  {
+  linkedin: {
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -178,8 +186,9 @@ export const CardInformationData = [
       </svg>
     ),
     label: "LinkedIn",
+    value: context.crtCard.linkedin
   },
-  {
+  facebook: {
     svg: (
       <svg
         width="20"
@@ -195,8 +204,9 @@ export const CardInformationData = [
       </svg>
     ),
     label: "Facebook",
+    value: context.crtCard.facebook
   },
-  {
+  youtube: {
     svg: (
       <svg
         width="20"
@@ -212,8 +222,9 @@ export const CardInformationData = [
       </svg>
     ),
     label: "YouTube",
+    value: context.crtCard.youtube
   },
-  {
+  whatsapp: {
     svg: (
       <svg
         width="20"
@@ -229,8 +240,9 @@ export const CardInformationData = [
       </svg>
     ),
     label: "WhatsApp",
+    value: context.crtCard.whatsapp
   },
-  {
+  documents: {
     svg: (
       // <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
@@ -238,8 +250,9 @@ export const CardInformationData = [
       </svg>
     ),
     label: "Documents",
+    value: context.crtCard.documents
   },
-  {
+  files: {
     svg: (
       // <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
@@ -247,5 +260,6 @@ export const CardInformationData = [
       </svg>
     ),
     label: "Files",
+    value: context.crtCard.files
   },
-];
+});

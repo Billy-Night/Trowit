@@ -21,4 +21,5 @@
 
 .information-button-base:hover {
   background-color: #00000010;
+  cursor: pointer;
 }

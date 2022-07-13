@@ -6,19 +6,29 @@ export const MyContext = React.createContext();
 const MyProvider = (props) => {
     //first for the create new card form, set-up the object that will be filled by the information filled in
     const newCard = {
-        type: "",
-        first_name: "",
-        last_name: "",
-        title: "",
-        department: "",
-        company: "",
-        phone: 0,
-        email: "",
-        address: "",
-        website: "",
-        link: "",
-        colour: "",
-        users_id: 0,
+      type: "",
+      first_name: "",
+      last_name: "",
+      title: "",
+      department: "",
+      company: "",
+      colour: "",
+      users_id: 0,
+      // additional information below here
+      phone: 0,
+      email: "",
+      address: "",
+      website: "",
+      link: "",
+      pdf: undefined,
+      twitter: "",
+      instagram: "",
+      linkedin: "",
+      facebook: "",
+      youtube: "",
+      whatsapp: "",
+      documents: [],
+      files: []
     };
     //Then create a state and set it to the empty object of newCard
     let [crtCard, setCrtCard] = useState(newCard);
