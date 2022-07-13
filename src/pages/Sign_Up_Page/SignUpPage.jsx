@@ -40,20 +40,8 @@ const SignUpPage = () => {
         <h1 className="text">Create an account to get started!</h1>
       </div>
       <form className="registrationForm" onSubmit={handleRegistrationSubmit}>
-      <input
-          value={context.user.first_name}
-          onChange={context.handleLogReg}
-          name="first_name"
-          placeholder="Name"
-        />
-        <hr className="create-card-form-divider" />
-        <input
-          value={context.user.last_name}
-          onChange={context.handleLogReg}
-          name="last_name"
-          placeholder="Last Name"
-        />
-        <hr className="create-card-form-divider" />
+
+        <div className="create-card-form-divider" />
         <input
           value={context.user.email}
           onChange={context.handleLogReg}

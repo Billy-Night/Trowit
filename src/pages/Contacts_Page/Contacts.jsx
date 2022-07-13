@@ -32,7 +32,10 @@ const Contact = () => {
     <div className="contact">
       <SideNavBar />
       <Avatar />
-      <p className="title"> Contacts</p>
+
+      <p className="title_contacts"> Contacts</p>
+
+
       <div className="contact-container">
       {id ? 
       <p>{id}</p>
@@ -43,6 +46,7 @@ const Contact = () => {
       :
       <p>Loading contact data</p>}
       </div>
+
       <ContactSortingOrder />
       <button className="add-contact-btn" onClick={handleClick}>Create New Contact</button>
     </div>
