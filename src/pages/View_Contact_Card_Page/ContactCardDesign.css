@@ -27,10 +27,18 @@
 
 #contact-card-left {
     /* background-color: azure; */
-    width: 60rem;
-    padding-inline-end: 24rem;
+    width: 20rem;
+    padding-inline-end: 10rem;
+   
   }
+
+.img {
+    width: 30rem;
+}
   
+.card_right {
+    width: 30rem;
+}
 
 #contact-card-form {
   width: 100%;
@@ -76,7 +84,7 @@
 
 .contact-card-form-divider {
     margin: 0;
-    width: 100%;
+    width: 90%;
     border-top: rgba(0, 0, 0, 0.185);
     border-inline: none;
   }
@@ -89,6 +97,7 @@
   }
   
 .search-area > a > svg {
+    margin-bottom: 2%;
     height: 100%;
     width: 100%;
   }
