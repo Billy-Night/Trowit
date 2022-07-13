@@ -12,7 +12,7 @@ const SearchCard = ({ keyword, setKeyword }) => {
           key="random1"
           type="search"
           value={keyword}
-          placeholder="Search Card"
+          placeholder="Search"
           //  aria-describedby="basic-addon2"
           onChange={(e) => setKeyword(e.target.value)}
         />
