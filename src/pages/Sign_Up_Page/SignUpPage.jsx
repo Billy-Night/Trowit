@@ -57,6 +57,7 @@ const SignUpPage = () => {
           type="password"
         />
         <hr className="create-card-form-divider" />
+        {/* //! the verify email doesn't get sent to the database. */}
         {/* <input
                 value={context.user.verify_password}
                 onChange={context.handleLogReg}  

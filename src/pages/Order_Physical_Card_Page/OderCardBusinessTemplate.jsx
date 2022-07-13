@@ -1,4 +1,9 @@
 const OderCardBusinessTemplate = (props) => {
+
+  const handleClick = () => {
+    console.log("click");
+  }
+
   return (
     <div className="OC__sub-container3__price-table-and-buttons business">
       <div className="OC__sub-container3__price-frame business">
@@ -14,7 +19,7 @@ const OderCardBusinessTemplate = (props) => {
       </div>
       {/* price & fees part in the page  */}
       {/* btn part in the page  */}
-      <button className="OC__sub-container3__button business">
+      <button onClick={(handleClick)} className="OC__sub-container3__button business">
         {props.button}
       </button>
     </div>
