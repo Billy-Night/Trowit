@@ -58,7 +58,18 @@ const CreateNewCard = () => {
         ...enabledAdditionalFields,
         key,
       ]);
+      return;
     }
+    setEnabledAdditionalFields(
+      enabledAdditionalFields.filter((k) => k !== key)
+    );
+
+    // A bit hacky, leave this in if you want fields to reset when removed
+    // I also added this to prevent fields that were removed to show
+    // up in submitted data
+    context.handleCreateNewCardForm({
+      currentTarget: { name: key, value: undefined },
+    });
   };
 
   return (
@@ -176,6 +187,7 @@ const CreateNewCard = () => {
                     svg={item.svg}
                     label={item.label}
                     onClick={() => handleItemClick(key)}
+                    active={enabledAdditionalFields.includes(key)}
                   />
                 );
               })}
