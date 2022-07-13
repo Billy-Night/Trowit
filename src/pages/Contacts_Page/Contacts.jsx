@@ -3,6 +3,7 @@ import SideNavBar from "../../components/Side_NavBar/SideNavBar.jsx";
 import { useNavigate } from 'react-router-dom';
 import "./Contacts.css";
 import ContactSortingOrder from "./ContactSortingOrder.jsx";
+import SearchCard from "../Cards_Page/SearchCard.jsx"
 
 const Contact = () => {
   const navigate = useNavigate();
@@ -16,7 +17,9 @@ const Contact = () => {
       <SideNavBar />
       <Avatar />
       <p className="title_contacts"> Contacts</p>
-
+      <p className="search_card">
+      <SearchCard />
+      </p>
       <ContactSortingOrder />
       <button className="add-contact-btn" onClick={handleClick}>Create New Contact</button>
     </div>

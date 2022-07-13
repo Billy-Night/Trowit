@@ -3,7 +3,7 @@
 }
 
 .title_contacts {
-  margin-left: 10rem;
+  margin-left: 7%;
   margin-top: 2rem;
   padding-bottom: 2%;
   font-size: 2rem;
@@ -29,4 +29,10 @@
   text-transform: uppercase;
   justify-self: flex-end;
   cursor: pointer;
+}
+
+
+.search_card {
+  margin-left: 7%;
+  margin-bottom: 2%;
 }
