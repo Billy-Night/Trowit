@@ -8,6 +8,7 @@ import SideNavBar from '../../components/Side_NavBar/SideNavBar.jsx';
 //!previous data coming from the fake data
 // import CardsData from '../../cardData';
 import SearchCard from './SearchCard';
+import createCard from '../../images/cards_page/create_card@2x.png';
 
 import Card from './Card.jsx';
 import Avatar from '../../components/Avatar/Avatar';
@@ -27,6 +28,7 @@ const CardsPage = () => {
       setCards(data);
     });
   }, [id])
+
 
   return (
     <div id="cardsPage">
@@ -49,6 +51,9 @@ const CardsPage = () => {
         </>
         :
         null }
+        <div>
+          <Card img={createCard} id={3999} type={"Add Card"} />
+        </div>
       </div>
       {/* Added Dynamic cards from the fake data that can be found in the cardData.js file this will be replace by information from the Database */}
       {/* <div className="CP_cards">

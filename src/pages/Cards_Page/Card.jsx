@@ -22,13 +22,14 @@ const Card = (props) => {
 
   const handleClick = (id) => {
     console.log(id);
-    if (id === 3) {
+    if (id === 3999) {
       navigate("/cards/newcard");
     }
   };
 
     return (
       <div className="card" onClick={() => handleClick(props.id)}>
+          <img src={props.img} alt="img"/>
           <p>{props.type}</p> 
       </div>
         // <div className="card">
