@@ -41,14 +41,14 @@ const SignUpPage = () => {
       </div>
       <form className="registrationForm" onSubmit={handleRegistrationSubmit}>
       <input
-          value={context.user.email}
+          value={context.user.name}
           onChange={context.handleLogReg}
           name="name"
           placeholder="Name"
         />
         <hr className="create-card-form-divider" />
         <input
-          value={context.user.email}
+          value={context.user.lastname}
           onChange={context.handleLogReg}
           name="Last Name"
           placeholder="Last Name"
