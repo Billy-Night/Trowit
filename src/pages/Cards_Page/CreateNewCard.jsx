@@ -6,7 +6,7 @@ import { MyContext } from "../../context/MyProvider";
 import AvatarEditor from "../../components/AvatarEditor/AvatarEditor";
 import InformationButton from "../../components/InformationButton/InformationButton";
 import { CardInformationData } from "./CardInformationData";
-import "./SearchCard.css"
+import "./SearchCard.css";
 // import SearchCard from "./SearchCard.jsx";
 import Avatar from "../../components/Avatar/Avatar.jsx";
 
@@ -52,100 +52,102 @@ const CreateNewCard = () => {
       <SideNavBar />
       <h1>Cards / New Card</h1>
       <br />
-      <span className="search-area">
-        <a href="#">
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M22.7144 13.5C23.4245 13.5 24.0001 12.8284 24.0001 12C24.0001 11.1716 23.4245 10.5 22.7144 10.5V13.5ZM0.805288 10.9393C0.303185 11.5251 0.303185 12.4749 0.805288 13.0607L8.98754 22.6066C9.48965 23.1924 10.3037 23.1924 10.8058 22.6066C11.3079 22.0208 11.3079 21.0711 10.8058 20.4853L3.5327 12L10.8058 3.51476C11.3079 2.92897 11.3079 1.97923 10.8058 1.39344C10.3037 0.807654 9.48965 0.807654 8.98754 1.39344L0.805288 10.9393ZM22.7144 10.5H1.71443V13.5H22.7144V10.5Z"
-              fill="black"
-            />
-          </svg>
-        </a>
-        <input type="search" />
-      </span>
-      <div>
-        <Avatar />
-        <div id="create-card-left">
-        <form onSubmit={handleSubmitOfCreateNewCard}> 
-          <section>
-            <input
-                value={context.crtCard.type}
-                onChange={context.handleCreateNewCardForm}
-                id="type"
-                name="type"
-                placeholder="Card Type"
+      <form onSubmit={handleSubmitOfCreateNewCard}>
+        <span className="search-area">
+          <a href="#">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M22.7144 13.5C23.4245 13.5 24.0001 12.8284 24.0001 12C24.0001 11.1716 23.4245 10.5 22.7144 10.5V13.5ZM0.805288 10.9393C0.303185 11.5251 0.303185 12.4749 0.805288 13.0607L8.98754 22.6066C9.48965 23.1924 10.3037 23.1924 10.8058 22.6066C11.3079 22.0208 11.3079 21.0711 10.8058 20.4853L3.5327 12L10.8058 3.51476C11.3079 2.92897 11.3079 1.97923 10.8058 1.39344C10.3037 0.807654 9.48965 0.807654 8.98754 1.39344L0.805288 10.9393ZM22.7144 10.5H1.71443V13.5H22.7144V10.5Z"
+                fill="black"
               />
-          </section>
-          <AvatarEditor />
-          <section id="create-card-form">
-          <div className="box-container">
-            <div className="box red"></div>
-            <div className="box green"></div>
-            <div className="box blue"></div>
-            <div className="box yellow"></div>
-            <div className="box violet"></div>
+            </svg>
+          </a>
+          <input
+            value={context.crtCard.type}
+            onChange={context.handleCreateNewCardForm}
+            id="type"
+            name="type"
+            placeholder="Card Type"
+          />
+        </span>
+        <div>
+          <Avatar />
+          <div id="create-card-left">
+            <div>
+              <AvatarEditor />
+              <section id="create-card-form">
+                <div className="box-container">
+                  <div className="box red"></div>
+                  <div className="box green"></div>
+                  <div className="box blue"></div>
+                  <div className="box yellow"></div>
+                  <div className="box violet"></div>
+                </div>
+                <input
+                  value={context.crtCard.first_name}
+                  onChange={context.handleCreateNewCardForm}
+                  id="First_Name"
+                  name="first_name"
+                  placeholder="First Name"
+                />
+                <hr className="create-card-form-divider" />
+                <input
+                  value={context.crtCard.last_name}
+                  onChange={context.handleCreateNewCardForm}
+                  id="last_name"
+                  name="last_name"
+                  placeholder="Last Name"
+                />
+                <hr className="create-card-form-divider" />
+                <input
+                  value={context.crtCard.title}
+                  onChange={context.handleCreateNewCardForm}
+                  id="title"
+                  name="title"
+                  placeholder="Title"
+                />
+                <hr className="create-card-form-divider" />
+                <input
+                  value={context.crtCard.department}
+                  onChange={context.handleCreateNewCardForm}
+                  id="department"
+                  name="department"
+                  placeholder="Department"
+                />
+                <hr className="create-card-form-divider" />
+                <input
+                  value={context.crtCard.company}
+                  onChange={context.handleCreateNewCardForm}
+                  id="company"
+                  name="company"
+                  placeholder="Company"
+                />
+                <hr className="create-card-form-divider" />
+                <br />
+                {/* TODO: load other input fields conditionally and make them depend on the state of the information panel*/}
+                <input
+                  id="create-card-button-save"
+                  type="submit"
+                  value="SAVE"
+                />
+              </section>
+            </div>
           </div>
-            <input
-              value={context.crtCard.first_name}
-              onChange={context.handleCreateNewCardForm}
-              id="First_Name"
-              name="first_name"
-              placeholder="First Name"
-            />
-            <hr className="create-card-form-divider" />
-            <input
-              value={context.crtCard.last_name}
-              onChange={context.handleCreateNewCardForm}
-              id="last_name"
-              name="last_name"
-              placeholder="Last Name"
-            />
-            <hr className="create-card-form-divider" />
-            <input
-              value={context.crtCard.title}
-              onChange={context.handleCreateNewCardForm}
-              id="title"
-              name="title"
-              placeholder="Title"
-            />
-            <hr className="create-card-form-divider" />
-            <input
-              value={context.crtCard.department}
-              onChange={context.handleCreateNewCardForm}
-              id="department"
-              name="department"
-              placeholder="Department"
-            />
-            <hr className="create-card-form-divider" />
-            <input
-              value={context.crtCard.company}
-              onChange={context.handleCreateNewCardForm}
-              id="company"
-              name="company"
-              placeholder="Company"
-            />
-            <hr className="create-card-form-divider" />
-            <br />
-            {/* TODO: load other input fields conditionally and make them depend on the state of the information panel*/}
-            <input id="create-card-button-save" type="submit" value="SAVE" />
-          </section>
-        </form>
-        </div>
-        <div id="create-card-right">
-          {/* add more information container */}
-          <h1>Add more information:</h1>
-          <div id="create-card-right-grid">
-            {CardInformationData.map((item) => (
-              <InformationButton svg={item.svg} label={item.label} />
-            ))}
+          <div id="create-card-right">
+            {/* add more information container */}
+            <h1>Add more information:</h1>
+            <div id="create-card-right-grid">
+              {CardInformationData.map((item) => (
+                <InformationButton svg={item.svg} label={item.label} />
+              ))}
+            </div>
           </div>
-        </div>
 
-        {/* <form onSubmit={handleSubmitOfCreateNewCard}>
+          {/* <form onSubmit={handleSubmitOfCreateNewCard}>
             <input
               value={context.crtCard.type}
               onChange={context.handleCreateNewCardForm}
@@ -194,7 +196,8 @@ const CreateNewCard = () => {
               placeholder="link"
             />
           </form> */}
-      </div>
+        </div>
+      </form>
     </section>
   );
 };
