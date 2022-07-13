@@ -66,6 +66,7 @@ const SignUpPage = () => {
           onChange={context.handleLogReg}
           name="hash_password"
           placeholder="Password"
+          type="password"
         />
         <hr className="create-card-form-divider" />
         {/* <input
