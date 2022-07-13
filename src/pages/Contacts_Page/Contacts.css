@@ -30,3 +30,7 @@
   justify-self: flex-end;
   cursor: pointer;
 }
+
+.contact-container {
+  margin-left: 20%;
+}

@@ -27,10 +27,6 @@ const Avatar = () => {
         //think about adding some clean up function here
     }, [authToken])
 
-    // useEffect(() => {
-    //     context.setCrtCard(avatarData.id)
-    // }, [avatarData])
-
     
 
     return (
