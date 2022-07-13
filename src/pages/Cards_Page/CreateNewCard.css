@@ -108,6 +108,7 @@
   padding-block: 0.6rem;
   padding-inline: 1.2rem;
 }
+
 #create-card-form > input::placeholder {
   color: #a8a8a8;
   font-family: "Raleway";
