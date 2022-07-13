@@ -68,6 +68,7 @@ const LoginPage = () => {
             onChange={context.handleLogReg}
             name="hash_password"
             placeholder="Password"
+            type="password"
           />
           <hr className={styles["create-card-form-divider"]} />
           <input className={styles["reg"]} type="submit" value="Submit" />

@@ -21,10 +21,9 @@
 }
 
 .title {
-  margin-left: 2.5%;
+  margin-left: 2%;
   padding-bottom: 5%;
-  margin-bottom: 3%;
-  font-size: 300%;
+  margin-top: 3%;
   font-family: "Raleway";
   font-style: normal;
   font-weight: 700;
@@ -33,6 +32,9 @@
 
   /* identical to box height, or 160% */
   letter-spacing: 0.25px;
-
   color: #333333;
+}
+
+.searchcard {
+  margin-left: 5%;
 }
