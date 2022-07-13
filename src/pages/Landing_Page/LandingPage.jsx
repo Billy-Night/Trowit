@@ -19,6 +19,7 @@ const LandingPage = () => {
   return (
     <div id="body">
       <TopNavbar />
+    <></>
       <HeroSection HandleClickOrdCard={HandleClickOrdCard} />
       <LPFeatures HandleClickOrdCard={HandleClickOrdCard} />
       <CreateAndShare HandleClickOrdCard={HandleClickOrdCard} />
