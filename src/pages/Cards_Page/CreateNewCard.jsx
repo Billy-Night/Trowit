@@ -9,7 +9,6 @@ import { CardInformationData } from "./CardInformationData";
 import "./SearchCard.css"
 // import SearchCard from "./SearchCard.jsx";
 import Avatar from "../../components/Avatar/Avatar.jsx";
- 
 
 const CreateNewCard = () => {
   const context = useContext(MyContext);
