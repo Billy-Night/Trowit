@@ -15,6 +15,7 @@
   justify-content: flex-start;
   align-items: center;
   width: 56rem;
+  margin-bottom: 5rem;
 }
 
 #create-card-page > form > span.search-area > a {
@@ -152,15 +153,26 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-evenly;
-  margin-bottom: 15px;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
   border: none;
   clear: both;
+  margin-right: 8rem;
+  
 }
 
 .box {
   height: 20px;
   width: 20px;
+  margin-right: 2rem;
+  transition: transform .2s;
+  cursor: pointer;
+}
+
+.box:hover {
+  transform: scale(1.5);
+
 }
 
 .blue {
