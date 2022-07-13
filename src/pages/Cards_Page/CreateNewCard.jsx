@@ -66,6 +66,7 @@ const CreateNewCard = () => {
               />
             </svg>
           </a>
+        
           <input
             value={context.crtCard.type}
             onChange={context.handleCreateNewCardForm}
