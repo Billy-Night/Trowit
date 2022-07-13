@@ -33,10 +33,9 @@ const CardsPage = () => {
       <div>
         <SideNavBar />
         <p className="title"> Cards</p>
+        <p className='searchcard'>
         <SearchCard />
-        {/* I don't think using line <br> is good practice whats best then??? */}
-        <br />
-        <br />
+        </p>
       </div>
       <div>
         <Avatar />
