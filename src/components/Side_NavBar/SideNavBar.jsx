@@ -2,18 +2,35 @@ import React, { useState } from "react";
 import "./SideNavBar.css";
 import { Link } from "react-router-dom";
 
-const SideNavBar = () => {
+const SideNavBar = (props) => {
   return (
-    <aside className="sidebar">
+    <aside
+      className={"sidebar".concat(
+        props.active !== undefined && props.active ? " active" : ""
+      )}
+    >
       <nav className="nav">
-        <Link to="/" className="nav-link trowit">
-          <img
-            src="/logo_white_no_text@4x.png"
-            alt=""
-            className="nav-link-icon"
-          />
-          <span className="nav-link-name"></span>
-        </Link>
+        <span id="logo-flexbox">
+          <Link to="/" className="nav-link trowit">
+            <img
+              src="/logo_white_no_text@4x.png"
+              alt=""
+              className="nav-link-icon"
+            />
+          </Link>
+
+          <span className="flex-spacer" />
+          <div
+            role="button"
+            onClick={(event) => {
+              props.closeCallback();
+              event.stopPropagation();
+            }}
+            className="exit-button"
+          >
+            <i className={"fas fa-times"} />
+          </div>
+        </span>
 
         <Link to="/cards" className="nav-link">
           <img src="/id-card.png" alt="" className="nav-link-icon" />

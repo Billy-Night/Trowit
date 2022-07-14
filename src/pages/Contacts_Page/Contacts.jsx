@@ -7,7 +7,11 @@ import SideNavBar from "../../components/Side_NavBar/SideNavBar.jsx";
 import "./Contacts.css";
 import ContactSortingOrder from "./ContactSortingOrder.jsx";
 import SearchCard from "../Cards_Page/SearchCard.jsx"
+<<<<<<< Updated upstream
 import ContactCard from './ContactCard.jsx';
+=======
+import Layout from '../../components/Layout/Layout.jsx';
+>>>>>>> Stashed changes
 
 
 const Contact = () => {
@@ -61,6 +65,32 @@ const Contact = () => {
       <p>Loading contact data</p>}
       </div>*/}
     </div> 
+    // <Layout title="Contacts">
+    //   <div className="contact">
+        
+        
+
+    //     <p className="title_contacts"> Contacts</p>
+
+    //     <div className="contact-container">
+    //       {id ? <p>{id}</p> : <p>Loading Id</p>}
+    //       {contactData ? (
+    //         <p>{contactData[0].full_name}</p>
+    //       ) : (
+    //         <p>Loading contact data</p>
+    //       )}
+    //     </div>
+
+    //     <p className="search_card">
+    //       <SearchCard />
+    //     </p>
+
+    //     <ContactSortingOrder />
+    //     <button className="add-contact-btn" onClick={handleClick}>
+    //       Create New Contact
+    //     </button>
+    //   </div>
+    // </Layout>
   );
 };
 
