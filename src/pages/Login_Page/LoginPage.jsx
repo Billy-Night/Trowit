@@ -36,9 +36,9 @@ const LoginPage = () => {
       setAuthToken(data.token);
       context.SetLogIn(true);
       // console.log(authToken);
-      navigate("/cards");
       context.setUser(context.blankUser);
       context.setUserID(data.id);
+      navigate("/cards");
     })
   }
 
