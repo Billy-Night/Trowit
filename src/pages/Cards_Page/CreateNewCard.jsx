@@ -79,7 +79,7 @@ const CreateNewCard = () => {
       <br />
       <form onSubmit={handleSubmitOfCreateNewCard}>
         <span className="search-area">
-          <a href="#">
+          <span href="#">
             <svg
               viewBox="0 0 24 24"
               fill="none"
@@ -90,7 +90,7 @@ const CreateNewCard = () => {
                 fill="black"
               />
             </svg>
-          </a>
+          </span>
 
           <input
             value={context.crtCard.type}

@@ -57,7 +57,7 @@ const ContactCard = () => {
       <SideNavBar />
       <h1 className="contact-card-title">Contacts/TROWIT/Contact Name</h1>
         <span className="search-area">
-            <a href="#">
+            <span href="#">
             <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -68,7 +68,7 @@ const ContactCard = () => {
                 fill="black"
                 />
             </svg>
-            </a>
+            </span>
         </span>
     <div>
       <Avatar />
