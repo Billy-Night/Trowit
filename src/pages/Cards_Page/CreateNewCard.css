@@ -1,0 +1,197 @@
+#create-card-page {
+  height: 100vh;
+  margin-left: 8rem;
+  padding: 2rem 4rem;
+  font-size: 1rem;
+}
+
+#create-card-page > h1 {
+  font-size: 2.5rem;
+  color: black;
+}
+
+#create-card-page > form > span.search-area {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 56rem;
+  margin-bottom: 5rem;
+}
+
+#create-card-page > form > span.search-area > a {
+  height: 3rem;
+  width: 3rem;
+  display: inline-block;
+  margin-inline-end: 1.5rem;
+}
+
+#create-card-page > form > span.search-area > a > svg {
+  height: 100%;
+  width: 100%;
+}
+
+#create-card-page > form > span.search-area > input {
+  height: 4rem;
+  font-size: 1.6rem;
+  width: 48rem;
+  padding-inline: 1.6rem;
+  min-width: 24rem;
+  display: inline-block;
+  border: none;
+  border-radius: 2rem;
+  background-color: white;
+  box-shadow: 0 .4rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+#create-card-page > form > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-content: stretch;
+}
+
+#create-card-left {
+  /* background-color: azure; */
+  width: 60rem;
+  padding-inline-end: 24rem;
+}
+
+#create-card-right {
+  background-color: #25dac5;
+  filter: brightness(80%) saturate(80%) grayscale(20%);
+  width: 60rem;
+  border-radius: 2rem;
+  outline-width: 0.2rem;
+}
+
+#create-card-right > * {
+  filter: none;
+}
+
+#create-card-right > h1 {
+  font-size: 1.8rem;
+  padding: 1.5rem 3rem;
+}
+
+#create-card-right-grid {
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  display: grid;
+  grid-gap: 2rem;
+  grid-auto-flow: dense;
+  grid-template-columns: auto auto auto;
+  justify-content: space-evenly;
+  align-content: start;
+}
+
+#create-card-form {
+  width: 100%;
+  max-width: 36rem;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#create-card-form > .create-card-form__input-title {
+  font-family: "Raleway", "sans-serif";
+  font-weight: 500;
+  font-size: 1.7rem;
+  letter-spacing: 0.08rem;
+  width: 100%;
+}
+
+#create-card-form > input {
+  border: none;
+  width: 100%;
+  padding-block: 0.6rem;
+  padding-inline: 1.2rem;
+}
+
+#create-card-form > input::placeholder {
+  color: #a8a8a8;
+  font-family: "Raleway";
+  font-weight: 10;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+}
+
+.create-card-form-divider {
+  margin: 0;
+  width: 100%;
+  border-top: rgba(0, 0, 0, 0.185);
+  border-inline: none;
+}
+
+#create-card-form > input {
+  width: 100%;
+}
+
+#create-card-button-save {
+  padding: 0.5rem 2rem;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  border-color: transparent;
+  background-color: var(--primary);
+  color: #fff;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  justify-self: flex-end;
+  cursor: pointer;
+}
+
+#order-crd-basic {
+  font-family: "Raleway", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: hsla(0, 0%, 20%, 1);
+  width: 98vw;
+}
+
+.box-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  border: none;
+  clear: both;
+  margin-right: 8rem;
+  
+}
+
+.box {
+  height: 20px;
+  width: 20px;
+  margin-right: 2rem;
+  transition: transform .2s;
+  cursor: pointer;
+}
+
+.box:hover {
+  transform: scale(1.5);
+
+}
+
+.blue {
+  background-color: blue;
+}
+
+.green {
+  background-color: green;
+}
+
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.violet {
+  background-color: violet;
+}

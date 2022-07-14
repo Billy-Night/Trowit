@@ -1,0 +1,8 @@
+#avatar-editor {
+  height: 100%;
+  width: 100%;
+  max-width: 36rem;
+  max-height: 36rem;
+  /* background-color: tan; */
+  background-image: fill;
+}

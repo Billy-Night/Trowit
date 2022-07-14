@@ -1,0 +1,46 @@
+.contact {
+  color: red;
+}
+
+.title_contacts {
+  margin-left: 7%;
+  margin-top: 2rem;
+  padding-bottom: 2%;
+  font-size: 2rem;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+
+  /* identical to box height, or 160% */
+  letter-spacing: 0.25px;
+  color: #333333;
+}
+
+.add-contact-btn {
+  margin-left: 7%;
+  padding: 0.1rem 2rem;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  border-color: transparent;
+  background-color: var(--primary);
+  color: #fff;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  justify-self: flex-end;
+  cursor: pointer;
+}
+
+.contact-container {
+  margin-left: 20%;
+}
+
+.search_card {
+  margin-left: 7%;
+  margin-bottom: 2%;
+}
+
+.contact-container-box {
+  margin-left: 10%;
+}
+

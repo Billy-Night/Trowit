@@ -1,0 +1,63 @@
+:root {
+  --primary: #25dac5;
+}
+
+.btn {
+  padding: 8px 20px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.btn--primary {
+  background-color: var(--primary);
+  color: #15143966;
+  border: 1px solid var(--primary);
+}
+
+.btn--outline {
+  background-color: transparent;
+  font-family: "Nunito Sans";
+  color: #15143966;
+  padding: 8px 20px;
+  transition: all 0.3s ease-out;
+}
+
+.btn--outline-in {
+  background-color: var(--primary);
+  color: #fff;
+  font-family: "Nunito Sans";
+  padding: 8px 20px;
+  border: 1px solid var(--primary);
+  border-radius: 25px;
+  transition: all 0.3s ease-out;
+}
+
+.btn--medium {
+  padding: 8px 20px;
+  font-size: 18px;
+}
+
+.btn--large {
+  padding: 12px 26px;
+  font-size: 20px;
+}
+
+.btn--medium:hover,
+.btn--large:hover {
+  background: #fff;
+  color: var(--primary);
+  transition: all 0.3s ease-out;
+}
+
+.btn--outline:hover {
+  background: var(--primary);
+  color: #fff;
+  transition: all 0.3s ease-out;
+  border-radius: 25px;
+}

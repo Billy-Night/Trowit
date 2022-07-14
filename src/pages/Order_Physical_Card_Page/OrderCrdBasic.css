@@ -1,0 +1,214 @@
+#order-crd-basic {
+  font-family: "Raleway", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: hsla(0, 0%, 20%, 1);
+  /* height: 98vw; */
+  width: 98vw;
+}
+
+.OCB__main-container {
+  float: right;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-around; */
+  gap: 3rem;
+}
+/* header section  */
+
+.OCB__sub-container__header-and-menu {
+  position: relative;
+  min-height: fit-content;
+  margin-inline: auto;
+  width: 90vw;
+  display: flex;
+
+  /* background-color: blue; */
+}
+
+.OCB__sub-container__header {
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.OCB__sub-container__drop-menu {
+  background-image: url("../../images/Order_physical_card_page/drop_down_menu@2x.png");
+  min-width: 30rem;
+  width: 40rem;
+  height: 10rem;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  position: absolute;
+  top: -3rem;
+  right: -3rem;
+}
+
+/* main section  */
+
+.OCB__sub-container2__sub-title-and-preview-cards {
+  /* background-color: navajowhite; */
+}
+.OCB__sub-container2__sub-title {
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+  margin-bottom: 1.5rem;
+}
+.OCB__sub-container2__preview-cards {
+  display: flex;
+  gap: 3rem;
+}
+.OCB__sub-container2__single-card {
+  background: url("../../images/Order_physical_card_page/card_preview@2x.png"),
+    white;
+  border: 0.4rem solid var(--primary);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 1.8rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 15rem;
+  min-width: 12rem;
+}
+
+.OCB__sub-container1__divider {
+  margin-left: 3rem;
+  opacity: 0.3;
+  /* height: 90vh; */
+}
+
+main.OBC__containers {
+  padding: 0;
+  display: flex;
+  width: 90vw;
+  height: 80vh;
+  gap: 5rem;
+  /* justify-content: center; */
+
+  /* background-color: antiquewhite; */
+}
+
+section.OCB__sub-container1__content-and-divider {
+  /* width: 30vw; */
+
+  /* background-color: burlywood; */
+}
+
+.OCB__sub-container2__mein-card-front-back {
+  /* background-color: grey; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2.5rem;
+  width: 30vw;
+  height: 80vh;
+
+  /* background-color: aqua; */
+  /* height: 50vh; */
+}
+
+.OCB__main-card-preview {
+}
+
+.OCB__main-card-preview > img {
+  width: 100%;
+}
+
+h1.OBC__subtitle {
+  font-family: "Raleway", "sans-serif";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 32px;
+}
+
+p.OCB__main-card__description {
+  font-family: "Raleway", "sans-serif";
+  color: #333333;
+  font-weight: 300;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  letter-spacing: 0.25px;
+  margin-block-start: 1rem;
+}
+p.OCB__main-card__description > span {
+  color: #25dac5;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.OCB__cards-img-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  /* background-color: blueviolet; */
+}
+
+.OCB__cards-img-container > img {
+  width: 10rem;
+}
+
+.OCB__submit-order {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  /* gap: 1.2rem; */
+  width: 25vw;
+  height: 80vh;
+  /* background-color: blue; */
+}
+
+.OCB__submit-order > .OCB__input-title {
+  font-family: "Raleway", "sans-serif";
+  font-weight: 500;
+  font-size: 1.7rem;
+  letter-spacing: 0.08rem;
+  /* background-color: bisque; */
+  width: 100%;
+}
+
+.OCB__submit-order > input {
+  border: none;
+  width: 100%;
+  /* background-color: blueviolet; */
+  padding-block: 1rem;
+}
+
+.OCB__submit-order > input::placeholder {
+  color: #a8a8a8;
+  font-family: "Raleway";
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 3rem;
+  letter-spacing: 1px;
+}
+
+.OCB__sub-container3__button {
+  padding: 0.5rem 2rem;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  border-color: transparent;
+  background-color: var(--primary);
+  color: #fff;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  justify-self: flex-end;
+}
+
+.OCB__form-divider {
+  margin: 0;
+  margin-top: -2rem;
+  width: 100%;
+  border-top: rgba(0, 0, 0, 0.185);
+  border-inline: none;
+}
+
+.OCB__middle-divider {
+  opacity: 0.3;
+}

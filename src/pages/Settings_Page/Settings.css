@@ -1,0 +1,23 @@
+.settings {
+  color: teal;
+}
+
+.title {
+  margin-left: 7%;
+  padding-bottom: 2%;
+  font-size: 300%;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 32px;
+
+  /* identical to box height, or 160% */
+  letter-spacing: 0.25px;
+
+  color: #333333;
+}
+
+.edit-profile {
+  margin-left: 20%;
+}

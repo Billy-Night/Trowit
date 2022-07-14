@@ -1,0 +1,38 @@
+.searchForm {
+  font-size: 1.5rem;
+  width: 25rem;
+  display: flex;
+  align-items: center;
+  background-color: "#F2F1F9";
+  border: 2px solid;
+  border-radius: 15px;
+  border-color: lightgray;
+  flex-direction: row-reverse;
+  margin-left: 5%;
+}
+
+.searchForm > input[type="search"] {
+  margin: 0;
+  width: auto;
+  height: auto;
+  box-sizing: initial;
+  background-color: transparent;
+  border: 0;
+  padding: 0.4rem 0.8rem;
+  font: "Nunito";
+  flex-grow: 1;
+}
+
+.searchForm > input[type="search"]:focus-visible {
+  outline: none;
+}
+
+.fa-search,
+.searchForm > [type="submit"] {
+  background-color: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  overflow: hidden;
+  padding-inline-start: 0.8rem;
+  border: none;
+}
