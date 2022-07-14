@@ -8,6 +8,11 @@
   border-radius: 2rem;
 }
 
+.information-button-base.active {
+  backdrop-filter: brightness(80%);
+  box-shadow: 0 0 1rem #00000030;
+}
+
 .information-button-base > svg {
   width: 4rem;
   height: 4rem;
@@ -21,4 +26,8 @@
 
 .information-button-base:hover {
   background-color: #00000010;
+  box-shadow: 0 0 1rem #00000015;
+  cursor: pointer;
+  
 }
+

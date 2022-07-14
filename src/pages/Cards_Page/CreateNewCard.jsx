@@ -9,6 +9,7 @@ import { CardInformationData } from "./CardInformationData";
 import "./SearchCard.css";
 // import SearchCard from "./SearchCard.jsx";
 import Avatar from "../../components/Avatar/Avatar.jsx";
+import { useState } from "react";
 
 const CreateNewCard = () => {
   const context = useContext(MyContext);
@@ -47,6 +48,30 @@ const CreateNewCard = () => {
     });
   };
 
+  const additionalInformation = CardInformationData(context);
+
+  const [enabledAdditionalFields, setEnabledAdditionalFields] = useState([]);
+
+  const handleItemClick = (key) => {
+    if (!enabledAdditionalFields.includes(key)) {
+      setEnabledAdditionalFields((enabledAdditionalFields) => [
+        ...enabledAdditionalFields,
+        key,
+      ]);
+      return;
+    }
+    setEnabledAdditionalFields(
+      enabledAdditionalFields.filter((k) => k !== key)
+    );
+
+    // A bit hacky, leave this in if you want fields to reset when removed
+    // I also added this to prevent fields that were removed to show
+    // up in submitted data
+    context.handleCreateNewCardForm({
+      currentTarget: { name: key, value: undefined },
+    });
+  };
+
   return (
     <section id="create-card-page">
       <SideNavBar />
@@ -66,7 +91,7 @@ const CreateNewCard = () => {
               />
             </svg>
           </a>
-        
+
           <input
             value={context.crtCard.type}
             onChange={context.handleCreateNewCardForm}
@@ -128,8 +153,21 @@ const CreateNewCard = () => {
                   placeholder="Company"
                 />
                 <hr className="create-card-form-divider" />
+
+                {enabledAdditionalFields.map((field) => (
+                  <>
+                    <input
+                      value={additionalInformation[field].value}
+                      onChange={context.handleCreateNewCardForm}
+                      id={field}
+                      name={field}
+                      placeholder={additionalInformation[field].label}
+                    />
+                    <hr className="create-card-form-divider" />
+                  </>
+                ))}
+
                 <br />
-                {/* TODO: load other input fields conditionally and make them depend on the state of the information panel*/}
                 <input
                   id="create-card-button-save"
                   type="submit"
@@ -142,9 +180,17 @@ const CreateNewCard = () => {
             {/* add more information container */}
             <h1>Add more information:</h1>
             <div id="create-card-right-grid">
-              {CardInformationData.map((item) => (
-                <InformationButton svg={item.svg} label={item.label} />
-              ))}
+              {Object.keys(additionalInformation).map((key) => {
+                const item = additionalInformation[key];
+                return (
+                  <InformationButton
+                    svg={item.svg}
+                    label={item.label}
+                    onClick={() => handleItemClick(key)}
+                    active={enabledAdditionalFields.includes(key)}
+                  />
+                );
+              })}
             </div>
           </div>
 
