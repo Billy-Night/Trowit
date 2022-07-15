@@ -8,7 +8,6 @@ import contact_card_left from "../../images/cards_page/contact.png";
 import contact_right from "../../images/cards_page/contact_right.png";
 import contact_rightdown from "../../images/cards_page/contactcardrightdown.png";
 
-
 const ContactCard = () => {
   const navigate = useNavigate();
   const context = useContext(MyContext);
@@ -72,53 +71,62 @@ const ContactCard = () => {
         </span>
     <div>
       <Avatar />
-      <div id="contact-card-left">
-        <img src={contact_card_left} alt="contact_card" className="img" />    
-            <div id="contact-card-right">
-                <h1> Tags</h1>
-                <form onSubmit={handleContactSubmit} id="contact-card-right-grid">
-                    <input
-                    value={context.contact.tag1}
-                    onChange={context.handleContact}
-                    name="tag1"
-                    placeholder="Tag 1"
-                    />
+      <div>
+        <div id="contact-card-left">
+          <img src={contact_card_left} alt="contact_card" className="img" />
+          <div id="contact-card-right">
+            <h1> Tags</h1>
+            <form onSubmit={handleContactSubmit} id="contact-card-right-grid">
+              <input
+                value={context.contact.tag1}
+                onChange={context.handleContact}
+                name="tag1"
+                placeholder="Tag 1"
+              />
 
-                    <input
-                    value={context.contact.tag2}
-                    onChange={context.handleContact}
-                    name="tag2"
-                    placeholder="Tag 2"
-                    />
+              <input
+                value={context.contact.tag2}
+                onChange={context.handleContact}
+                name="tag2"
+                placeholder="Tag 2"
+              />
 
-                    <input
-                    value={context.contact.tag3}
-                    onChange={context.handleContact}
-                    name="tag3"
-                    placeholder="Tag 3"
-                    />
+              <input
+                value={context.contact.tag3}
+                onChange={context.handleContact}
+                name="tag3"
+                placeholder="Tag 3"
+              />
 
-                    <input
-                    value={context.contact.tag4}
-                    onChange={context.handleContact}
-                    name="tag4"
-                    placeholder="Tag 4"
-                    />
-                </form>
+              <input
+                value={context.contact.tag4}
+                onChange={context.handleContact}
+                name="tag4"
+                placeholder="Tag 4"
+              />
+            </form>
             <div id="contact-card-right-grid">
-                <form onSubmit={handleContactSubmit}>
+              <form onSubmit={handleContactSubmit}>
                 <h1> Notes</h1>
-                        <input
-                        value={context.contact.notes}
-                        onChange={context.handleContact}
-                        name="notes"
-                        placeholder="Notes"
-                        />
-                    <div className="card_right">
-                        <img src={contact_right} alt="card_right" className="card_right" />
-                        <img src={contact_rightdown} alt="card_right" className="card_right" />
-                    </div>         
-                </form>
+                <input
+                  value={context.contact.notes}
+                  onChange={context.handleContact}
+                  name="notes"
+                  placeholder="Notes"
+                />
+                <div className="card_right">
+                  <img
+                    src={contact_right}
+                    alt="card_right"
+                    className="card_right"
+                  />
+                  <img
+                    src={contact_rightdown}
+                    alt="card_right"
+                    className="card_right"
+                  />
+                </div>
+              </form>
             </div>
           </div>
         </div>

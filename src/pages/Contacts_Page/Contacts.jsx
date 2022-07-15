@@ -8,6 +8,7 @@ import "./Contacts.css";
 import ContactSortingOrder from "./ContactSortingOrder.jsx";
 import SearchCard from "../Cards_Page/SearchCard.jsx"
 import ContactCard from './ContactCard.jsx';
+import Layout from '../../components/Layout/Layout.jsx';
 
 
 const Contact = () => {
@@ -33,9 +34,8 @@ const Contact = () => {
 //Todo 1. ADD the box 2.Style the contact component,
 
   return (
+    <Layout>
     <div className="contact">
-      <SideNavBar />
-      <Avatar />
       <p className="title_contacts"> Contacts</p>
       <p className="search_card">
       <SearchCard />
@@ -60,7 +60,33 @@ const Contact = () => {
       :
       <p>Loading contact data</p>}
       </div>*/}
-    </div> 
+    </div> </Layout>
+    // <Layout title="Contacts">
+    //   <div className="contact">
+        
+        
+
+    //     <p className="title_contacts"> Contacts</p>
+
+    //     <div className="contact-container">
+    //       {id ? <p>{id}</p> : <p>Loading Id</p>}
+    //       {contactData ? (
+    //         <p>{contactData[0].full_name}</p>
+    //       ) : (
+    //         <p>Loading contact data</p>
+    //       )}
+    //     </div>
+
+    //     <p className="search_card">
+    //       <SearchCard />
+    //     </p>
+
+    //     <ContactSortingOrder />
+    //     <button className="add-contact-btn" onClick={handleClick}>
+    //       Create New Contact
+    //     </button>
+    //   </div>
+    // </Layout>
   );
 };
 

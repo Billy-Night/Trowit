@@ -95,7 +95,7 @@
   transition: all 0.2s ease-out;
 }
 
-.fa-bars {
+.menu-icon > .fa-bars {
   color: #25dac5;
   margin-top: 25%;
   font-size: 2.5rem;
