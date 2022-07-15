@@ -1,6 +1,7 @@
 .avatar {
   background-color: red;
-  position: absolute;
+  /* position: absolute; */
+  display: inline-block;
   top: 0;
   left: 100;
   right: 0;
