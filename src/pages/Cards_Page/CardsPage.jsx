@@ -2,6 +2,7 @@ import './CardsPage.css';
 import React, { useContext, useState } from 'react';
 import { MyContext } from '../../context/MyProvider';
 import SideNavBar from '../../components/Side_NavBar/SideNavBar.jsx';
+import workImg from "../../images/cards_page/card_work@2x.png";
 // import cardWork from '../../images/cards_page/card_work@2x.png';
 // import cardPersonal from '../../images/cards_page/card_personal@2x.png';
 // import createCard from '../../images/cards_page/create_card@2x.png';
@@ -46,7 +47,7 @@ const CardsPage = () => {
         {cardsData ? 
         <>
         {cardsData.map((card, index) => (
-          <Card key={index} colour={card.colour}  id={card.id} type={card.type} />
+          <Card key={index} colour={card.colour} id={card.id} type={card.type} img={workImg} />
         ))}
         </>
         :
