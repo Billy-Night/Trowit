@@ -46,7 +46,7 @@ const CardsPage = () => {
         {cardsData ? 
         <>
         {cardsData.map((card, index) => (
-          <Card key={index} id={card.id} type={card.type} />
+          <Card key={index} colour={card.colour}  id={card.id} type={card.type} />
         ))}
         </>
         :
