@@ -7,11 +7,8 @@ import SideNavBar from "../../components/Side_NavBar/SideNavBar.jsx";
 import "./Contacts.css";
 import ContactSortingOrder from "./ContactSortingOrder.jsx";
 import SearchCard from "../Cards_Page/SearchCard.jsx"
-<<<<<<< Updated upstream
 import ContactCard from './ContactCard.jsx';
-=======
 import Layout from '../../components/Layout/Layout.jsx';
->>>>>>> Stashed changes
 
 
 const Contact = () => {
@@ -37,9 +34,8 @@ const Contact = () => {
 //Todo 1. ADD the box 2.Style the contact component,
 
   return (
+    <Layout>
     <div className="contact">
-      <SideNavBar />
-      <Avatar />
       <p className="title_contacts"> Contacts</p>
       <p className="search_card">
       <SearchCard />
@@ -64,7 +60,7 @@ const Contact = () => {
       :
       <p>Loading contact data</p>}
       </div>*/}
-    </div> 
+    </div> </Layout>
     // <Layout title="Contacts">
     //   <div className="contact">
         

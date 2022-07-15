@@ -24,6 +24,7 @@ const CreateNewCard = () => {
         "Content-Type": "application/json",
       }),
       body: JSON.stringify({
+        image: context.crtCard.image,
         type: context.crtCard.type,
         first_name: context.crtCard.first_name,
         last_name: context.crtCard.last_name,
@@ -35,6 +36,15 @@ const CreateNewCard = () => {
         address: context.crtCard.address,
         website: context.crtCard.website,
         link: context.crtCard.link,
+        pdf: context.crtCard.pdf,
+        twitter: context.crtCard.twitter,
+        instagram: context.crtCard.instagram,
+        linkedin: context.crtCard.linkedin,
+        facebook: context.crtCard.facebook,
+        youtube: context.crtCard.youtube,
+        whatsapp: context.crtCard.whatsapp,
+        documents: context.crtCard.documents,
+        files: context.crtCard.files,
         colour: context.crtCard.colour,
         users_id: context.userId,
       }),
@@ -72,6 +82,57 @@ const CreateNewCard = () => {
     });
   };
 
+  // const handleColourClick = (colour) => {
+    
+  // }
+
+  const colour = [
+    {
+      id: 1,
+      colour: "#2CDAC5"
+    },
+    {
+      id: 2,
+      colour: "#3A59AE"
+    }, 
+    {
+      id: 3,
+      colour: "#628AF8"
+    }, 
+    {
+      id: 4,
+      colour: "#8F5FDE"
+    }, 
+    {
+      id: 5,
+      colour: "#3BB55D"
+    },
+    {
+      id: 6,
+      colour: "#FDC631"
+    },
+    {
+      id: 7,
+      colour: "#EA3A2E"
+    },
+    {
+      id: 8,
+      colour: "#EE85DD"
+    }, 
+    {
+      id: 9,
+      colour: "#4A4A4A" 
+    },
+  ];
+
+  // const colour1 = [ "#2CDAC5", "#3A59AE", "#628AF8", "#8F5FDE", "#3BB55D", "#FDC631", "#EA3A2E", "#EE85DD", "#4A4A4A"]
+
+  // const handleClick = (event) => {
+  //   if (colour === context.crtCard.colour) {
+  //     context.handleCreateNewCardForm(event);
+  //   } 
+  // }
+
   return (
     <section id="create-card-page">
       <SideNavBar />
@@ -107,12 +168,21 @@ const CreateNewCard = () => {
               <AvatarEditor />
               <section id="create-card-form">
                 <div className="box-container">
-                  <div className="box red"></div>
-                  <div className="box green"></div>
+                  {colour.map((e, index) =>
+                    <div className="box" >
+                      <input style={{backgroundColor: `${e.colour}`}} key={index} onClick={context.handleCreateNewCardForm} name="colour" value={e.colour} type="radio" />
+                    </div>
+                  )}
+{/* Jess: Your previous work is here */}
+                  {/* 
+                  <input className="box red" onClick={context.handleCreateNewCardForm} name="colour" value="#2CDAC5"  type="checkbox"></input>
+                  
+                  <div className="box green" onClick={() => context.handleCreateNewCardForm({name: "colour", value: "green"})}></div>
+
                   <div className="box blue"></div>
                   <div className="box yellow"></div>
-                  <div className="box violet"></div>
-                </div>
+                  <div className="box violet"></div>*/}
+                </div> 
                 <input
                   value={context.crtCard.first_name}
                   onChange={context.handleCreateNewCardForm}
