@@ -1,6 +1,4 @@
-
 import { useNavigate } from "react-router-dom";
-
 
 const Card = (props) => {
   const navigate = useNavigate();
@@ -9,6 +7,8 @@ const Card = (props) => {
     console.log(id);
     if (id === 3999) {
       navigate("/cards/newcard");
+    } else {
+      navigate(`/cards/individual/card/${id}`)
     }
   };
 
