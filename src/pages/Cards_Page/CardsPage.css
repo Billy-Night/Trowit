@@ -3,6 +3,7 @@
 }
 
 .CP_cards {
+  margin-top: 2%;
   display: flex;
   width: 90vw;
   justify-content: space-around;
