@@ -13,7 +13,7 @@ const Card = (props) => {
   };
 
     return (
-      <div className="card" onClick={() => handleClick(props.id)}>
+      <div style={{borderColor: `${props.colour}`}} className="card" onClick={() => handleClick(props.id)}>
           <img src={props.img} alt="img"/>
           <p>{props.type}</p> 
       </div>

@@ -159,24 +159,33 @@
   margin-top: 3rem;
   border: none;
   clear: both;
-  margin-right: 8rem;
-  
+  margin-right: 2rem;
+  margin-left: 2rem;
 }
 
 .box {
   height: 20px;
   width: 20px;
-  margin-right: 2rem;
+  margin-right: 1rem;
   transition: transform .2s;
   cursor: pointer;
 }
 
-.box:hover {
-  transform: scale(1.5);
-
+.box input {
+  height: 100%;
+  width: 100%;
+  appearance: none;
 }
 
-.blue {
+.box:hover {
+  transform: scale(1.5);
+}
+
+.box > input:checked {
+  transform: scale(1.5);
+}
+
+/* .blue {
   background-color: blue;
 }
 
@@ -185,7 +194,7 @@
 }
 
 .red {
-  background-color: red;
+  background-color: #2CDAC5;
 }
 
 .yellow {
@@ -194,4 +203,4 @@
 
 .violet {
   background-color: violet;
-}
+} */

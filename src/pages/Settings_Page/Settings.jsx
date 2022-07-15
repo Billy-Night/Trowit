@@ -1,14 +1,77 @@
 import "./Settings.css";
 import EditProfile from "./EditProfile.jsx";
 import SideNavBar from "../../components/Side_NavBar/SideNavBar";
+import Avatar from "../../components/Avatar/Avatar";
+import { useState } from "react";
 
 const Settings = () => {
+  const [showModal, setShowModal] = useState(false);
+
+  const Modal = (props) => {
+    return (
+      <div
+        style={{
+          display: showModal ? "flex" : "none",
+          position: "absolute",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "100vw",
+          height: "100vh",
+          top: 0,
+          left: 0,
+          zIndex: 9999,
+          backdropFilter: "brightness(60%)",
+        }}
+      >
+        {props.children}
+      </div>
+    );
+  };
+
+  const saveSettings = () => {
+    setShowModal(false);
+  }
+
   return (
-    <div className="settings">
+    <main id="settings-page">
       <SideNavBar />
-      <p className="title"> Settings</p>
-      <EditProfile />
-    </div>
+      <top className="titlebar">
+        <p className="title"> Settings</p>
+        <Avatar />
+      </top>
+      <section className="settings-area" style={{marginLeft: "8rem"}}>
+        <div>
+          <div>Subscription</div>
+          <div>
+            <p>Profile</p>
+            <button onClick={() => setShowModal(true)}>Open Editor</button>
+            </div>
+        </div>
+        <div>Account</div>
+      </section>
+      <Modal>
+        <div
+          style={{
+            fontSize: "2.4rem",
+            backgroundColor: "white",
+            borderRadius: "1em",
+            width: "24em",
+            height: "18em",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "flex-start",
+            alignItems: "center",
+            gap: "2em",
+            padding: "1em 2em"
+          }}
+        >
+          <h1>Profile Editor</h1>
+          <EditProfile />
+          <button onClick={saveSettings}>Save</button>
+        </div>
+      </Modal>
+    </main>
   );
 };
 
