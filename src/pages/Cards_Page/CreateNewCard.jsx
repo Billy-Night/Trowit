@@ -24,7 +24,6 @@ const CreateNewCard = () => {
         "Content-Type": "application/json",
       }),
       body: JSON.stringify({
-        id: context.crtCard.id,
         image: context.crtCard.image,
         type: context.crtCard.type,
         first_name: context.crtCard.first_name,
@@ -47,7 +46,7 @@ const CreateNewCard = () => {
         documents: context.crtCard.documents,
         files: context.crtCard.files,
         colour: context.crtCard.colour,
-        users_id: context.users_id,
+        users_id: context.userId,
       }),
     }).then((response) => {
       if (response.status === 201) {

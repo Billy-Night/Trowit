@@ -6,7 +6,6 @@ export const MyContext = React.createContext();
 const MyProvider = (props) => {
     //first for the create new card form, set-up the object that will be filled by the information filled in
     const newCard = {
-      id: "",
       image: "",
       type: "",
       first_name: "",
