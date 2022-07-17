@@ -1,11 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import { MyContext } from '../../context/MyProvider';
 import { useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import FullCard from "./FullCard";
 import "./IndividualCardPage.css";
 
 
+
 const IndividualCard = () => {
+    const context = useContext(MyContext);
+    const navigate = useNavigate();
+
     let [cardData, setCardData] = useState();
+
 
     //! It has to be called exactly the same as defined in the path(App.js)
     let { id } = useParams();
@@ -20,22 +27,43 @@ const IndividualCard = () => {
         });
     }, [id]);
 
+    const handleClickEditCard = () => {
+        console.log("clicked");
+        // context.handleCreateNewCardForm(cardData[0]);
+        context.setCrtCard({...cardData[0]});
+        context.setEditCard(true);
+        navigate('/cards/newcard');
+    };
+
+    const handleClickConnectContact = () => {
+        console.log("Connecting");
+    };
 
     return (
         <div className="individual-card-page-container">
             <p>This is the individual contact card page</p>
             <p>Card ID: {id}</p>
             <>
-            {cardData ? 
-            <>
-            <p>First Name: {cardData[0].first_name}</p>
-            <p>Second Name: {cardData[0].second_name}</p>
+                {cardData ? 
+                <FullCard first_name={cardData[0].first_name} last_name={cardData[0].last_name}/>
+                :
+                null
+                }
             </>
-            :
-            null
-            }
-            </>
-            <FullCard />
+            {(cardData) ? 
+                    (cardData[0].users_id === context.userId) ? 
+                    <div>
+                        <p>This is the users card you can edit it below</p>
+                        <button onClick={handleClickEditCard}>Edit Me</button>
+                    </div>
+                    :
+                    <div>
+                       <p>This is not the users card you can add as contact</p>
+                       <button onClick={handleClickConnectContact}>Connect</button> 
+                    </div>
+                    :
+                    null
+                    }
         </div>
     )
 }

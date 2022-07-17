@@ -6,6 +6,7 @@ export const MyContext = React.createContext();
 const MyProvider = (props) => {
     //first for the create new card form, set-up the object that will be filled by the information filled in
     const newCard = {
+      id: null,
       image: "",
       type: "",
       first_name: "",
@@ -106,6 +107,8 @@ const MyProvider = (props) => {
     [name]: value,
   });
   };
+
+  let [ editCard, setEditCard ] = useState(false);
     
     return (
         <MyContext.Provider 
@@ -124,7 +127,9 @@ const MyProvider = (props) => {
                 setUserID: setUserID,
                 contact: contact,
                 setContact: setContact,
-                handleContact: handleContact
+                handleContact: handleContact,
+                setEditCard: setEditCard,
+                editCard: editCard
             }} >
                 { props.children }
         </MyContext.Provider> 
