@@ -15,6 +15,8 @@ const CreateNewCard = () => {
   const context = useContext(MyContext);
   const navigate = useNavigate();
 
+
+
   const handleSubmitOfCreateNewCard = (event) => {
     event.preventDefault();
     fetch("http://localhost:3306/createcard", {
@@ -58,6 +60,54 @@ const CreateNewCard = () => {
     });
   };
 
+  const handleSubmitOfUpdateCard = (event) => {
+    event.preventDefault();
+    let userId = context.userId;
+    console.log(`User id: ${userId}`);
+    let cardId = context.crtCard.id;
+    console.log(`Card id: ${cardId}`);
+    fetch(`http://localhost:3306/api/update/card/user/${userId}/card/${cardId}`, {
+      method: "PUT",
+      mode: "cors",
+      headers: new Headers({
+        "Content-Type": "application/json",
+      }),
+      body: JSON.stringify({
+        image: context.crtCard.image,
+        type: context.crtCard.type,
+        first_name: context.crtCard.first_name,
+        last_name: context.crtCard.last_name,
+        title: context.crtCard.title,
+        department: context.crtCard.department,
+        company: context.crtCard.company,
+        phone: context.crtCard.phone,
+        email: context.crtCard.email,
+        address: context.crtCard.address,
+        website: context.crtCard.website,
+        link: context.crtCard.link,
+        pdf: context.crtCard.pdf,
+        twitter: context.crtCard.twitter,
+        instagram: context.crtCard.instagram,
+        linkedin: context.crtCard.linkedin,
+        facebook: context.crtCard.facebook,
+        youtube: context.crtCard.youtube,
+        whatsapp: context.crtCard.whatsapp,
+        documents: context.crtCard.documents,
+        files: context.crtCard.files,
+        colour: context.crtCard.colour,
+      }),
+    }).then((response) => {
+      if (response.status === 200) {
+        navigate("/cards");
+        context.setCrtCard(context.newCard);
+      } else {
+        navigate("/error");
+      }
+    });
+  };
+
+
+
   const additionalInformation = CardInformationData(context);
 
   const [enabledAdditionalFields, setEnabledAdditionalFields] = useState([]);
@@ -81,10 +131,6 @@ const CreateNewCard = () => {
       currentTarget: { name: key, value: undefined },
     });
   };
-
-  // const handleColourClick = (colour) => {
-    
-  // }
 
   const colour = [
     {
@@ -125,20 +171,17 @@ const CreateNewCard = () => {
     },
   ];
 
-  // const colour1 = [ "#2CDAC5", "#3A59AE", "#628AF8", "#8F5FDE", "#3BB55D", "#FDC631", "#EA3A2E", "#EE85DD", "#4A4A4A"]
-
-  // const handleClick = (event) => {
-  //   if (colour === context.crtCard.colour) {
-  //     context.handleCreateNewCardForm(event);
-  //   } 
-  // }
-
   return (
     <section id="create-card-page">
       <SideNavBar />
+      {context.editCard ? 
+      <h1>Cards / Edit Card</h1>
+      : 
       <h1>Cards / New Card</h1>
+      }
       <br />
-      <form onSubmit={handleSubmitOfCreateNewCard}>
+      
+      <form onSubmit={(context.editCard) ? handleSubmitOfUpdateCard : handleSubmitOfCreateNewCard}> 
         <span className="search-area">
           <span href="#">
             <svg
@@ -238,11 +281,16 @@ const CreateNewCard = () => {
                 ))}
 
                 <br />
+                {(context.editCard) ? <input
+                  id="create-card-button-save"
+                  type="submit"
+                  value="UPDATE"
+                /> : 
                 <input
                   id="create-card-button-save"
                   type="submit"
                   value="SAVE"
-                />
+                /> }
               </section>
             </div>
           </div>
