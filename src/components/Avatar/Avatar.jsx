@@ -27,6 +27,7 @@ const Avatar = () => {
             .then((data) => {
             setAvatarData(data);
             context.setUserID(data.id);
+            context.SetLogIn(true);
     });
         //think about adding some clean up function here
     }, [authToken, context])
@@ -40,22 +41,22 @@ const Avatar = () => {
 
     return (
         <div className="avatar">
-            <h1>This is the avatar component</h1>
-            <h2>The Web token {authToken}</h2>
-            {avatarData ?
+        {(avatarData) ?
             <div>
+                <h1>This is the avatar component</h1>
+                <h2>The Web token {authToken}</h2>
                 <p>First Name: {avatarData.first_name}</p>
                 <p>Second Name: {avatarData.last_name} </p>
                 <button>Settings</button>
                 <button>Tips</button>
                 <button onClick={handleLogOutClick}>LogOut</button>
             </div>
-            :
-            <>
-            <p>Loading...</p>
-            </>
-            }
-    </div>
+        :
+        <>
+        <p>Sign In</p>
+        </>
+        }
+        </div>
   );
 };
 

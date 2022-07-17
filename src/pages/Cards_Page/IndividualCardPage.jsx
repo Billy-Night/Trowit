@@ -39,13 +39,31 @@ const IndividualCard = () => {
 
     const handleClickConnectContact = () => {
         console.log("Connecting");
+        fetch('http://localhost:3306/api/add/contact', {
+            method: "POST",
+            headers: new Headers ({
+                "content-type": "application/json",
+            }),
+            body: JSON.stringify({
+                users_id: context.userId,
+                cards_id: cardData[0].id
+            })
+        })
+        .then((res) => {
+            if (res.status === 200) {
+                console.log("contact added");
+                navigate('/contacts');
+            } else {
+                console.log("There was an error adding the contact FE")
+            }
+        });
     };
 
     return (
         <div>
             <Avatar />
             {(cardData) ? (cardData[0].users_id === context.userId) ? <SideNavBar /> : null : null }
-            {/* {(cardData) ? (cardData[0].users_id === context.userId) ?  : null : null } */}
+            
             <div className="individual-card-page-container">
                 <p>This is the individual contact card page</p>
                 <p>Card ID: {id}</p>
