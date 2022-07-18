@@ -3,6 +3,7 @@
 }
 
 .CP_cards {
+  margin-top: 2%;
   display: flex;
   width: 90vw;
   justify-content: space-around;
@@ -14,15 +15,17 @@
   border: solid 5px #51dac4;
   border-radius: 20px;
   cursor: pointer;
+  font-size: 60px;
 }
+
 .card img {
   height: 200px;
 }
 
 .title {
-  margin-left: 2.5%;
-  padding-bottom: 2%;
-  font-size: 300%;
+  margin-left: 2%;
+  padding-bottom: 5%;
+  margin-top: 3%;
   font-family: "Raleway";
   font-style: normal;
   font-weight: 700;
@@ -31,6 +34,15 @@
 
   /* identical to box height, or 160% */
   letter-spacing: 0.25px;
-
   color: #333333;
+}
+
+.searchcard {
+  margin-left: 5%;
+}
+
+.position {
+ margin-left: -70%;
+ margin-top: 7%;
+  
 }

@@ -2,44 +2,36 @@ import React, { useState } from "react";
 import "./SideNavBar.css";
 import { Link } from "react-router-dom";
 
-const SideNavBar = () => {
+const SideNavBar = (props) => {
+  const NavEntry = (props) => (
+    <Link to={props.link} className="nav-link">
+      <img src={props.img} alt="" className="nav-link-icon" />
+      <span className="nav-link-name">{props.label}</span>
+    </Link>
+  );
+
   return (
-    <aside className="sidebar">
+    <aside
+      className={"sidebar".concat(
+        props.active !== undefined && props.active ? " active" : ""
+      )}
+    >
       <nav className="nav">
-        <Link to="/" className="nav-link trowit">
-          <img
-            src="./logo_white_no_text@4x.png"
-            alt=""
-            className="nav-link-icon"
-          />
-          <span className="nav-link-name"></span>
-        </Link>
-
-        <Link to="/cards" className="nav-link">
-          <img src="./id-card.png" alt="" className="nav-link-icon" />
-          <span className="nav-link-name">Cards</span>
-        </Link>
-
-        <Link to="/contacts" className="nav-link">
-          <img src="./contacts.png" alt="" className="nav-link-icon" />
-          <span className="nav-link-name">Contacts</span>
-        </Link>
-        <Link to="/backgrounds" className="nav-link">
-          <img src="./backgrounds.png" alt="" className="nav-link-icon" />
-          <span className="nav-link-name">Backgrounds</span>
-        </Link>
-        <Link to="/email-signatures" className="nav-link">
-          <img src="./email.png" alt="" className="nav-link-icon" />
-          <span className="nav-link-name">Email Signatures</span>
-        </Link>
-        <Link to="/settings" className="nav-link">
-          <img src="./settings.png" alt="" className="nav-link-icon" />
-          <span className="nav-link-name">Settings</span>
-        </Link>
-        <Link to="/order-card" className="nav-link">
-          <img src="./card-yellow.png" alt="" className="nav-link-icon" />
-          <span className="nav-link-name">Order Physical Card</span>
-        </Link>
+        <span id="logo-flexbox">
+          <Link to="/" className="nav-link trowit">
+            <img
+              src="/logo_white_no_text@4x.png"
+              alt=""
+              className="nav-link-icon"
+            />
+          </Link>
+        </span>
+        <NavEntry link="/cards" img="/id-card.png" label="Cards" />
+        <NavEntry link="/contacts" img="/contacts.png" label="Contacts" />
+        <NavEntry link="/backgrounds" img="/backgrounds.png" label="Backgrounds" />
+        <NavEntry link="/email-signatures" img="/email.png" label="Email Signatures" />
+        <NavEntry link="/settings" img="/settings.png" label="Settings" />
+        <NavEntry link="/order-card" img="/card-yellow.png" label="Order Physical Card" />
       </nav>
     </aside>
   );

@@ -1,6 +1,11 @@
 import React from "react";
 
 const OderCardTemplate = (props) => {
+
+  // const handleClick = () => {
+  //   console.log("clicked")
+  // }
+
   return (
     <div className="OC__sub-container3__price-table-and-buttons">
       <div className="OC__sub-container3__price-frame">

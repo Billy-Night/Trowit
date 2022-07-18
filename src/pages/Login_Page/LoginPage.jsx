@@ -11,7 +11,7 @@ import styles from "./LoginPage.module.css";
 const LoginPage = () => {
   const navigate = useNavigate();
   const context = useContext(MyContext);
-  const { authToken, setAuthToken } = useContext(AuthContext);
+  const { setAuthToken } = useContext(AuthContext);
 
   const handleLogin = (event) => {
     event.preventDefault();
@@ -31,15 +31,16 @@ const LoginPage = () => {
         }
         return response.json();
       })
-      .then((data) => {
-        // console.log(data);
-        setAuthToken(data.token);
-        context.SetLogIn(true);
-        console.log(authToken);
-        navigate("/cards");
-        context.setUser(context.blankUser);
-      });
-  };
+    .then((data) => {
+      // console.log(data);
+      setAuthToken(data.token);
+      context.SetLogIn(true);
+      // console.log(authToken);
+      context.setUser(context.blankUser);
+      context.setUserID(data.id);
+      navigate("/cards");
+    })
+  }
 
   return (
     <div className={styles["login-page-container"]}>
@@ -54,7 +55,7 @@ const LoginPage = () => {
         <div>
           <h1 className={styles["text"]}>Log in to your account</h1>
         </div>
-        <form className={styles["loginForm"]} onSubmit={handleLogin}>
+        <form onSubmit={handleLogin} className={styles["loginForm"]} >
           <input
             value={context.user.email}
             onChange={context.handleLogReg}
@@ -67,10 +68,11 @@ const LoginPage = () => {
             onChange={context.handleLogReg}
             name="hash_password"
             placeholder="Password"
+            type="password"
           />
           <hr className={styles["create-card-form-divider"]} />
+          <input className={styles["reg"]} type="submit" value="Submit" />
         </form>
-        <input className={styles["reg"]} type="submit" value="Submit" />
         <span className={styles["forgotPassword"]}>
           <a href="https://www.w3schools.com">Forgot password?</a>
         </span>

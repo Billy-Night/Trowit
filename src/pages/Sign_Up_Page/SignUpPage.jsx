@@ -40,20 +40,8 @@ const SignUpPage = () => {
         <h1 className="text">Create an account to get started!</h1>
       </div>
       <form className="registrationForm" onSubmit={handleRegistrationSubmit}>
-      <input
-          value={context.user.email}
-          onChange={context.handleLogReg}
-          name="name"
-          placeholder="Name"
-        />
-        <hr className="create-card-form-divider" />
-        <input
-          value={context.user.email}
-          onChange={context.handleLogReg}
-          name="Last Name"
-          placeholder="Last Name"
-        />
-        <hr className="create-card-form-divider" />
+
+        <div className="create-card-form-divider" />
         <input
           value={context.user.email}
           onChange={context.handleLogReg}
@@ -66,8 +54,10 @@ const SignUpPage = () => {
           onChange={context.handleLogReg}
           name="hash_password"
           placeholder="Password"
+          type="password"
         />
         <hr className="create-card-form-divider" />
+        {/* //! the verify email doesn't get sent to the database. */}
         {/* <input
                 value={context.user.verify_password}
                 onChange={context.handleLogReg}  

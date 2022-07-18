@@ -1,7 +1,8 @@
 #create-card-page {
+  position: static;
   height: 100vh;
+  width: 100vw;
   margin-left: 8rem;
-  padding: 2rem 4rem;
   font-size: 1rem;
 }
 
@@ -10,26 +11,27 @@
   color: black;
 }
 
-#create-card-page > span.search-area {
+#create-card-page > form > span.search-area {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   width: 56rem;
+  margin-bottom: 5rem;
 }
 
-#create-card-page > span.search-area > a {
+#create-card-page > form > span.search-area > a {
   height: 3rem;
   width: 3rem;
   display: inline-block;
   margin-inline-end: 1.5rem;
 }
 
-#create-card-page > span.search-area > a > svg {
+#create-card-page > form > span.search-area > a > svg {
   height: 100%;
   width: 100%;
 }
 
-#create-card-page > span.search-area > input {
+#create-card-page > form > span.search-area > input {
   height: 4rem;
   font-size: 1.6rem;
   width: 48rem;
@@ -42,7 +44,7 @@
   box-shadow: 0 .4rem 1rem rgba(0, 0, 0, 0.2);
 }
 
-#create-card-page > div {
+#create-card-page > form > div {
   width: 100%;
   height: 100%;
   display: flex;
@@ -107,6 +109,7 @@
   padding-block: 0.6rem;
   padding-inline: 1.2rem;
 }
+
 #create-card-form > input::placeholder {
   color: #a8a8a8;
   font-family: "Raleway";
@@ -152,18 +155,38 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-evenly;
-  margin-bottom: 15px;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
   border: none;
   clear: both;
+  margin-right: 2rem;
+  margin-left: 2rem;
 }
 
 .box {
   height: 20px;
   width: 20px;
+  margin-right: 1rem;
+  transition: transform .2s;
+  cursor: pointer;
 }
 
-.blue {
+.box input {
+  height: 100%;
+  width: 100%;
+  appearance: none;
+}
+
+.box:hover {
+  transform: scale(1.5);
+}
+
+.box > input:checked {
+  transform: scale(1.5);
+}
+
+/* .blue {
   background-color: blue;
 }
 
@@ -172,7 +195,7 @@
 }
 
 .red {
-  background-color: red;
+  background-color: #2CDAC5;
 }
 
 .yellow {
@@ -182,3 +205,29 @@
 .violet {
   background-color: violet;
 }
+
+@media screen and (min-width: 0) and (max-width: 480px) {
+  #create-card-page > form > div {
+    flex-direction: column;
+  }
+
+  #create-card-left {
+    padding-inline-end: 0;
+  }
+
+  #create-card-right-grid {
+    padding: 1rem;
+    grid-gap: 1rem;
+  }
+
+  #create-card-page {
+    margin: 0;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  
+}
+} */

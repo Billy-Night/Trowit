@@ -4,22 +4,34 @@ import React, { useState } from "react";
 export const MyContext = React.createContext();
 
 const MyProvider = (props) => {
-  //first for the create new card form, set-up the object that will be filled by the information filled in
-  const newCard = {
-    type: "",
-    first_name: "",
-    last_name: "",
-    title: "",
-    department: "",
-    company: "",
-    phone: 0,
-    email: "",
-    address: "",
-    website: "",
-    link: "",
-  };
-  //Then create a state and set it to the empty object of newCard
-  let [crtCard, setCrtCard] = useState(newCard);
+    //first for the create new card form, set-up the object that will be filled by the information filled in
+    const newCard = {
+      id: null,
+      image: "",
+      type: "",
+      first_name: "",
+      last_name: "",
+      title: "",
+      department: "",
+      company: "",
+      phone: 0,
+      email: "",
+      address: "",
+      website: "",
+      link: "",
+      pdf: "",
+      twitter: "",
+      instagram: "",
+      linkedin: "",
+      facebook: "",
+      youtube: "",
+      whatsapp: "",
+      documents: "",
+      files: "",
+      colour: ""
+    };
+    //Then create a state and set it to the empty object of newCard
+    let [crtCard, setCrtCard] = useState(newCard);
 
   const handleCreateNewCardForm = (event) => {
     const { name, value } = event.currentTarget;
@@ -61,24 +73,67 @@ const MyProvider = (props) => {
   //A state to check the status of wether the user is logged in or not
   let [loggedIn, SetLogIn] = useState(false);
 
-  return (
-    <MyContext.Provider
-      value={{
-        newCard: newCard,
-        crtCard: crtCard,
-        setCrtCard: setCrtCard,
-        handleCreateNewCardForm: handleCreateNewCardForm,
-        blankUser: blankUser,
-        user: user,
-        setUser: setUser,
-        handleLogReg: handleLogReg,
-        SetLogIn: SetLogIn,
-        loggedIn: loggedIn,
-      }}
-    >
-      {props.children}
-    </MyContext.Provider>
-  );
+  let [userId, setUserID] = useState(null);
+
+  const contactBlank = {
+    image: "",
+    full_name: "",
+    title: "",
+    company: "",
+    email: "",
+    phone: 0,
+    website: "",
+    linkdin: "",
+    documents: "",
+    files: "",
+    add_date: null,
+    add_time: null,
+    contact_type: "",
+    tag1: "",
+    tag2: "",
+    tag3: "",
+    tag4: "",
+    notes: "",
+    users_id: null,
+  }
+
+  let [contact, setContact] = useState(contactBlank);
+
+  const handleContact = (event) => {
+    const { name, value } = event.currentTarget;
+
+    setContact({
+    ...contact,
+    [name]: value,
+  });
+  };
+
+  let [ editCard, setEditCard ] = useState(false);
+    
+    return (
+        <MyContext.Provider 
+            value={{
+                newCard: newCard,
+                crtCard: crtCard,
+                setCrtCard: setCrtCard,
+                handleCreateNewCardForm: handleCreateNewCardForm,
+                blankUser: blankUser,
+                user: user,
+                setUser: setUser,
+                handleLogReg: handleLogReg,
+                SetLogIn: SetLogIn,
+                loggedIn: loggedIn,
+                userId: userId,
+                setUserID: setUserID,
+                contact: contact,
+                setContact: setContact,
+                handleContact: handleContact,
+                setEditCard: setEditCard,
+                editCard: editCard
+            }} >
+                { props.children }
+        </MyContext.Provider> 
+    )
 };
 
 export default MyProvider;
