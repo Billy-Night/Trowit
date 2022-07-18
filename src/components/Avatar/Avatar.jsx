@@ -44,7 +44,7 @@ const Avatar = () => {
         {(avatarData) ?
             <div>
                 <h1>This is the avatar component</h1>
-                <h2>The Web token {authToken}</h2>
+                {/* <h2>The Web token {authToken}</h2> */}
                 <p>First Name: {avatarData.first_name}</p>
                 <p>Second Name: {avatarData.last_name} </p>
                 <button>Settings</button>
