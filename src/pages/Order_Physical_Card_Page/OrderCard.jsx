@@ -1,9 +1,40 @@
+import React, { useContext, useState, useEffect } from 'react';
+import { MyContext } from '../../context/MyProvider';
+// import { useNavigate } from 'react-router-dom';
 import "./OrderCard.css";
 import SideNavBar from "../../components/Side_NavBar/SideNavBar";
 import OderCardTemplate from "./OderCardTemplate";
 import OderCardBusinessTemplate from "./OderCardBusinessTemplate";
+import Card from '../Cards_Page/Card';
+import workImg from "../../images/cards_page/card_work@2x.png";
 
 const OrderCard = () => {
+  // const navigate = useNavigate();
+  const context = useContext(MyContext);
+
+  let [ cardsData, setCards ] = useState();
+  let [ selectedCardId, setSelectedCardId] = useState();
+  let [ selectedCardIndex, setSelectedCardIndex ] = useState()
+  let [ cardSelected, setCardSelected ] = useState(false);
+
+  let id = context.userId;
+
+  useEffect(() => {
+    fetch(`http://localhost:3306/cards/${id}`)
+    .then((res) => res.json())
+    .then((data) => { 
+      setCards(data);
+    });
+  }, [id])
+
+  const handleCardSelectClickOC = (id) => {
+    setSelectedCardId(id);
+    let index = cardsData.findIndex((e) => e.id === id);
+    console.log(index);
+    setSelectedCardIndex(index);
+    setCardSelected(!cardSelected);
+  };
+
   return (
     <div id="order-card">
       <SideNavBar />
@@ -17,14 +48,24 @@ const OrderCard = () => {
         <div className="OC__sub-container2__sub-title-and-preview-cards">
           <h2 className="OC__sub-container2__sub-title">Select your card:</h2>
           <div className="OC__sub-container2__preview-cards">
-            <div className="OC__sub-container2__single-card">
-              {/* <p className="OC__sub-container2__preview-card-category">Work</p> */}
-            </div>
-            <div className="OC__sub-container2__single-card">
-              {/* <p className="OC__sub-container2__preview-card-category">
+            {cardsData ? cardSelected ? 
+            <>
+             <Card colour={cardsData[selectedCardIndex].colour} id={cardsData[selectedCardIndex].selectedCardId} type={cardsData[selectedCardIndex].type} img={workImg}  className={"OC__sub-container2__single-card"} action={() => handleCardSelectClickOC(cardsData[selectedCardIndex].id)} />
+            </>
+            :
+            <>
+            {cardsData.map((card, index) => (
+            <div>
+              <Card key={index} colour={card.colour} id={card.id} type={card.type} img={workImg}  className={"OC__sub-container2__single-card"} action={() => handleCardSelectClickOC(card.id)} />
+            </div> 
+             ))}
+            </>
+            : null }
+            {/* <div className="OC__sub-container2__single-card">
+              <p className="OC__sub-container2__preview-card-category">
                 Personal
-              </p> */}
-            </div>
+              </p>
+            </div> */}
           </div>
         </div>
         {/* third part in the page  */}
