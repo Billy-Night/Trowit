@@ -6,6 +6,7 @@ import FullCard from "./FullCard";
 import "./IndividualCardPage.css";
 import SideNavBar from '../../components/Side_NavBar/SideNavBar.jsx';
 import Avatar from '../../components/Avatar/Avatar.jsx';
+import Layout from '../../components/Layout/Layout';
 
 
 
@@ -60,8 +61,7 @@ const IndividualCard = () => {
     };
 
     return (
-        <div>
-            <Avatar />
+        <Layout title={`Card ID: ${id}`}>
             {(cardData) ? (cardData[0].users_id === context.userId) ? <SideNavBar /> : null : null }
             
             <div className="individual-card-page-container">
@@ -90,7 +90,7 @@ const IndividualCard = () => {
                     null
                     }
             </div>
-        </div>
+        </Layout>
     )
 }
 
