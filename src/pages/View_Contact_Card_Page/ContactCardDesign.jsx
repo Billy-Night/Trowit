@@ -55,6 +55,7 @@ const ContactCard = () => {
     <div id="contact-card">
       <SideNavBar />
       <h1 className="contact-card-title">Contacts/TROWIT/Contact Name</h1>
+      <Avatar />
       <span className="search-area">
         <span href="#">
           <svg
@@ -69,11 +70,15 @@ const ContactCard = () => {
           </svg>
         </span>
       </span>
-      <Avatar />
       <div>
-        <div id="contact-card-left">
-          <img src={contact_card_left} alt="contact_card" className="img" />
-          <div id="contact-card-right">
+        <div id="view-contact-content">
+          <img
+            className="contact-card-view img"
+            src={contact_card_left}
+            alt="contact_card"
+          />
+
+          <div id="edit-contact-notes">
             <h1> Tags</h1>
             <form onSubmit={handleContactSubmit} id="contact-card-right-grid">
               <input
@@ -113,20 +118,16 @@ const ContactCard = () => {
                   name="notes"
                   placeholder="Notes"
                 />
-                <div className="card_right">
-                  <img
-                    src={contact_right}
-                    alt="card_right"
-                    className="card_right"
-                  />
-                  <img
-                    src={contact_rightdown}
-                    alt="card_right"
-                    className="card_right"
-                  />
-                </div>
               </form>
             </div>
+          </div>
+          <div className="contact-more-info">
+            <img src={contact_right} alt="card_right" className="card_right" />
+            <img
+              src={contact_rightdown}
+              alt="card_right"
+              className="card_right"
+            />
           </div>
         </div>
       </div>
