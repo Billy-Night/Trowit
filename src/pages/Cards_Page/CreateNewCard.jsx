@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import "./CreateNewCard.css";
-import SideNavBar from "../../components/Side_NavBar/SideNavBar.jsx";
 import { useNavigate } from "react-router-dom";
 import { MyContext } from "../../context/MyProvider";
 import AvatarEditor from "../../components/AvatarEditor/AvatarEditor";
@@ -8,9 +7,9 @@ import InformationButton from "../../components/InformationButton/InformationBut
 import { CardInformationData } from "./CardInformationData";
 import "./SearchCard.css";
 // import SearchCard from "./SearchCard.jsx";
-import Avatar from "../../components/Avatar/Avatar.jsx";
 import Layout from "../../components/Layout/Layout";
 import { useState } from "react";
+// import Wheel from '@uiw/react-color-wheel';
 
 const CreateNewCard = () => {
   const context = useContext(MyContext);
@@ -132,6 +131,18 @@ const CreateNewCard = () => {
       currentTarget: { name: key, value: undefined },
     });
   };
+
+  // function Demo() {
+  //   const [hsva, setHsva] = useState({ h: 0, s: 0, v: 68, a: 1 });
+  //   return (
+  //     <Wheel
+  //       color={hsva}
+  //       onChange={(color) => {
+  //         setHsva({ ...hsva, ...color.hsva });
+  //       }}
+  //     />
+  //   );
+  // }
 
   const colour = [
     {
