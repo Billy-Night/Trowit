@@ -1,19 +1,9 @@
-import { useNavigate } from "react-router-dom";
+
 
 const Card = (props) => {
-  const navigate = useNavigate();
-
-  const handleClick = (id) => {
-    console.log(id);
-    if (id === 3999) {
-      navigate("/cards/newcard");
-    } else {
-      navigate(`/cards/individual/card/${id}`)
-    }
-  };
 
     return (
-      <div style={{borderColor: `${props.colour}`}} className="card" onClick={() => handleClick(props.id)}>
+      <div className={props.className} style={{borderColor: `${props.colour}`}} onClick={() => props.action(props.id)}>
           <img src={props.img} alt="img"/>
           <p>{props.type}</p> 
       </div>

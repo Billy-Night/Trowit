@@ -1,6 +1,7 @@
 import './CardsPage.css';
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { MyContext } from '../../context/MyProvider';
+import { useNavigate } from 'react-router-dom';
 import SideNavBar from '../../components/Side_NavBar/SideNavBar.jsx';
 import workImg from "../../images/cards_page/card_work@2x.png";
 // import cardWork from '../../images/cards_page/card_work@2x.png';
@@ -13,10 +14,10 @@ import createCard from '../../images/cards_page/create_card@2x.png';
 
 import Card from './Card.jsx';
 import Avatar from '../../components/Avatar/Avatar';
-import { useEffect } from 'react';
 
 const CardsPage = () => {
   const context = useContext(MyContext);
+  const navigate = useNavigate();
 
   let [ cardsData, setCards ] = useState();
 
@@ -30,15 +31,23 @@ const CardsPage = () => {
     });
   }, [id])
 
+  const handleCardSelectClick = (id) => {
+    console.log(id);
+    if (id === 3999) {
+      navigate("/cards/newcard");
+    } else {
+      navigate(`/cards/individual/card/${id}`)
+    }
+  };
+
 
   return (
     <div id="cardsPage">
       <div>
         <SideNavBar />
         <p className="title"> Cards</p>
-        <p className='searchcard'>
+        <p className='searchcard'></p>
         <SearchCard />
-        </p>
       </div>
       <div>
         <Avatar />
@@ -47,13 +56,14 @@ const CardsPage = () => {
         {cardsData ? 
         <>
         {cardsData.map((card, index) => (
-          <Card key={index} colour={card.colour} id={card.id} type={card.type} img={workImg} />
+          <Card key={index} colour={card.colour} className={"cards_page_card"} id={card.id} type={card.type} img={workImg} action={() => handleCardSelectClick(card.id)}/>
         ))}
         </>
         :
         null }
-        <div className='position'>
-          <Card img={createCard} id={3999} />
+        <div>
+        {/* <div className='position'> */}
+          <Card img={createCard} id={3999} className={"cards_page_card"} type={"Add Card"} action={() => handleCardSelectClick(3999)}/>
         </div>
       </div>
       {/* Added Dynamic cards from the fake data that can be found in the cardData.js file this will be replace by information from the Database */}

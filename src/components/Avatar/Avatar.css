@@ -1,10 +1,11 @@
 .avatar {
-  background-color: red;
+  /* background-color: red; */
   /* position: absolute; */
   display: inline-block;
   top: 0;
   left: 100;
   right: 0;
-  height: 50px;
+  border: solid 2px red;
+  height: 80px;
   width: 150px;
 }
