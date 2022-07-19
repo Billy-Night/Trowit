@@ -3,6 +3,7 @@ import EditProfile from "./EditProfile.jsx";
 import SideNavBar from "../../components/Side_NavBar/SideNavBar";
 import Avatar from "../../components/Avatar/Avatar";
 import { useState } from "react";
+import Layout from "../../components/Layout/Layout";
 
 const Settings = () => {
   const [showModal, setShowModal] = useState(false);
@@ -31,50 +32,51 @@ const Settings = () => {
 
   const saveSettings = () => {
     setShowModal(false);
-  }
+  };
 
   return (
-    <main id="settings-page">
-      <SideNavBar />
-      <top className="titlebar">
-        <p className="title"> Settings</p>
-        <Avatar />
-      </top>
-      <section className="settings-area" style={{marginLeft: "8rem"}}>
-        <div className="box_sub">
-          <img src="../images/cards_page/credit-card.png" alt="card" className="img" />
-          <h1>Subscription</h1>
+    <Layout title="Settings">
+      <main id="settings-page">
+        <section className="settings-area">
+          <div className="box_sub">
+            <img
+              src="../images/cards_page/credit-card.png"
+              alt="card"
+              className="img"
+            />
+            <h1>Subscription</h1>
           </div>
           <div className="box_sub">
-          <div>
-            <h2>Profile</h2>
-            <button onClick={() => setShowModal(true)}>Open Editor</button>
+            <div>
+              <h2>Profile</h2>
+              <button onClick={() => setShowModal(true)}>Open Editor</button>
             </div>
-        </div>
-        <h2 className="box_sub_account">Account</h2>
-      </section>
-      <Modal>
-        <div
-          style={{
-            fontSize: "2.4rem",
-            backgroundColor: "white",
-            borderRadius: "1em",
-            width: "24em",
-            height: "18em",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "flex-start",
-            alignItems: "center",
-            gap: "2em",
-            padding: "1em 2em"
-          }}
-        >
-          <h1>Profile Editor</h1>
-          <EditProfile />
-          <button onClick={saveSettings}>Save</button>
-        </div>
-      </Modal>
-    </main>
+          </div>
+          <h2 className="box_sub_account">Account</h2>
+        </section>
+        <Modal>
+          <div
+            style={{
+              fontSize: "2.4rem",
+              backgroundColor: "white",
+              borderRadius: "1em",
+              width: "24em",
+              height: "18em",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "flex-start",
+              alignItems: "center",
+              gap: "2em",
+              padding: "1em 2em",
+            }}
+          >
+            <h1>Profile Editor</h1>
+            <EditProfile />
+            <button onClick={saveSettings}>Save</button>
+          </div>
+        </Modal>
+      </main>
+    </Layout>
   );
 };
 
