@@ -34,9 +34,8 @@ const Contact = () => {
 //Todo 1. ADD the box 2.Style the contact component,
 
   return (
-    <Layout>
+    <Layout title="Contacts">
     <div className="contact">
-      <p className="title_contacts"> Contacts</p>
       {/*//!The SearchCard component is wrap in a <p> tag */}
       <p className="search_card">
       <SearchCard />
