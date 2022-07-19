@@ -64,7 +64,7 @@ const Settings = () => {
             />First Last Name</h2>
             Free
               <button className="arrow" onClick={() => setShowModal(true)}>
-              ></button>
+              </button>
             </div>
           </div>
           <div className="block-2 settings-bordered-box">
@@ -77,12 +77,12 @@ const Settings = () => {
               size="2rem"
               alt="contact_card"
             />Account</h2>
-              <h3>Change your email address<button className="arrow">></button></h3>
+              <h3>Change your email address<button className="arrow"></button></h3>
               email@trowit.com
               <br />
-              <h3>Reset your password</h3><button className="arrow">></button>
+              <h3>Reset your password</h3><button className="arrow"></button>
               <br />
-              <h3>Delete Account</h3><button className="arrow">></button>
+              <h3>Delete Account</h3><button className="arrow"></button>
           
             </div>
           </div>
