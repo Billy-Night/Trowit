@@ -28,6 +28,7 @@ import ContactCardDesign from './pages/View_Contact_Card_Page/ContactCardDesign.
 import IndividualCardPage from './pages/Cards_Page/IndividualCardPage';
 import LayoutTestPage from './pages/LayoutTestPage/LayoutTestPage.jsx';
 import FullCardLayout from './pages/Cards_Page/FullCardLayout.jsx';
+import ViewInsideGroup from './pages/Contacts_Page/ViewInsideGroup.jsx';
 
 function App() {
   // const context = useContext(MyContext);
@@ -64,6 +65,7 @@ function App() {
             />
             <Route path="/layout" element={<LayoutTestPage />} />
             <Route path="/exportcard" element={<FullCardLayout />} />
+            <Route path="/contacts/:id" element={<ViewInsideGroup />} />
           </Routes>
         </Router>
       </MyProvider>
