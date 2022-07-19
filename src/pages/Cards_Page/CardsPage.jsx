@@ -63,7 +63,7 @@ const CardsPage = () => {
         null }
         <div>
         {/* <div className='position'> */}
-          <Card img={createCard} id={3999} className={"cards_page_card"} type={"Add Card"} handleCardSelectClick={() => handleCardSelectClick(3999)}/>
+          <Card img={createCard} id={3999} className={"cards_page_card"} type={"Add Card"} action={() => handleCardSelectClick(3999)}/>
         </div>
       </div>
       {/* Added Dynamic cards from the fake data that can be found in the cardData.js file this will be replace by information from the Database */}

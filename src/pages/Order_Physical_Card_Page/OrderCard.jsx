@@ -33,6 +33,7 @@ const OrderCard = () => {
     console.log(index);
     setSelectedCardIndex(index);
     setCardSelected(!cardSelected);
+    console.log(`Selected card id: ${selectedCardId}`);
   };
 
   return (
