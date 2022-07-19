@@ -1,6 +1,7 @@
 #navigation-layout {
   font-size: 2rem;
   margin-left: var(--nav-width);
+  min-height: 100%;
 }
 
 #navigation-layout_title-bar {
@@ -33,6 +34,8 @@
 }
 
 #navigation-layout_content-box {
+  width: 100%;
+  min-height: 100%;
   padding-inline: 4rem;
   padding-block-end: 2rem;
   overflow: auto;
