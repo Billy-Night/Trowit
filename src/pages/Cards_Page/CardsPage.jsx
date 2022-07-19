@@ -2,7 +2,6 @@ import "./CardsPage.css";
 import React, { useContext, useState, useEffect } from "react";
 import { MyContext } from "../../context/MyProvider";
 import { useNavigate } from "react-router-dom";
-import SideNavBar from "../../components/Side_NavBar/SideNavBar.jsx";
 import workImg from "../../images/cards_page/card_work@2x.png";
 // import cardWork from '../../images/cards_page/card_work@2x.png';
 // import cardPersonal from '../../images/cards_page/card_personal@2x.png';
@@ -11,9 +10,7 @@ import workImg from "../../images/cards_page/card_work@2x.png";
 // import CardsData from '../../cardData';
 import SearchCard from "./SearchCard";
 import createCard from "../../images/cards_page/create_card@2x.png";
-
 import Card from "./Card.jsx";
-import Avatar from "../../components/Avatar/Avatar";
 import Layout from "../../components/Layout/Layout";
 
 const CardsPage = () => {
