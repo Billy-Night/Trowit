@@ -1,0 +1,41 @@
+.customized-input-box {
+  height: 4rem;
+  font-size: 1.6rem;
+  width: 48rem;
+  padding-inline: 1.6rem;
+  min-width: 24rem;
+  display: inline-block;
+  border: none;
+  border-radius: 2rem;
+  background-color: white;
+  box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.customized-input-box input {
+  font-size: 1em;
+  margin: 0;
+  width: auto;
+  height: 4rem;
+  box-sizing: initial;
+  background-color: transparent;
+  border: 0;
+  font: "Nunito";
+  flex-grow: 1;
+}
+
+.customized-input-box input:focus-visible {
+  outline: none;
+}
+
+.customized-input-box > .fa {
+  background-color: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  overflow: hidden;
+  padding-inline-end: 0.8rem;
+  border: none;
+  font-size: .8em;
+}

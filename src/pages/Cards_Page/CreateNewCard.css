@@ -29,18 +29,6 @@
   width: 100%;
 }
 
-#search-area > input {
-  height: 4rem;
-  font-size: 1.6rem;
-  width: 48rem;
-  padding-inline: 1.6rem;
-  min-width: 24rem;
-  display: inline-block;
-  border: none;
-  border-radius: 2rem;
-  background-color: white;
-  box-shadow: 0 .4rem 1rem rgba(0, 0, 0, 0.2);
-}
 
 #create-card-page > div {
   width: 100%;

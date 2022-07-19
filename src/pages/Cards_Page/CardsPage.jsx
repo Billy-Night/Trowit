@@ -39,11 +39,10 @@ const CardsPage = () => {
   };
 
   return (
-    <Layout title="Cards">
+    <Layout title="Cards" extraControls={
+      <SearchCard />
+    }>
       <div id="cardsPage">
-        <div>
-          <SearchCard />
-        </div>
         <div className="CP_cards">
           {cardsData ? (
             <>
