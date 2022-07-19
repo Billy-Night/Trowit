@@ -37,54 +37,115 @@ const Settings = () => {
     setShowModal(false);
   };
 
+  const SettingsSection = (props) => {
+    const iconSize = "1.6em";
+    return (
+      <>
+        <span
+          style={{
+            display: "flex",
+            gap: ".5em",
+            alignItems: "center",
+            marginBlockEnd: ".5em",
+          }}
+        >
+          <div
+            style={{
+              width: iconSize,
+              height: iconSize,
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            {props.icon}
+          </div>
+          <h2 style={{ flexGrow: 1 }}>{props.title ?? "Section title"}</h2>
+          {props.extra}
+        </span>
+        {props.children}
+      </>
+    );
+  };
+
+  const SettingsSectionButton = (props) => {
+    return (
+      <span style={{ display: "flex", alignItems: "center" }}>
+        {props.optionalInlineStartComponent}
+        <div style={{ display: "flex", flexDirection: "column", flexGrow: 1 }}>
+          <h3>{props.title}</h3>
+          <h5 style={{ fontSize: ".8em", color: "grey" }}>{props.subtitle}</h5>
+        </div>
+        <button
+          style={{
+            fontSize: "1.5em",
+            cursor: "pointer",
+            border: "none",
+            backgroundColor: "white",
+          }}
+          onClick={props.action}
+        >
+          {">"}
+        </button>
+      </span>
+    );
+  };
+
   return (
     <Layout title="Settings">
       <main id="settings-page">
         <section id="settings-area">
           <div className="block-1">
             <div className="subblock-1 settings-bordered-box">
-           <h1><img
-                src={credit_card}
-                alt="card"
-                className="card"
-              />Subscription</h1>
-              <h2>TROWIT Free</h2>
-
-            <button className="upgrade">+ UPGRADE PLAN</button>
-         
+              <SettingsSection
+                icon={<img src={credit_card} alt="card" className="card" />}
+                title="Subscription"
+                extra={<button className="upgrade">+ UPGRADE PLAN</button>}
+              >
+                <h2>TROWIT Free</h2>
+              </SettingsSection>
             </div>
             <div className="subblock-2 settings-bordered-box">
-              <h1>Profile</h1>
-              <h2>           
-              <img
-              className="contact-card-view"
-              src={avatar}
-              size="2rem"
-              alt="contact_card"
-            />First Last Name</h2>
-            Free
-              <button className="arrow" onClick={() => setShowModal(true)}>
-              </button>
+              <SettingsSection title="Profile">
+                <h2>
+                  <img
+                    className="contact-card-view"
+                    src={avatar}
+                    size="2rem"
+                    alt="contact_card"
+                  />
+                  First Last Name
+                </h2>
+                Free
+                <button className="arrow" onClick={() => setShowModal(true)}>
+                  {">"}
+                </button>
+              </SettingsSection>
             </div>
           </div>
           <div className="block-2 settings-bordered-box">
-            <div>
-              <h2 className="box_sub_account">
-                
-              <img
-              className="contact-card-view"
-              src={icon_logo}
-              size="2rem"
-              alt="contact_card"
-            />Account</h2>
-              <h3>Change your email address<button className="arrow"></button></h3>
-              email@trowit.com
+            <SettingsSection
+              icon={
+                <img
+                  className="contact-card-view"
+                  src={icon_logo}
+                  size="2rem"
+                  alt="contact_card"
+                />
+              }
+              title="Account"
+            >
+              <SettingsSectionButton
+                title="Change your email address"
+                subtitle="email@trowit.com"
+                action={() => {}}
+              />
+              <h3>Reset your password</h3>
+              <button className="arrow">{">"}</button>
               <br />
-              <h3>Reset your password</h3><button className="arrow"></button>
-              <br />
-              <h3>Delete Account</h3><button className="arrow"></button>
-          
-            </div>
+              <h3>Delete Account</h3>
+              <button className="arrow">{">"}</button>
+            </SettingsSection>
           </div>
         </section>
         <Modal>
