@@ -14,7 +14,7 @@ import LoginPage from './pages/Login_Page/LoginPage.jsx';
 import CardsPage from './pages/Cards_Page/CardsPage.jsx';
 import Contacts from './pages/Contacts_Page/Contacts.jsx';
 import CreateNewCard from './pages/Cards_Page/CreateNewCard.jsx';
-import BackgrdImgGen from './components/Background_Image_Generator/BackgrdImgGen.jsx';
+import BackgrdImgGenPage from './pages/Background_Image_Generator_Page/BackgrdImgGenPage.jsx';
 import EmailGen from './pages/Email_Generator_Page/EmailGen.jsx';
 import Settings from './pages/Settings_Page/Settings.jsx';
 import OrderCard from './pages/Order_Physical_Card_Page/OrderCard.jsx';
@@ -49,7 +49,7 @@ function App() {
             <Route path="/cards" element={<CardsPage />} />
             <Route path="/cards/newcard" element={<CreateNewCard />} />
             <Route path="/contacts" element={<Contacts />} />
-            <Route path="/backgrounds" element={<BackgrdImgGen />} />
+            <Route path="/backgrounds" element={<BackgrdImgGenPage />} />
             <Route path="/email-signatures" element={<EmailGen />} />
             <Route path="/settings" element={<Settings />} />
             <Route path="/order-card" element={<OrderCard />} />
