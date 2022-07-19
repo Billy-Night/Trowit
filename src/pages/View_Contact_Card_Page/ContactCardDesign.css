@@ -20,21 +20,6 @@
 }
 
 
-
-
-
-
-
-
-
-.contact-card-title {
-  margin-left: 5rem;
-  margin-bottom: 1%;
-  font-size: 1rem;
-  font-size: 2.5rem;
-  color: black;
-}
-
 .nav-btn {
   margin-left: 30%;
   margin-right: 20%;
@@ -128,8 +113,6 @@
 
 #contact-card {
   height: 100vh;
-  margin-left: 8rem;
-  padding: 2rem 4rem;
   font-size: 1rem;
 }
 
