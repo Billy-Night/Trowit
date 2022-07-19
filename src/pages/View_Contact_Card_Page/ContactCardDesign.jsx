@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import SideNavBar from "../../components/Side_NavBar/SideNavBar.jsx";
 import "./ContactCardDesign.css";
 import Avatar from "../../components/Avatar/Avatar.jsx";
-import contact_card_left from "../../images/cards_page/contact.png";
+import avatar from "../../images/cards_page/avatar.png";
 import contact_right from "../../images/cards_page/contact_right.png";
 import contact_rightdown from "../../images/cards_page/contactcardrightdown.png";
 import Layout from "../../components/Layout/Layout";
@@ -73,9 +73,11 @@ const ContactCard = () => {
           <div id="view-contact-content">
             <img
               className="contact-card-view img"
-              src={contact_card_left}
+              src={avatar}
               alt="contact_card"
             />
+            <h1>First Name</h1>
+            <h2>Company</h2>
 
             <div id="edit-contact-notes">
               <h1> Tags</h1>
