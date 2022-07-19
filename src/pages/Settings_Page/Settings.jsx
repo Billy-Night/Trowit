@@ -1,9 +1,12 @@
 import "./Settings.css";
 import EditProfile from "./EditProfile.jsx";
-import SideNavBar from "../../components/Side_NavBar/SideNavBar";
-import Avatar from "../../components/Avatar/Avatar";
 import { useState } from "react";
 import Layout from "../../components/Layout/Layout";
+import avatar from "../../images/cards_page/avatar.png";
+import credit_card from "../../images/cards_page/credit-card.png";
+import icon_logo from "../../images/cards_page/icon_logo.png";
+import arrow_vector from "../../images/cards_page/arrow_vector.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Settings = () => {
   const [showModal, setShowModal] = useState(false);
@@ -40,21 +43,47 @@ const Settings = () => {
         <section id="settings-area">
           <div className="block-1">
             <div className="subblock-1 settings-bordered-box">
-              <h1>Subscription</h1>
-              {/* TODO: <img
-                src={imgSub}
+           <h1><img
+                src={credit_card}
                 alt="card"
-                className="img"
-              /> */}
+                className="card"
+              />Subscription</h1>
+              <h2>TROWIT Free</h2>
+
+            <button className="upgrade">+ UPGRADE PLAN</button>
+         
             </div>
             <div className="subblock-2 settings-bordered-box">
-              <h2>Profile</h2>
-              <button onClick={() => setShowModal(true)}>Open Editor</button>
+              <h1>Profile</h1>
+              <h2>           
+              <img
+              className="contact-card-view"
+              src={avatar}
+              size="2rem"
+              alt="contact_card"
+            />First Last Name</h2>
+            Free
+              <button className="arrow" onClick={() => setShowModal(true)}>
+              ></button>
             </div>
           </div>
           <div className="block-2 settings-bordered-box">
             <div>
-              <h2 className="box_sub_account">Account</h2>
+              <h2 className="box_sub_account">
+                
+              <img
+              className="contact-card-view"
+              src={icon_logo}
+              size="2rem"
+              alt="contact_card"
+            />Account</h2>
+              <h3>Change your email address<button className="arrow">></button></h3>
+              email@trowit.com
+              <br />
+              <h3>Reset your password</h3><button className="arrow">></button>
+              <br />
+              <h3>Delete Account</h3><button className="arrow">></button>
+          
             </div>
           </div>
         </section>

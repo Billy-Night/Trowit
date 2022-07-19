@@ -36,3 +36,28 @@
   border-radius: 1rem;
   padding: 1rem 2rem;
 }
+
+.contact-card-view {
+  height: 2rem;
+  width: 2rem;
+}
+
+.card {
+  height: 2rem;
+  width: 2rem;
+}
+
+.upgrade {
+  color: #25DAC5;
+  font-weight: bold;
+  border: none;
+  background-color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.arrow {
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}
