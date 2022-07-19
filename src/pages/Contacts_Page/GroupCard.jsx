@@ -1,5 +1,6 @@
 
 import './GroupCard.css'
+import CostumizedInputBox from '../../components/CostumizedInputBox/CostumizedInputBox';
 
 const GroupCard = () => {
 
@@ -7,6 +8,7 @@ const GroupCard = () => {
 
     return (
         <div className='group_card_container'>
+            <CostumizedInputBox />
             <div className='gc_image_container'>
             </div>
             <h1>This is the group card component</h1>
