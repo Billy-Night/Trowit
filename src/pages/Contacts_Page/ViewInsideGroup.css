@@ -1,0 +1,18 @@
+#search-area {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 56rem;
+  }
+  
+  #search-area > div {
+    height: 3rem;
+    width: 3rem;
+    display: inline-block;
+    margin-inline-end: 1.5rem;
+  }
+  
+  #search-area > div > svg {
+    height: 100%;
+    width: 100%;
+  }
