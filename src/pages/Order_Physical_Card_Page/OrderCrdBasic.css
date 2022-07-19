@@ -5,7 +5,7 @@
   box-sizing: border-box;
   color: hsla(0, 0%, 20%, 1);
   /* height: 98vw; */
-  width: 98vw;
+  width: 100%;
 }
 
 .OCB__main-container {
@@ -14,36 +14,6 @@
   flex-direction: column;
   /* justify-content: space-around; */
   gap: 3rem;
-}
-/* header section  */
-
-.OCB__sub-container__header-and-menu {
-  position: relative;
-  min-height: fit-content;
-  margin-inline: auto;
-  width: 90vw;
-  display: flex;
-
-  /* background-color: blue; */
-}
-
-.OCB__sub-container__header {
-  font-weight: 700;
-  font-size: 3rem;
-}
-
-.OCB__sub-container__drop-menu {
-  background-image: url("../../images/Order_physical_card_page/drop_down_menu@2x.png");
-  min-width: 30rem;
-  width: 40rem;
-  height: 10rem;
-  background-size: 70%;
-  background-repeat: no-repeat;
-  background-position: center;
-
-  position: absolute;
-  top: -3rem;
-  right: -3rem;
 }
 
 /* main section  */

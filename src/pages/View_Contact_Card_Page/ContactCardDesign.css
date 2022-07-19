@@ -1,10 +1,24 @@
-.contact-card-title {
-  margin-left: 5rem;
-  margin-bottom: 1%;
-  font-size: 1rem;
-  font-size: 2.5rem;
-  color: black;
+#view-contact-content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+  width: 100%;
+  min-height: 100%; 
 }
+
+
+#view-contact-content > .contact-card-view {
+  flex: 2;
+}
+
+#view-contact-content > .edit-contact-notes {
+  flex: 3;
+}
+
+#view-contact-content > .contact-more-info {
+  flex: 2;
+}
+
 
 .nav-btn {
   margin-left: 30%;
@@ -99,8 +113,6 @@
 
 #contact-card {
   height: 100vh;
-  margin-left: 8rem;
-  padding: 2rem 4rem;
   font-size: 1rem;
 }
 

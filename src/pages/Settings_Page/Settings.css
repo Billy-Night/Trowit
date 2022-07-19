@@ -1,23 +1,63 @@
-.settings {
-  color: teal;
+#settings-page, #settings-area {
+  font-family: "Nunito Sans";
+  width: 100%;
+  min-height: 100%;
 }
 
-.title {
-  margin-left: 7%;
-  padding-bottom: 2%;
-  font-size: 300%;
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 32px;
-
-  /* identical to box height, or 160% */
-  letter-spacing: 0.25px;
-
-  color: #333333;
+#settings-page * {
+  font-size: 2rem;
+  font-weight: normal;
 }
 
-.edit-profile {
-  margin-left: 30%;
+#settings-area {
+  display: flex;
+  gap: 1rem;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+#settings-area .block-1 {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+#settings-area .block-1, #settings-area .block-2 {
+  flex: 1;
+}
+
+#settings-area .subblock-1, #settings-area .subblock-2 {
+  flex: 1;
+}
+
+#settings-area .settings-bordered-box {
+  border: 2px solid #25DAC5;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+}
+
+.contact-card-view {
+  height: 2rem;
+  width: 2rem;
+}
+
+.card {
+  height: 2rem;
+  width: 2rem;
+}
+
+.upgrade {
+  color: #25DAC5;
+  font-weight: bold;
+  border: none;
+  background-color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.arrow {
+  background-color: white;
+  border: none;
+  cursor: pointer;
 }
