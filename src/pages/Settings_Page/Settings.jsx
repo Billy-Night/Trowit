@@ -37,22 +37,26 @@ const Settings = () => {
   return (
     <Layout title="Settings">
       <main id="settings-page">
-        <section className="settings-area">
-          <div className="box_sub">
-            <img
-              src="../images/cards_page/credit-card.png"
-              alt="card"
-              className="img"
-            />
-            <h1>Subscription</h1>
-          </div>
-          <div className="box_sub">
-            <div>
+        <section id="settings-area">
+          <div className="block-1">
+            <div className="subblock-1 settings-bordered-box">
+              <h1>Subscription</h1>
+              {/* TODO: <img
+                src={imgSub}
+                alt="card"
+                className="img"
+              /> */}
+            </div>
+            <div className="subblock-2 settings-bordered-box">
               <h2>Profile</h2>
               <button onClick={() => setShowModal(true)}>Open Editor</button>
             </div>
           </div>
-          <h2 className="box_sub_account">Account</h2>
+          <div className="block-2 settings-bordered-box">
+            <div>
+              <h2 className="box_sub_account">Account</h2>
+            </div>
+          </div>
         </section>
         <Modal>
           <div

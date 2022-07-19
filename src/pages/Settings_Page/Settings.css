@@ -1,23 +1,38 @@
-.settings {
-  color: teal;
-}
-
-.box_sub {
-
-  border: solid #25DAC5;
-  width: 576px;
-  height: 104px;
+#settings-page, #settings-area {
   font-family: "Nunito Sans";
-  font-size: 20px;
- 
+  width: 100%;
+  min-height: 100%;
 }
 
-.box_sub_account {
+#settings-page * {
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+#settings-area {
   display: flex;
-  border: solid #25DAC5;
-  width: 576px;
-  height: 104px;
-  font-family: "Nunito Sans";
-  font-size: 20px;
-  flex: 2;
+  gap: 1rem;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+#settings-area .block-1 {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+#settings-area .block-1, #settings-area .block-2 {
+  flex: 1;
+}
+
+#settings-area .subblock-1, #settings-area .subblock-2 {
+  flex: 1;
+}
+
+#settings-area .settings-bordered-box {
+  border: 2px solid #25DAC5;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
 }
