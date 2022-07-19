@@ -38,9 +38,6 @@ const Settings = () => {
   };
 
   const SettingsSection = (props) => {
-    // we have an optional icon
-    // we have a section title
-    // we have an optional text for the end of title line
     const iconSize = "1.6em";
     return (
       <>
@@ -68,6 +65,29 @@ const Settings = () => {
         </span>
         {props.children}
       </>
+    );
+  };
+
+  const SettingsSectionButton = (props) => {
+    return (
+      <span style={{ display: "flex", alignItems: "center" }}>
+        {props.optionalInlineStartComponent}
+        <div style={{ display: "flex", flexDirection: "column", flexGrow: 1 }}>
+          <h3>{props.title}</h3>
+          <h5 style={{ fontSize: ".8em", color: "grey" }}>{props.subtitle}</h5>
+        </div>
+        <button
+          style={{
+            fontSize: "1.5em",
+            cursor: "pointer",
+            border: "none",
+            backgroundColor: "white",
+          }}
+          onClick={props.action}
+        >
+          {">"}
+        </button>
+      </span>
     );
   };
 
@@ -115,12 +135,11 @@ const Settings = () => {
               }
               title="Account"
             >
-              <h3>
-                Change your email address
-                <button className="arrow">{">"}</button>
-              </h3>
-              email@trowit.com
-              <br />
+              <SettingsSectionButton
+                title="Change your email address"
+                subtitle="email@trowit.com"
+                action={() => {}}
+              />
               <h3>Reset your password</h3>
               <button className="arrow">{">"}</button>
               <br />
