@@ -23,10 +23,23 @@
 }
 
 .box_sub {
+
   border: solid #25DAC5;
   width: 576px;
   height: 104px;
   margin-left: 3%;
   font-family: "Nunito Sans";
   font-size: 20px;
+ 
+}
+
+.box_sub_account {
+  display: flex;
+  border: solid #25DAC5;
+  width: 576px;
+  height: 104px;
+  margin-left: 3%;
+  font-family: "Nunito Sans";
+  font-size: 20px;
+  flex: 2;
 }

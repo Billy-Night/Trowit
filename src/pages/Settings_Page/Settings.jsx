@@ -47,11 +47,11 @@ const Settings = () => {
           </div>
           <div className="box_sub">
           <div>
-            <p>Profile</p>
+            <h2>Profile</h2>
             <button onClick={() => setShowModal(true)}>Open Editor</button>
             </div>
         </div>
-        <div className="box_sub">Account</div>
+        <h2 className="box_sub_account">Account</h2>
       </section>
       <Modal>
         <div
