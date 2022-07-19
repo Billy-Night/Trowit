@@ -29,6 +29,7 @@ import IndividualCardPage from './pages/Cards_Page/IndividualCardPage';
 import LayoutTestPage from './pages/LayoutTestPage/LayoutTestPage.jsx';
 import FullCardLayout from './pages/Cards_Page/FullCardLayout.jsx';
 import ViewInsideGroup from './pages/Contacts_Page/ViewInsideGroup.jsx';
+import OrderCardDesignSelect from './pages/Order_Physical_Card_Page/OrderCardDesignSelect.jsx';
 
 function App() {
   // const context = useContext(MyContext);
@@ -54,6 +55,7 @@ function App() {
             <Route path="/email-signatures" element={<EmailGen />} />
             <Route path="/settings" element={<Settings />} />
             <Route path="/order-card" element={<OrderCard />} />
+            <Route path="/order/card/:id" element={<OrderCardDesignSelect />} />
             <Route path="/order-cardb" element={<OrderCrdBasic />} />
             <Route path="/order-cardcust" element={<OrderCrdCustomized />} />
             <Route path="/order-cardprem" element={<OrderCrdPremium />} />
