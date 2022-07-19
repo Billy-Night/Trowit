@@ -1,0 +1,97 @@
+#fclo__container {
+  /* background-color: red; */
+  width: fit-content;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flco__img-logo-container {
+  /* background-color: green; */
+  width: 100%;
+}
+
+.flco__card-info {
+  width: 40rem;
+}
+
+.flco__header {
+}
+
+.flco__full-name {
+  font-family: 'Raleway', sans-serif;
+  font-size: 3rem;
+}
+.flco__title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2rem;
+  font-style: italic;
+}
+
+.flco__company {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2rem;
+  font-style: italic;
+}
+
+.flco__img-profile {
+  width: inherit;
+}
+
+.flco__card-details {
+  /* background-color: orange; */
+  overflow-y: scroll;
+  height: 25rem;
+}
+
+.flco__text {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.4rem;
+}
+
+.flco__email,
+.flco__mobile,
+.flco__website,
+.flco__linkedin {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-block: 1rem;
+}
+.flco__icon {
+  /* background-color: blue; */
+  width: 5rem;
+  height: 5rem;
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.flco__text {
+  font-size: 1.6rem;
+}
+
+.flco__icon.email {
+  background-image: url('../../images/full_card_imgs/mail@2x.png');
+}
+.flco__icon.mobile {
+  background-image: url('../../images/full_card_imgs/phone-icon@2x.png');
+}
+.flco__icon.website {
+  background-image: url('../../images/full_card_imgs/website@2x.png');
+}
+.flco__icon.linkedin {
+  background-image: url('../../images/full_card_imgs/linkedin@2x.png');
+}
+
+.flco__credit {
+  background-color: rgba(37, 218, 197, 1);
+  width: 45rem;
+  text-align: center;
+}
+
+.flco__footer-text {
+  font-size: 1.6rem;
+}
