@@ -36,6 +36,17 @@ const OrderCard = () => {
     console.log(`Selected card id: ${selectedCardId}`);
   };
 
+  const handleOrderPlanSelected = (type) => {
+    // console.log(type);
+    if (type === "basic") {
+      console.log("Clicked Basic");
+    } else if (type === "customized") {
+      console.log("Clicked Customized");
+    } else if (type === "premium") {
+      console.log("Clicked Premium");
+    }
+  }
+
   return (
     <div id="order-card">
       <SideNavBar />
@@ -80,6 +91,8 @@ const OrderCard = () => {
             price="€10"
             fee="shipping fees"
             button="order"
+            type="basic" 
+            action={handleOrderPlanSelected}
           />
           <OderCardTemplate
             header="Customized"
@@ -90,6 +103,8 @@ const OrderCard = () => {
             price="€20"
             fee="shipping fees"
             button="order"
+            type="customized"
+            action={handleOrderPlanSelected}
           />
           <OderCardTemplate
             header="Premium"
@@ -100,6 +115,8 @@ const OrderCard = () => {
             price="€30"
             fee="shipping fees"
             button="order"
+            type="premium"
+            action={handleOrderPlanSelected}
           />
           <OderCardBusinessTemplate
             header="Business"
