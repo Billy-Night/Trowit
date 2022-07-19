@@ -41,14 +41,17 @@ const Settings = () => {
         <Avatar />
       </top>
       <section className="settings-area" style={{marginLeft: "8rem"}}>
-        <div>
-          <div>Subscription</div>
+        <div className="box_sub">
+          <img src="../images/cards_page/credit-card.png" alt="card" className="img" />
+          <h1>Subscription</h1>
+          </div>
+          <div className="box_sub">
           <div>
             <p>Profile</p>
             <button onClick={() => setShowModal(true)}>Open Editor</button>
             </div>
         </div>
-        <div>Account</div>
+        <div className="box_sub">Account</div>
       </section>
       <Modal>
         <div
