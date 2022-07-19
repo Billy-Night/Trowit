@@ -9,17 +9,14 @@ import cardfront2 from "../../images/order_physical_card_basic/small_card2@2x.pn
 import cardfront6 from "../../images/order_physical_card_basic/small_card6@2x.png";
 import cardfront8 from "../../images/order_physical_card_basic/small_card8@2x.png";
 import SideNavBar from "../../components/Side_NavBar/SideNavBar";
+import Layout from "../../components/Layout/Layout";
 
 const OrderCrdBasic = () => {
   return (
+    <Layout title="Order physical card">
     <div id="order-crd-basic">
-      <SideNavBar />
       {/* first part in the page */}
       <div className="OCB__main-container">
-        <header className="OCB__sub-container__header-and-menu">
-          <h1 className="OCB__sub-container__header">Order physical card</h1>
-          <div className="OCB__sub-container__drop-menu"></div>
-        </header>
         {/* wrapping the content with the <hr/> in the page  */}
         <main className="OBC__containers">
           <section className="OCB__sub-container1__content-and-divider">
@@ -114,6 +111,7 @@ const OrderCrdBasic = () => {
         </main>
       </div>
     </div>
+    </Layout>
   );
 };
 
