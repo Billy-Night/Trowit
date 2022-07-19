@@ -6,6 +6,7 @@ import ContactSortingOrder from "./ContactSortingOrder.jsx";
 import SearchCard from "../Cards_Page/SearchCard.jsx"
 
 import Layout from '../../components/Layout/Layout.jsx';
+import GroupCard from './GroupCard';
 
 
 const Contact = () => {
@@ -28,6 +29,7 @@ const Contact = () => {
         <SearchCard />
         </p>
         <ContactSortingOrder />
+        <GroupCard />
         <button onClick={() => handleGroupSelection("All Contacts")}>All Contacts</button>
       </div> 
     </Layout>
