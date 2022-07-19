@@ -69,7 +69,7 @@ const CardsPage = () => {
               img={createCard}
               id={3999}
               className={"cards_page_card"}
-              type={"Add Card"}
+              // FIXME: we need text for accessibility: type={"Add Card"}
               action={() => handleCardSelectClick(3999)}
             />
           </div>
