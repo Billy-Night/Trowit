@@ -29,7 +29,7 @@ const ViewInsideGroup = () => {
 //Todo add the main container so I can input the Contact Card components with the contact details
 
     return (
-        <Layout>
+        <Layout title="Contacts/TROWIT" >
             <div className="contact">
 {/*This is the title of the page it needs to include the id which comes from the URL */}               
                 <h1>Contact/{ id }</h1>

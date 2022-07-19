@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
 import "./Contacts.css";
 import ContactSortingOrder from "./ContactSortingOrder.jsx";
 import SearchCard from "../Cards_Page/SearchCard.jsx"
-
 import Layout from '../../components/Layout/Layout.jsx';
 import GroupCard from './GroupCard';
-
+import CostumizedInputBox from '../../components/CostumizedInputBox/CostumizedInputBox';
 
 const Contact = () => {
   const navigate = useNavigate();
@@ -24,10 +22,9 @@ const Contact = () => {
   return (
     <Layout title="Contacts">
       <div className="contact">
-  {/*//!The SearchCard component is wrap in a <p> tag */}
-        <p className="search_card">
+        <CostumizedInputBox />  
         <SearchCard />
-        </p>
+      
         <ContactSortingOrder />
         <GroupCard />
         <button onClick={() => handleGroupSelection("All Contacts")}>All Contacts</button>
