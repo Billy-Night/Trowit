@@ -37,6 +37,17 @@ const OrderCard = () => {
     console.log(`Selected card id: ${selectedCardId}`);
   };
 
+  const handleOrderPlanSelected = (type) => {
+    // console.log(type);
+    if (type === "basic") {
+      console.log("Clicked Basic");
+    } else if (type === "customized") {
+      console.log("Clicked Customized");
+    } else if (type === "premium") {
+      console.log("Clicked Premium");
+    }
+  }
+
   return (
     <Layout title="Order physical card">
       <div id="order-card">
@@ -83,46 +94,51 @@ const OrderCard = () => {
               </p>
             </div> */}
             </div>
-          </div>
-          {/* third part in the page  */}
-          <div className="OC__sub-container3__price-cards">
-            <OderCardTemplate
-              header="Basic"
-              cta="Choose from our 5 business card designs!"
-              benefit1="✔ NFC connectivity"
-              benefit2="✔ Lasting material"
-              benefit3="- TROWIT watermark"
-              price="€10"
-              fee="shipping fees"
-              button="order"
-            />
-            <OderCardTemplate
-              header="Customized"
-              cta="Upload your own design and customize your card!"
-              benefit1="✔ NFC connectivity"
-              benefit2="✔ Lasting material"
-              benefit3="✔ No watermark"
-              price="€20"
-              fee="shipping fees"
-              button="order"
-            />
-            <OderCardTemplate
-              header="Premium"
-              cta="Send us the details, and we’ll design your card!"
-              benefit1="✔ NFC connectivity"
-              benefit2="✔ Lasting material"
-              benefit3="✔ No watermark"
-              price="€30"
-              fee="shipping fees"
-              button="order"
-            />
-            <OderCardBusinessTemplate
-              header="Business"
-              cta1="Do you want to order TROWIT Business Cards for the whole team?"
-              cta2="Get in touch for a personalized quote!"
-              button="Contact Sales"
-            />
-          </div>
+        </div>
+        {/* third part in the page  */}
+        <div className="OC__sub-container3__price-cards">
+          <OderCardTemplate
+            header="Basic"
+            cta="Choose from our 5 business card designs!"
+            benefit1="✔ NFC connectivity"
+            benefit2="✔ Lasting material"
+            benefit3="- TROWIT watermark"
+            price="€10"
+            fee="shipping fees"
+            button="order"
+            type="basic" 
+            action={handleOrderPlanSelected}
+          />
+          <OderCardTemplate
+            header="Customized"
+            cta="Upload your own design and customize your card!"
+            benefit1="✔ NFC connectivity"
+            benefit2="✔ Lasting material"
+            benefit3="✔ No watermark"
+            price="€20"
+            fee="shipping fees"
+            button="order"
+            type="customized"
+            action={handleOrderPlanSelected}
+          />
+          <OderCardTemplate
+            header="Premium"
+            cta="Send us the details, and we’ll design your card!"
+            benefit1="✔ NFC connectivity"
+            benefit2="✔ Lasting material"
+            benefit3="✔ No watermark"
+            price="€30"
+            fee="shipping fees"
+            button="order"
+            type="premium"
+            action={handleOrderPlanSelected}
+          />
+          <OderCardBusinessTemplate
+            header="Business"
+            cta1="Do you want to order TROWIT Business Cards for the whole team?"
+            cta2="Get in touch for a personalized quote!"
+            button="Contact Sales"
+          />
         </div>
       </div>
     </Layout>

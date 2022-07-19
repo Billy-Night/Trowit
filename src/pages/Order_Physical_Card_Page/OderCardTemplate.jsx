@@ -2,9 +2,6 @@ import React from "react";
 
 const OderCardTemplate = (props) => {
 
-  // const handleClick = () => {
-  //   console.log("clicked")
-  // }
 
   return (
     <div className="OC__sub-container3__price-table-and-buttons">
@@ -38,7 +35,7 @@ const OderCardTemplate = (props) => {
         </button>
       )}
       {props.button !== "upgrade" && (
-        <button className="OC__sub-container3__button ">{props.button}</button>
+        <button onClick={() => props.action(props.type)} className="OC__sub-container3__button ">{props.button}</button>
       )}
     </div>
   );
