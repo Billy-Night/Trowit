@@ -44,3 +44,7 @@
   margin-left: 10%;
 }
 
+.cards_page_card {
+  border-radius: none;
+  border: none;
+}

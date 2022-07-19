@@ -5,6 +5,8 @@ import ContactSortingOrder from "./ContactSortingOrder.jsx";
 import SearchCard from "../Cards_Page/SearchCard.jsx";
 import Layout from "../../components/Layout/Layout.jsx";
 import GroupCard from "./GroupCard";
+import all_contacts from "../../images/cards_page/all_contacts.png";
+import Card from "../Cards_Page/Card";
 
 const Contact = () => {
   const navigate = useNavigate();
@@ -26,10 +28,17 @@ const Contact = () => {
       <div className="contact">
 
         <ContactSortingOrder />
-        <GroupCard />
-        <button onClick={() => handleGroupSelection("All Contacts")}>
+
+        <Card
+              img={all_contacts}
+              id={3999}
+              className={"cards_page_card"}
+              // FIXME: we need text for accessibility: type={"Add Card"}
+              action={() => handleGroupSelection("All Contacts")}
+            />
+        {/* <button onClick={() => handleGroupSelection("All Contacts")}>
           All Contacts
-        </button>
+        </button> */}
       </div>
     </Layout>
   );
