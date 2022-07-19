@@ -1,12 +1,12 @@
 import "./EmailGen.css";
 import SideNavBar from "../../components//Side_NavBar/SideNavBar";
+import Layout from "../../components/Layout/Layout";
 
 const EmailGen = () => {
   return (
-    <div className="email-gen">
-      <SideNavBar />
-      <p className="title"> Email Signature Generator</p>
-    </div>
+    <Layout title="Email Signature Generator">
+      <div className="email-gen">Generate your email signatures here</div>
+    </Layout>
   );
 };
 

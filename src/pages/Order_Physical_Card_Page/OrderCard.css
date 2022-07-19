@@ -4,44 +4,19 @@
   padding: 0;
   box-sizing: border-box;
   color: hsla(0, 0%, 20%, 1);
-  width: 98vw;
+  width: 100%;
 }
 
 .OC__main-container {
-  height: 90vh;
-  width: 90vw;
+  min-height: 100%;
+  width: 100%;
   float: right;
   display: flex;
   flex-direction: column;
   /* justify-content: space-around; */
   gap: 3rem;
 }
-.OC__sub-container1__header-and-menu {
-  position: relative;
-  min-height: fit-content;
-  /* background-color: blue; */
-}
 
-.OC__sub-container1__header {
-  font-weight: 700;
-  font-size: 3rem;
-  height: 100%;
-  display: flex;
-  align-items: flex-start;
-}
-.OC__sub-container1__drop-menu {
-  background-image: url("../../images/Order_physical_card_page/drop_down_menu@2x.png");
-  min-width: 30rem;
-  width: 40rem;
-
-  height: 10rem;
-  background-size: 70%;
-  background-repeat: no-repeat;
-  background-position: center;
-  position: absolute;
-  top: -3rem;
-  right: -3rem;
-}
 .OC__sub-container2__sub-title-and-preview-cards {
   /* background-color: navajowhite; */
 }
