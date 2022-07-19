@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import { MyContext } from "../../context/MyProvider";
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import "./OrderCard.css";
 import SideNavBar from "../../components/Side_NavBar/SideNavBar";
 import OderCardTemplate from "./OderCardTemplate";
@@ -10,7 +10,7 @@ import workImg from "../../images/cards_page/card_work@2x.png";
 import Layout from "../../components/Layout/Layout";
 
 const OrderCard = () => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const context = useContext(MyContext);
 
   let [cardsData, setCards] = useState();
@@ -18,15 +18,15 @@ const OrderCard = () => {
   let [selectedCardIndex, setSelectedCardIndex] = useState();
   let [cardSelected, setCardSelected] = useState(false);
 
-  let id = context.userId;
+  let userId = context.userId;
 
   useEffect(() => {
-    fetch(`http://localhost:3306/cards/${id}`)
+    fetch(`http://localhost:3306/cards/${userId}`)
       .then((res) => res.json())
       .then((data) => {
         setCards(data);
       });
-  }, [id]);
+  }, [userId]);
 
   const handleCardSelectClickOC = (id) => {
     setSelectedCardId(id);
@@ -37,16 +37,42 @@ const OrderCard = () => {
     console.log(`Selected card id: ${selectedCardId}`);
   };
 
+  // const handleOrderPlanSelected = (type) => {
+  //  fetch('http://localhost:3306/api/order/physical/card', {
+  //   method: "POST",
+  //   headers: new Headers({
+  //     "Content-Type": "application/json",
+  //   }),
+  //   body: JSON.stringify({
+  //     plan: type,
+  //     users_id: userId,
+  //   }),
+  //  })
+  //  .then((res) => {
+  //   if (res.status === 200) {
+  //     console.log("Plan selected and added to order");
+  //     navigate('/');
+  //   } else {
+  //     console.log("There was an error adding the plan to order")
+  //   }
+  //  });
+  // };
+
   const handleOrderPlanSelected = (type) => {
-    // console.log(type);
+  console.log(type);
     if (type === "basic") {
-      console.log("Clicked Basic");
+      // console.log("Clicked Basic");
+      navigate(`/order/card/${type}`)
     } else if (type === "customized") {
-      console.log("Clicked Customized");
+      // console.log("Clicked Customized");
+      navigate(`/order/card/${type}`)
     } else if (type === "premium") {
-      console.log("Clicked Premium");
+      // console.log("Clicked Premium");
+      navigate(`/order/card/${type}`)
     }
   };
+
+ 
 
   return (
     <Layout title="Order physical card">

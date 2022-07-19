@@ -110,31 +110,42 @@ const MyProvider = (props) => {
 
   let [ editCard, setEditCard ] = useState(false);
 
-  let orderPhysicalCardJoin = {
-    order_physical_card_id: null,
-    cards_id: null
-  }
+  const orderPhysicalCardBlank = {
+    plan: "",
+    users_id: null,
+  };
 
-  let cardOrderAddress = {
-    first_name: "",
-    last_name: "",
-    street_and_number: "",
-    city: "",
-    zip_code: "",
-    country: "",
-    phone_number: 0
-  }
+  let [ orderPhysicalCard, setPhysicalCard ] = useState(orderPhysicalCardBlank);
 
-  let [ orderAddress, setOrderAddress ] = useState(cardOrderAddress);
-
-  const handleOrderAddress = (event) => {
+  const handleOrderPhysicalCard = (event) => {
     const { name, value } = event.currentTarget;
 
-    setOrderAddress({
-      ...orderAddress,
+    setPhysicalCard({
+      ...orderPhysicalCard,
       [name]: value, 
-  });
+    });
   };
+
+  // let cardOrderAddress = {
+  //   first_name: "",
+  //   last_name: "",
+  //   street_and_number: "",
+  //   city: "",
+  //   zip_code: "",
+  //   country: "",
+  //   phone_number: 0
+  // }
+
+  // let [ orderAddress, setOrderAddress ] = useState(cardOrderAddress);
+
+  // const handleOrderAddress = (event) => {
+  //   const { name, value } = event.currentTarget;
+
+  //   setOrderAddress({
+  //     ...orderAddress,
+  //     [name]: value, 
+  // });
+  // };
     
     return (
         <MyContext.Provider 
@@ -155,7 +166,8 @@ const MyProvider = (props) => {
                 setContact: setContact,
                 handleContact: handleContact,
                 setEditCard: setEditCard,
-                editCard: editCard
+                editCard: editCard,
+                handleOrderPhysicalCard: handleOrderPhysicalCard
             }} >
                 { props.children }
         </MyContext.Provider> 
