@@ -33,6 +33,8 @@
 }
 
 #navigation-layout_content-box {
+  padding-inline: 4rem;
+  padding-block-end: 2rem;
   overflow: auto;
 }
 

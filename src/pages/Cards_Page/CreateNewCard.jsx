@@ -9,6 +9,7 @@ import { CardInformationData } from "./CardInformationData";
 import "./SearchCard.css";
 // import SearchCard from "./SearchCard.jsx";
 import Avatar from "../../components/Avatar/Avatar.jsx";
+import Layout from "../../components/Layout/Layout";
 import { useState } from "react";
 
 const CreateNewCard = () => {
@@ -172,8 +173,8 @@ const CreateNewCard = () => {
   ];
 
   return (
+    <Layout>
     <section id="create-card-page">
-      <SideNavBar />
       {context.editCard ? 
       <h1>Cards / Edit Card</h1>
       : 
@@ -205,7 +206,6 @@ const CreateNewCard = () => {
           />
         </span>
         <div>
-          <Avatar />
           <div id="create-card-left">
             <div>
               <AvatarEditor />
@@ -364,6 +364,7 @@ const CreateNewCard = () => {
         </div>
       </form>
     </section>
+    </Layout>
   );
 };
 
